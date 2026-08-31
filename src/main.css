@@ -1,2 +1,53 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@layer base {
+  @font-face {
+    font-family: iransans;
+    font-style: normal;
+    src: url("/fonts/iransans/eot/IRANSansFaNum_Medium.eot");
+    src:
+      url("/fonts/iransans/eot/IRANSansFaNum_Medium.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/iransans/woff2/IRANSansWebFaNum_Medium.woff2") format("woff2"),
+      url("/fonts/iransans/woff/IRANSansWebFaNum_Medium.woff") format("woff"),
+      url("/fonts/iransans/ttf/IRANSansWebFaNum_Medium.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: BYekan;
+    src:
+      url("/fonts/BYekan/BYekan+.ttf"), url("/fonts/BYekan/BYekan+ Bold.ttf");
+  }
+
+  @font-face {
+    font-family: WebYekan;
+    src:
+      url("/fonts/WebYekan/WebYekan.eot"), url("/fonts/WebYekan/WebYekan.ttf"),
+      url("/fonts/WebYekan/WebYekan.eot");
+  }
+  @font-face {
+    font-family: Yekan;
+    src:
+      url("/fonts/Yekan/Yekan.eot"), url("/fonts/Yekan/Yekan.ttf"),
+      url("/fonts/Yekan/Yekan.woff"), url("/fonts/Yekan/Yekan.woff2"),
+      url("/fonts/Yekan/Yekan.eot");
+  }
+  body {
+    font-family: iransans;
+    direction: rtl;
+    @apply min-h-screen flex flex-col;
+  }
+}
+:root {
+  --navbar-height: 0px;
+}
+html,
+body {
+  @apply relative h-full;
+}
+body {
+  padding-top: var(--navbar-height);
+}
+body {
+  overflow: auto;
+}

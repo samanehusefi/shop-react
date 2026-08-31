@@ -10,5 +10,8 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
   ],
-  base: "./",
+  server: {
+    port: 3000,
+  },
+  base: process.env.NODE_ENV === "production" ? "/shop-react/" : "./",
 });

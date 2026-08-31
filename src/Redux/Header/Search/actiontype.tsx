@@ -1,0 +1,2 @@
+export const SET_SEARCH_TEXT = "SET_SEARCH_TEXT";
+export const CLEAR_SEARCH = "CLEAR_SEARCH";

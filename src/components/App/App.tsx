@@ -1,6 +1,12 @@
+import Header from "../Layout/Header/Header";
+
 const App = () => {
   return (
-    <div className="w-full max-w-7xl bg-gray-600 h-3.5 mx-auto mt-2"></div>
+    <div className="w-full  h-screen mx-auto">
+      <>
+        <Header />
+      </>
+    </div>
   );
 };
 
