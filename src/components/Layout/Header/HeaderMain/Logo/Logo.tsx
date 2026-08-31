@@ -3,9 +3,14 @@ import { useSelector } from "react-redux";
 const Logo = () => {
   debugger;
   const logo = useSelector((state: any) => state.header.data?.company.logo);
+  console.log("HEADER DATA:", logo);
   if (!logo) {
     return null;
   }
+  const logoSrc = `${import.meta.env.BASE_URL}${logo.desktopSrc.replace(
+    /^\/+/,
+    "",
+  )}`;
   return (
     <a
       href="/"
@@ -13,7 +18,7 @@ const Logo = () => {
       className="hidden md:flex items-center shrink-0"
     >
       <img
-        src={logo.desktopSrc}
+        src={logoSrc}
         alt={logo.alt}
         className="h-7 w-auto object-contain md:h-8"
       />

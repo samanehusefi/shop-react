@@ -1,6 +1,25 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
 export const getShopData = async () => {
+  const isProduction = import.meta.env.PROD;
+
+  if (isProduction) {
+    const response = await fetch(`${import.meta.env.BASE_URL}db.json`);
+
+    if (!response.ok) {
+      throw new Error("خطا در دریافت اطلاعات");
+    }
+
+    const data = await response.json();
+
+    return {
+      incredible: data.incredible,
+      grouping: data.grouping,
+      brands: data.brands,
+      options: data.options,
+    };
+  }
+
   const [
     incredibleResponse,
     groupingResponse,
