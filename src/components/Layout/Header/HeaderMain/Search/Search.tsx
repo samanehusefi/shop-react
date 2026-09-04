@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { setSearchText } from "../../../../../Redux/Header/Search/action";
 import { getShopData } from "../../../../../Api/api";
+
 import type { ISearchResult } from "../../../../../Types/Header/ISearchResult";
+
 import { FiSearch } from "react-icons/fi";
+
 const Search = () => {
   const dispatch = useDispatch();
 
@@ -115,23 +119,40 @@ const Search = () => {
   const showDropdown = isOpen && searchText.trim().length >= 2;
 
   return (
-    <div ref={searchRef} className="relative flex-1 max-w-2xl">
+    <div
+      ref={searchRef}
+      className="
+        relative
+        w-full
+        flex-1
+        md:max-w-xl
+        lg:max-w-2xl
+      "
+    >
       {/* Search Box */}
 
       <div
         className="
-    flex
-    items-center
-    bg-gray-100
-    rounded-full
-    px-4
-    h-12
-    gap-3
-  "
+          flex
+          h-10
+          w-full
+          items-center
+          gap-2
+          rounded-full
+          bg-gray-100
+          px-3
+
+          sm:h-11
+          sm:gap-3
+          sm:px-4
+
+          md:h-12
+        "
         dir="rtl"
       >
         {/* Search Icon */}
-        <FiSearch className="text-gray-500 shrink-0" size={21} />
+
+        <FiSearch className="shrink-0 text-gray-500" size={19} />
 
         <input
           type="text"
@@ -144,40 +165,50 @@ const Search = () => {
           }}
           placeholder="جستجو"
           className="
-      flex-1
-      bg-transparent
-      outline-none
-      text-sm
-      text-gray-700
-      placeholder:text-gray-400
-    "
+            min-w-0
+            flex-1
+            bg-transparent
+            text-xs
+            text-gray-700
+            outline-none
+            placeholder:text-gray-400
+
+            sm:text-sm
+          "
         />
 
         {/* Clear Button */}
+
         {searchText && (
           <button
             type="button"
             onClick={handleClear}
             className="
-        flex
-        items-center
-        justify-center
-        w-7
-        h-7
-        rounded-full
-        text-gray-400
-        hover:text-gray-700
-        hover:bg-gray-200
-        transition
-        cursor-pointer
-        shrink-0
-      "
+              flex
+              h-6
+              w-6
+              shrink-0
+              cursor-pointer
+              items-center
+              justify-center
+              rounded-full
+              text-base
+              leading-none
+              text-gray-400
+              transition
+              hover:bg-gray-200
+              hover:text-gray-700
+
+              sm:h-7
+              sm:w-7
+            "
             aria-label="پاک کردن جستجو"
           >
             ×
           </button>
         )}
       </div>
+
       {/* Dropdown */}
 
       {showDropdown && (
@@ -185,34 +216,41 @@ const Search = () => {
           dir="rtl"
           className="
             absolute
-            top-[52px]
+            top-[46px]
             right-0
             left-0
             z-50
-            bg-white
+            overflow-hidden
             rounded-xl
             border
             border-gray-200
+            bg-white
             shadow-lg
-            overflow-hidden
+
+            sm:top-[50px]
+
+            md:top-[54px]
           "
         >
           {results.length > 0 ? (
-            <div className="max-h-[420px] overflow-y-auto py-2">
+            <div className="max-h-[60vh] overflow-y-auto py-1 sm:py-2">
               {/* Categories */}
 
               {categories.length > 0 && (
                 <div>
                   <div
                     className="
-                      px-4
+                      px-3
                       py-2
-                      text-xs
+                      text-[11px]
                       font-bold
                       text-gray-500
+
+                      sm:px-4
+                      sm:text-xs
                     "
                   >
-                    <span className=" border-b-amber-800 border-b-2 text-red-700">
+                    <span className="border-b-2 border-b-amber-800 text-red-700">
                       دسته‌بندی‌ها
                     </span>
                   </div>
@@ -221,14 +259,18 @@ const Search = () => {
                     <div
                       key={`category-${index}`}
                       className="
-                          px-4
-                          py-3
-                          text-sm
-                          text-gray-700
-                          cursor-pointer
-                          hover:bg-gray-50
-                          transition
-                        "
+                        cursor-pointer
+                        px-3
+                        py-2.5
+                        text-xs
+                        text-gray-700
+                        transition
+                        hover:bg-gray-50
+
+                        sm:px-4
+                        sm:py-3
+                        sm:text-sm
+                      "
                     >
                       {result.title}
                     </div>
@@ -242,14 +284,17 @@ const Search = () => {
                 <div className="border-t border-gray-100">
                   <div
                     className="
-                      px-4
+                      px-3
                       py-2
-                      text-xs
+                      text-[11px]
                       font-bold
                       text-gray-500
+
+                      sm:px-4
+                      sm:text-xs
                     "
                   >
-                    <span className=" border-b-amber-800 border-b-2 text-red-700">
+                    <span className="border-b-2 border-b-amber-800 text-red-700">
                       برندها
                     </span>
                   </div>
@@ -258,14 +303,18 @@ const Search = () => {
                     <div
                       key={`brand-${index}`}
                       className="
-                          px-4
-                          py-3
-                          text-sm
-                          text-gray-700
-                          cursor-pointer
-                          hover:bg-gray-50
-                          transition
-                        "
+                        cursor-pointer
+                        px-3
+                        py-2.5
+                        text-xs
+                        text-gray-700
+                        transition
+                        hover:bg-gray-50
+
+                        sm:px-4
+                        sm:py-3
+                        sm:text-sm
+                      "
                     >
                       {result.title}
                     </div>
@@ -279,14 +328,17 @@ const Search = () => {
                 <div className="border-t border-gray-100">
                   <div
                     className="
-                      px-4
+                      px-3
                       py-2
-                      text-xs
+                      text-[11px]
                       font-bold
                       text-gray-500
-                      "
+
+                      sm:px-4
+                      sm:text-xs
+                    "
                   >
-                    <span className=" border-b-amber-800 border-b-2 text-red-700">
+                    <span className="border-b-2 border-b-amber-800 text-red-700">
                       محصولات
                     </span>
                   </div>
@@ -295,15 +347,19 @@ const Search = () => {
                     <div
                       key={`product-${index}`}
                       className="
-                          px-4
-                          py-3
-                          text-sm
-                          text-gray-700
-                          cursor-pointer
-                          hover:bg-gray-50
-                          transition
-                          truncate
-                        "
+                        cursor-pointer
+                        truncate
+                        px-3
+                        py-2.5
+                        text-xs
+                        text-gray-700
+                        transition
+                        hover:bg-gray-50
+
+                        sm:px-4
+                        sm:py-3
+                        sm:text-sm
+                      "
                     >
                       {result.title}
                     </div>
@@ -312,14 +368,48 @@ const Search = () => {
               )}
             </div>
           ) : (
-            <div className="p-6 flex flex-col items-center justify-center text-center gap-2 md:p-0">
+            /* Not Found */
+
+            <div
+              className="
+                flex
+                min-h-[260px]
+                flex-col
+                items-center
+                justify-center
+                gap-2
+                p-4
+                text-center
+
+                sm:min-h-[300px]
+                sm:p-6
+              "
+            >
               <img
                 src="/assets/icon/SearchNotFound.svg"
-                className="w-60 h-60 opacity-70 md:p-0 md:mt-[-10%]"
-                alt="not found"
+                className="
+                  h-40
+                  w-40
+                  opacity-70
+
+                  sm:h-52
+                  sm:w-52
+
+                  md:h-60
+                  md:w-60
+                "
+                alt="نتیجه‌ای یافت نشد"
               />
 
-              <p className="text-md text-red-500 absolute top-[300px] md:top-[110px] font-bold">
+              <p
+                className="
+                  text-xs
+                  font-bold
+                  text-red-500
+
+                  sm:text-sm
+                "
+              >
                 نتیجه‌ای یافت نشد
               </p>
             </div>

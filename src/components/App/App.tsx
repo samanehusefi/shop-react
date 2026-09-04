@@ -1,3 +1,5 @@
+import CircleBadge from "../Home/CircleBadge/CircleBadge";
+import Slider from "../Home/Slider/Slider";
 import Header from "../Layout/Header/Header";
 
 const App = () => {
@@ -5,6 +7,8 @@ const App = () => {
     <div className="w-full  h-screen mx-auto">
       <>
         <Header />
+        <Slider />
+        <CircleBadge />
       </>
     </div>
   );

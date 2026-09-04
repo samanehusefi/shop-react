@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
+import type { RootState } from "../../../../../Redux/store";
 
 const Logo = () => {
-  debugger;
-  const logo = useSelector((state: any) => state.header.data?.company.logo);
+  const logo = useSelector((state: RootState) => state.header.data?.company.logo);
   console.log("HEADER DATA:", logo);
   if (!logo) {
     return null;

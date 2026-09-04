@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "server": "json-server db.json --host 0.0.0.0 --port 3001",
+    "server": "json-server public/db.json --host 0.0.0.0 --port 3001",
     "deploy": "npm run build && gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -21,6 +21,7 @@
     "react-router-dom": "^7.18.3",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
+    "swiper": "^14.2.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {

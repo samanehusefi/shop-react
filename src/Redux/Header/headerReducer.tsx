@@ -1,3 +1,4 @@
+import type { UnknownAction } from "redux";
 import type { IHeaderData } from "../../Types/Header/IHeader";
 
 import {
@@ -18,7 +19,14 @@ const initialState: HeaderState = {
   error: null,
 };
 
-const headerReducer = (state = initialState, action: any): HeaderState => {
+interface HeaderAction extends UnknownAction {
+  payload?: IHeaderData;
+}
+
+const headerReducer = (
+  state = initialState,
+  action: HeaderAction,
+): HeaderState => {
   switch (action.type) {
     case FETCH_HEADER_REQUEST:
       return {
@@ -31,7 +39,7 @@ const headerReducer = (state = initialState, action: any): HeaderState => {
       return {
         ...state,
         loading: false,
-        data: action.payload,
+        data: action.payload ?? null,
       };
 
     case FETCH_HEADER_FAILURE:
