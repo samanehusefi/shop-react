@@ -5976,28 +5976,538 @@
   ],
   "amazing": [
     {
-      "img": "./img/amazing/img-1.png",
-      "discount": "35%"
+      "id": 15229254,
+      "title": "کتاب تاریخ مصور ایران باستان اثر احسان رضایی و فاطمه شفیعی‌سروستانی نشر سایان 4 جلدی - جلد 1 تا 4",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/64befbccde92db44d19fe012942bf25b74d1718d_1713867221.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 88000000,
+        "original": 189853000,
+        "discount": 54
+      },
+      "timer": 89871,
+      "rating": {
+        "rate": 97.83,
+        "count": 840
+      },
+      "brand": {
+        "title": "نشر سایان",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/1c5426d73ffe8fe6f6da33089b2daaefd81d8fd3_1621684935.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "url": "/product/dkp-15229254/کتاب-تاریخ-مصور-ایران-باستان-اثر-احسان-رضایی-و-فاطمه-شفیعی-سروستانی-نشر-سایان-4-جلدی-جلد-1-تا-4"
     },
     {
-      "img": "./img/amazing/img-2.png",
-      "discount": "30%"
+      "id": 21691319,
+      "title": "شارژر دیواری 45 وات وونک مدل PD-45W به همراه کابل دو متری USB-C",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/6a3489f074142b7f68c74a6344ce6304aab65532_1776860410.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 22999900,
+        "original": 220000000,
+        "discount": 90
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 87.57,
+        "count": 37
+      },
+      "brand": {
+        "title": "وونک",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/2bc78a68b520ab675bccbf2d1f073a99f4e30b32_1719822952.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "مشکی براق",
+          "hex": "#090000"
+        },
+        {
+          "title": "مشکی",
+          "hex": "#000000"
+        }
+      ],
+      "url": "/product/dkp-21691319/شارژر-دیواری-45-وات-وونک-مدل-pd45w-به-همراه-کابل-دو-متری-usb-c"
     },
     {
-      "img": "./img/amazing/img-3.png",
-      "discount": "30%"
+      "id": 17709258,
+      "title": "آبسردکن آوکس مدل ES Tron",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/02b5ad20cdc26eda9755c292e86bebab1cc7a5d7_1787418088.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 148000000,
+        "original": 307990000,
+        "discount": 52
+      },
+      "timer": 89871,
+      "rating": {
+        "rate": 71.23,
+        "count": 73
+      },
+      "brand": {
+        "title": "آوکس",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/100011172.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "سفید",
+          "hex": "#FFFFFF"
+        }
+      ],
+      "url": "/product/dkp-17709258/آبسردکن-آوکس-مدل-es-tron"
     },
     {
-      "img": "./img/amazing/img-4.png",
-      "discount": "30%"
+      "id": 4514649,
+      "title": "صندلی غذاخوری کودک زویه مدل z110",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/246a09ab0f4e0dd79b490869f1d7760939213010_1613985382.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 85900000,
+        "original": 134000000,
+        "discount": 36
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 83.75,
+        "count": 693
+      },
+      "brand": {
+        "title": "زویه",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/5137aebe7633b968392c7b190e8fb08b9124840c_1606215513.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "طوسی",
+          "hex": "#e0e0e0"
+        },
+        {
+          "title": "سرخابی",
+          "hex": "#ff1493"
+        },
+        {
+          "title": "آبی",
+          "hex": "#0000FF"
+        },
+        {
+          "title": "آبی فیروزه ای",
+          "hex": "#40E0D0"
+        },
+        {
+          "title": "صورتی روشن",
+          "hex": "#FAD4E7"
+        },
+        {
+          "title": "کرم",
+          "hex": "#F5E8D8"
+        },
+        {
+          "title": "طوسی تیره",
+          "hex": "#4D4D4D"
+        },
+        {
+          "title": "سفید",
+          "hex": "#FFFFFF"
+        },
+        {
+          "title": "سرمه ای",
+          "hex": "#002171"
+        },
+        {
+          "title": "بنفش",
+          "hex": "#800080"
+        },
+        {
+          "title": "صورتی",
+          "hex": "#ffc0cb"
+        }
+      ],
+      "url": "/product/dkp-4514649/صندلی-غذاخوری-کودک-زویه-مدل-z110"
     },
     {
-      "img": "./img/amazing/img-5.png",
-      "discount": "30%"
+      "id": 16362642,
+      "title": "سرویس غذاخوری 29 پارچه 6 نفر چینی زرین ایران مدل نئوکلاسیک سفید درجه 3",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/eefbedb38f5cdae50fdb5921aa751d8cadb423b3_1784987843.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 32790000,
+        "original": 53180000,
+        "discount": 38
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 90.57,
+        "count": 70
+      },
+      "brand": {
+        "title": "چینی زرین ایران",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/5a10ae95eb42fc96906c8062563b28062668d418_1722238640.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "سفید",
+          "hex": "#FFFFFF"
+        }
+      ],
+      "url": "/product/dkp-16362642/سرویس-غذاخوری-29-پارچه-6-نفر-چینی-زرین-ایران-مدل-نئوکلاسیک-سفید-درجه-3"
     },
     {
-      "img": "./img/amazing/img-6.png",
-      "discount": "25%"
+      "id": 12275862,
+      "title": "سشوار حرفه‌ای کنورث مدل KW-9040 با موتور AC قدرتمند 9000 وات، تنظیمات دما سه حالته، دو سرعت، فناوری یونیزاسیون، باد سرد برای تثبیت حالت، طراحی کم‌صدا، همراه با متمرکزکننده باریک و پهن",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/2da34ba4a2316c1db6b412c41b3942886b4989db_1755788226.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 23900000,
+        "original": 42000000,
+        "discount": 43
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 84.52,
+        "count": 420
+      },
+      "brand": {
+        "title": "متفرقه",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/d37a7e939b804659cfc1e6d88092a1b8ea8132d4_1603699076.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "مشکی",
+          "hex": "#000000"
+        },
+        {
+          "title": "مشکی - طلایی",
+          "hex": "#1e1e1a"
+        },
+        {
+          "title": "مشکی براق",
+          "hex": "#090000"
+        }
+      ],
+      "url": "/product/dkp-12275862/سشوار-حرفهای-کنورث-مدل-kw-9040-با-موتور-ac-قدرتمند-9000-وات-تنظیمات-دما-سه-حالته-دو-سرعت-فناوری-یونیزاسیون-باد-سرد-برای-تثبیت-حالت-طراحی-کمصدا-همراه-با-متمرکزکننده-باریک-و-پهن"
+    },
+    {
+      "id": 18010485,
+      "title": "ادوپرفیوم زنانه پریمیر نوت مدل PACO RABANNE LADY MILLION با رایحه معتدل حجم 100 میلی‌لیتر",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/0a224bf790219758677d6b35b44ef2fc2f0fa168_1736930959.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 3900000,
+        "original": 18700000,
+        "discount": 79
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 62,
+        "count": 20
+      },
+      "brand": {
+        "title": "پریمیر نوت",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/6384.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "url": "/product/dkp-18010485/ادوپرفیوم-زنانه-پریمیر-نوت-مدل-paco-rabanne-lady-million-با-رایحه-معتدل-حجم-100-میلیلیتر"
+    },
+    {
+      "id": 21046789,
+      "title": "تبلت 12.1 اینچ شیائومی مدل Redmi Pad 2 Pro Wi-Fi، ظرفیت 256 گیگابایت و رم 8 گیگابایت، رزولوشن دوربین 8 مگاپیکسل، پشتیبانی از قلم و کیبورد",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/39aaf321b92c950fc9b5a0bfdbdfb783460c2714_1771426159.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 623990000,
+        "original": 635000000,
+        "discount": 2
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 96.23,
+        "count": 53
+      },
+      "brand": {
+        "title": "شیائومی",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/2994.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "بنفش",
+          "hex": "#800080"
+        },
+        {
+          "title": "خاکستری",
+          "hex": "#9E9E9E"
+        },
+        {
+          "title": "نقره ای",
+          "hex": "#dedede"
+        }
+      ],
+      "url": "/product/dkp-21046789/تبلت-121-اینچ-شیائومی-مدل-redmi-pad-2-pro-wi-fi-ظرفیت-256-گیگابایت-و-رم-8-گیگابایت-رزولوشن-دوربین-8-مگاپیکسل-پشتیبانی-از-قلم-و-کیبورد"
+    },
+    {
+      "id": 19655055,
+      "title": "چای ساز روی هم هایبورگ مدل TM-4010",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/87f5732b86ffe8d41011314df961658e945134de_1786910234.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 70900000,
+        "original": 124990000,
+        "discount": 43
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 80.69,
+        "count": 319
+      },
+      "brand": {
+        "title": "هایبورگ",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/5526a6daa30c509b3903e47862f35966c64a9404_1642415505.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "مشکی",
+          "hex": "#000000"
+        }
+      ],
+      "url": "/product/dkp-19655055/چای-ساز-روی-هم-هایبورگ-مدل-tm-4010"
+    },
+    {
+      "id": 21407787,
+      "title": "دستگاه سنباده‌زن 350 وات روماتون مدل 2330",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/d460add87c4fc03ed814919b44993212c85e294a_1770463370.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 58490000,
+        "original": 83874000,
+        "discount": 30
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 96.25,
+        "count": 16
+      },
+      "brand": {
+        "title": "روماتون",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/2376d33b0bf90984a7a71ddeeab3153ae296fa28_1706436960.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "url": "/product/dkp-21407787/دستگاه-سنبادهزن-350-وات-روماتون-مدل-2330"
+    },
+    {
+      "id": 22200135,
+      "title": "دستگاه بخور سرد هیسکا مدل H40",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/3aa1261cee3c467118866ce49586e930553b7c53_1783589524.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 66800000,
+        "original": 108000000,
+        "discount": 38
+      },
+      "timer": 89871,
+      "rating": {
+        "rate": 89.17,
+        "count": 24
+      },
+      "brand": {
+        "title": "هیسکا",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/05f9bfc37ed9762c41d0bfe064a3414943434a18_1677966062.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "سفید",
+          "hex": "#FFFFFF"
+        }
+      ],
+      "url": "/product/dkp-22200135/دستگاه-بخور-سرد-هیسکا-مدل-h40"
+    },
+    {
+      "id": 19655614,
+      "title": "کرم ضد لک روز صورت تیلسیم مدل Alpha Arbutin مناسب برای پوست معمولی حجم 50 میلی لیتر",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/25afbe50fb7ece9396806ac4de73130142a4a76f_1751102511.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 2790000,
+        "original": 12500000,
+        "discount": 78
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 79.69,
+        "count": 707
+      },
+      "brand": {
+        "title": "متفرقه",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/d37a7e939b804659cfc1e6d88092a1b8ea8132d4_1603699076.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "url": "/product/dkp-19655614/کرم-ضد-لک-روز-صورت-تیلسیم-مدل-alpha-arbutin-مناسب-برای-پوست-معمولی-حجم-50-میلی-لیتر"
+    },
+    {
+      "id": 18010463,
+      "title": "ادوپرفیوم زنانه پریمیر نوت مدل DIAMANTE AMARILLO F با رایحه معتدل حجم 100 میلی‌لیتر",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/0a224bf790219758677d6b35b44ef2fc2f0fa168_1736930932.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 3740000,
+        "original": 18700000,
+        "discount": 80
+      },
+      "timer": 89871,
+      "rating": {
+        "rate": 60.83,
+        "count": 24
+      },
+      "brand": {
+        "title": "پریمیر نوت",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/6384.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "url": "/product/dkp-18010463/ادوپرفیوم-زنانه-پریمیر-نوت-مدل-diamante-amarillo-f-با-رایحه-معتدل-حجم-100-میلیلیتر"
+    },
+    {
+      "id": 4143172,
+      "title": "لاستیک موتور سیکلت ایران یاسا مدل YS سایز 17-300 مناسب برای محور عقب هوندا",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/33e0d4ce75c691b03c03479b26057fd25b276aa8_1609584287.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 23600000,
+        "original": 27621000,
+        "discount": 15
+      },
+      "timer": 89871,
+      "rating": {
+        "rate": 85.73,
+        "count": 335
+      },
+      "brand": {
+        "title": "ایران یاسا",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/1607.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "url": "/product/dkp-4143172/لاستیک-موتور-سیکلت-ایران-یاسا-مدل-ys-سایز-17-300-مناسب-برای-محور-عقب-هوندا"
+    },
+    {
+      "id": 3373704,
+      "title": "لگو سری کلاسیک مدل Creative Suitcase 10713",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/c1027203085bcb4c9a4d9fc7e69e9fd95529474f_1599721548.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 43900000,
+        "original": 76655000,
+        "discount": 43
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 93.64,
+        "count": 66
+      },
+      "brand": {
+        "title": "لگو",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/3512.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "چند رنگ",
+          "hex": "#C71585"
+        },
+        {
+          "title": "زرد",
+          "hex": "#FFFF00"
+        }
+      ],
+      "url": "/product/dkp-3373704/لگو-سری-کلاسیک-مدل-creative-suitcase-10713"
+    },
+    {
+      "id": 1786016,
+      "title": "کاندوم کلایمکس مدل AMAZING بسته 12 عددی",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/112067678.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 1790000,
+        "original": 3905000,
+        "discount": 54
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 82.23,
+        "count": 3130
+      },
+      "brand": {
+        "title": "کلایمکس",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/604.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "url": "/product/dkp-1786016/کاندوم-کلایمکس-مدل-amazing-بسته-12-عددی"
+    },
+    {
+      "id": 11227934,
+      "title": "قرص ویتامین ب 3 یوروویتال بسته 60 عددی",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/fabfc06ae9704cce2fe89285e3138b00d75042b9_1683033873.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 690000,
+        "original": 6600000,
+        "discount": 90
+      },
+      "timer": 89871,
+      "rating": {
+        "rate": 88.77,
+        "count": 3246
+      },
+      "brand": {
+        "title": "یوروویتال",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/e44886020b773202d6d431e2fef2f3bd8bd3bc7f_1737817444.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "url": "/product/dkp-11227934/قرص-ویتامین-ب-3-یوروویتال-بسته-60-عددی"
+    },
+    {
+      "id": 22109767,
+      "title": "کیبورد و ماوس بی‌سیم هیسکا مدل H-MK25",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/a61d5741ee2daa81fc6aef56a0e5aa2d1ec66a18_1784564896.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 36000000,
+        "original": 50000000,
+        "discount": 28
+      },
+      "timer": 3471,
+      "rating": {
+        "rate": 95.56,
+        "count": 27
+      },
+      "brand": {
+        "title": "هیسکا",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/05f9bfc37ed9762c41d0bfe064a3414943434a18_1677966062.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "مشکی",
+          "hex": "#000000"
+        }
+      ],
+      "url": "/product/dkp-22109767/کیبورد-و-ماوس-بیسیم-هیسکا-مدل-h-mk25"
+    },
+    {
+      "id": 22112503,
+      "title": "کتابخانه رومیزی سه طبقه سیماژ مدل CZ1014",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/aec6daba353cbb8814b42a39930d94c4f9106d3e_1782655421.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+      "price": {
+        "selling": 16700000,
+        "original": 24000000,
+        "discount": 30
+      },
+      "timer": 89871,
+      "rating": {
+        "rate": 92,
+        "count": 5
+      },
+      "brand": {
+        "title": "سیماژ",
+        "logo": "https://dkstatics-public.digikala.com/digikala-brands/54221ee2c8dc0d314e0988bce54d20a0802f0456_1661254288.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80"
+      },
+      "colors": [
+        {
+          "title": "سفید",
+          "hex": "#FFFFFF"
+        },
+        {
+          "title": "قهوه ای",
+          "hex": "#6B4632"
+        },
+        {
+          "title": "کرم",
+          "hex": "#F5E8D8"
+        },
+        {
+          "title": "طوسی تیره",
+          "hex": "#4D4D4D"
+        },
+        {
+          "title": "نقره ای",
+          "hex": "#dedede"
+        },
+        {
+          "title": "مشکی",
+          "hex": "#000000"
+        },
+        {
+          "title": "قهوه ای روشن",
+          "hex": "#7b584c"
+        }
+      ],
+      "url": "/product/dkp-22112503/کتابخانه-رومیزی-سه-طبقه-سیماژ-مدل-cz1014"
     }
   ],
   "ads2": [
