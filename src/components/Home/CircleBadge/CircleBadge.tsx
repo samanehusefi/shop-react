@@ -24,8 +24,8 @@ const CircleBadge = () => {
 
   return (
     <>
-      <section className="mx-auto w-full max-w-350 px-4 py-6">
-        <div className="rounded-2xl bg-white md:px-4 py-5 ">
+      <section className="mx-auto w-full max-w-350 px-4 py-2">
+        <div className="rounded-2xl bg-white md:px-4 py-2 ">
           <div className="flex w-full gap-4 overflow-x-auto px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:justify-between md:gap-4">
             {visibleItems.map((item) => (
               <a
@@ -33,7 +33,8 @@ const CircleBadge = () => {
                 href={item.url}
                 target="_blank"
                 rel="noreferrer"
-                className="flex w-[calc((100vw-6.5rem)/5.5)] min-w-[calc((100vw-6.5rem)/5.5)] shrink-0 flex-col items-center text-center sm:w-[70px] sm:min-w-[70px]"
+                className="flex w-[calc((100vw-6.5rem)/5.5)] min-w-[calc((100vw-6.5rem)/5.5)] 
+                shrink-0 flex-col items-center text-center sm:w-[100px] sm:min-w-[100px]"
               >
                 <div className="mb-2 h-13 w-13 overflow-hidden rounded-full">
                   <img
@@ -43,7 +44,7 @@ const CircleBadge = () => {
                   />
                 </div>
 
-                <span className="line-clamp-2 text-[11px] leading-4 text-gray-700">
+                <span className="line-clamp-2 text-[10px] leading-3 text-gray-700">
                   {item.title}
                 </span>
               </a>
@@ -79,7 +80,6 @@ const CircleBadge = () => {
   w-full overflow-y-auto
   bg-white p-5
   animate-[slideUp_1.2s_ease-in-out]
-
   md:inset-auto
   md:left-1/2
   md:top-1/2
