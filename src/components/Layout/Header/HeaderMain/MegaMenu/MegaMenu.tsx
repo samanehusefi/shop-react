@@ -25,18 +25,19 @@ const MegaMenu = () => {
   return (
     <div
       dir="rtl"
-      className="absolute right-0 top-full z-50 h-[70vh] w-[80vw] overflow-hidden border-t border-gray-200 shadow-[0_8px_30px_rgba(0,0,0,0.15)] bg-transparent"
+      className="absolute right-0 top-full z-50 h-[70vh] w-[80vw] overflow-hidden rounded-bl-2xl rounded-br-2xl bg-white shadow-[0_10px_35px_rgba(0,0,0,0.18)]"
     >
-      <div className="mx-auto flex h-full max-w-350 overflow-hidden px-4 md:px-6">
+      <div className="flex h-full w-full overflow-hidden">
         <aside
           dir="ltr"
-          className="w-60 shrink-0 border-r bg-gray-50 border-gray-200"
+          className="w-60 shrink-0 border-l border-gray-200 bg-gray-50"
         >
           <div className="h-full overflow-y-auto py-4">
             <div dir="rtl">
               <div className="space-y-1">
                 {megaMenu.map((menu) => {
                   const isActive = menu.id === activeMegaMenu;
+
                   const MenuIcon =
                     menuIcons[menu.icon as keyof typeof menuIcons];
 
@@ -45,10 +46,16 @@ const MegaMenu = () => {
                       key={menu.id}
                       type="button"
                       onMouseEnter={() => dispatch(setActiveMegaMenu(menu.id))}
-                      className={`flex w-full items-center gap-3 py-3 text-right text-sm ${isActive ? "bg-white  text-red-500" : "text-gray-700 hover:bg-gray-50"}`}
+                      className={`flex w-full items-center gap-3 px-4 py-3 text-right text-sm transition-colors ${
+                        isActive
+                          ? "bg-white text-red-500"
+                          : "text-gray-700 hover:bg-white"
+                      }`}
                     >
                       <span
-                        className={`flex h-8 w-8 shrink-0 items-center justify-center ${isActive ? "text-red-500" : "text-gray-500"}`}
+                        className={`flex h-8 w-8 shrink-0 items-center justify-center ${
+                          isActive ? "text-red-500" : "text-gray-500"
+                        }`}
                       >
                         {MenuIcon && <MenuIcon size={20} strokeWidth={1.8} />}
                       </span>
@@ -64,7 +71,7 @@ const MegaMenu = () => {
 
         <main
           dir="ltr"
-          className="min-h-0 min-w-0 flex-1 overflow-y-auto rounded-bl-xl bg-white px-6 py-5"
+          className="min-h-0 min-w-0 flex-1 overflow-y-auto bg-white px-6 py-5"
         >
           {activeMenu && (
             <div dir="rtl">
@@ -74,12 +81,11 @@ const MegaMenu = () => {
                   className="flex items-center gap-1 text-sm font-medium text-[#0d4485]"
                 >
                   {activeMenu.topLink.title}
-                  <span className="text-lg">
-                    <LuChevronLeft
-                      className="shrink-0 text-[#0d4485]"
-                      size={19}
-                    />
-                  </span>
+
+                  <LuChevronLeft
+                    className="shrink-0 text-[#0d4485]"
+                    size={19}
+                  />
                 </a>
               </div>
 
