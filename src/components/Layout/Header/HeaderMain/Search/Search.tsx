@@ -209,7 +209,6 @@ const Search = () => {
         )}
       </div>
 
-
       {showDropdown && (
         <div
           dir="rtl"
@@ -385,18 +384,8 @@ const Search = () => {
               "
             >
               <img
-                src="/assets/icon/SearchNotFound.svg"
-                className="
-                  h-40
-                  w-40
-                  opacity-70
-
-                  sm:h-52
-                  sm:w-52
-
-                  md:h-60
-                  md:w-60
-                "
+                src={`${import.meta.env.BASE_URL}assets/icon/SearchNotFound.svg`}
+                className="h-40 w-40 opacity-70 sm:h-52 sm:w-52 md:h-60 md:w-60"
                 alt="نتیجه‌ای یافت نشد"
               />
 
