@@ -4,7 +4,7 @@ export const getOptions = async () => {
   const response = await fetch(
     isProduction
       ? `${import.meta.env.BASE_URL}db.json`
-      : `${import.meta.env.VITE_API_URL}/options`
+      : `${import.meta.env.VITE_API_URL}/options`,
   );
 
   if (!response.ok) {

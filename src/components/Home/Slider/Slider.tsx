@@ -16,9 +16,7 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 const Slider = () => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const slider = useSelector(
-    (state: RootState) => state.slider.slider
-  );
+  const slider = useSelector((state: RootState) => state.slider.slider);
 
   useEffect(() => {
     dispatch(getSlider());
@@ -45,11 +43,18 @@ const Slider = () => {
         {slider.map((item) => (
           <SwiperSlide key={item.id}>
             <a href={item.link} className="block h-full">
-              <img
-                src={item.imageSrc}
-                alt={item.title}
-                className="h-full w-full object-cover"
-              />
+              <picture>
+                <source
+                  media="(max-width: 1023px)"
+                  srcSet={item.imageMobileSrc}
+                />
+
+                <img
+                  src={item.imageSrc}
+                  alt={item.title}
+                  className="h-full w-full object-cover"
+                />
+              </picture>
             </a>
           </SwiperSlide>
         ))}

@@ -1,13 +1,8 @@
 import type { IHeaderData } from "../../Types/Header/IHeader";
+import { getDbData } from "../dbApi";
 
 export const getHeader = async (): Promise<IHeaderData> => {
-  const response = await fetch(`${import.meta.env.BASE_URL}db.json`);
-
-  if (!response.ok) {
-    throw new Error("خطا در دریافت اطلاعات Header");
-  }
-
-  const data = await response.json();
+  const data = await getDbData();
 
   return data.header;
 };

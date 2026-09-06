@@ -1,0 +1,2 @@
+export const GET_NAVBAR_MENU = "GET_NAVBAR_MENU";
+export const SET_ACTIVE_NAVBAR = "SET_ACTIVE_NAVBAR";

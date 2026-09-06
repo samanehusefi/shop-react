@@ -209,7 +209,6 @@ const Search = () => {
         )}
       </div>
 
-      {/* Dropdown */}
 
       {showDropdown && (
         <div

@@ -5,6 +5,8 @@ import { Provider } from "react-redux";
 import "./main.css";
 import App from "./components/App/App";
 import store from "./Redux/store";
+document.documentElement.lang = "fa";
+document.documentElement.dir = "rtl";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

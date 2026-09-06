@@ -2,7 +2,7 @@
   "header": {
     "id": 1,
     "company": {
-      "name": "فروشگاه من",
+      "name": "فروشگاه ",
       "logo": {
         "desktopSrc": "assets/logo/full-horizontal.svg",
         "mobileSrc": "assets/logo/full-horizontal.svg",
@@ -14,8 +14,8 @@
     },
     "heading1": "خرید آنلاین آسان و سریع",
     "seo": {
-      "title": "فروشگاه من - خرید آنلاین محصولات دیجیتال، مد، ورزش و خانه",
-      "description": "فروشگاه من، مرجع خرید آنلاین محصولات متنوع شامل دیجیتال، مد، ورزش، خانه و آشپزخانه با بهترین قیمت و کیفیت",
+      "title": "فروشگاه  - خرید آنلاین محصولات دیجیتال، مد، ورزش و خانه",
+      "description": "فروشگاه، مرجع خرید آنلاین محصولات متنوع شامل دیجیتال، مد، ورزش، خانه و آشپزخانه با بهترین قیمت و کیفیت",
       "keywords": [
         "خرید آنلاین",
         "فروشگاه اینترنتی",
@@ -5221,24 +5221,46 @@
   ],
   "navbar": [
     {
+      "id": "amazing",
       "title": "شگفت‌انگیزها",
-      "img": "./img/Header/nav/img-1.svg",
-      "link": "#"
+      "icon": "amazing",
+      "url": "/amazing",
+      "type": "link"
     },
     {
+      "id": "supermarket",
       "title": "سوپرمارکت",
-      "img": "./img/Header/nav/img-2.svg",
-      "link": "#"
+      "icon": "supermarket",
+      "url": "/supermarket",
+      "type": "link"
     },
     {
+      "id": "digital-gold",
       "title": "طلای دیجیتال",
-      "img": "./img/Header/nav/img-3.svg",
-      "link": "#"
+      "icon": "digital-gold",
+      "url": "/digital-gold",
+      "type": "link"
     },
     {
+      "id": "gold-silver",
+      "title": "طلا و نقره دیجیتال",
+      "icon": "gold-silver",
+      "url": "/gold-silver",
+      "type": "link"
+    },
+    {
+      "id": "bestsellers",
       "title": "پرفروش‌ترین‌ها",
-      "img": "./img/Header/nav/img-4.svg",
-      "link": "#"
+      "icon": "bestsellers",
+      "url": "/bestsellers",
+      "type": "link"
+    },
+    {
+      "id": "digistyle",
+      "title": "دیجی‌استایل",
+      "icon": "digistyle",
+      "url": "/digistyle",
+      "type": "link"
     }
   ],
   "locationCity": [
@@ -5488,72 +5510,63 @@
     {
       "id": 212051,
       "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/b2e248048bb803e460105b498df1ca6832ee4f1c_1787956668.gif?x-oss-process=image",
+      "imageMobileSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/46251fa33c3ca8f369648327a6ad3e7465490018_1788621988.jpg?x-oss-process=image/quality,q_95",
       "title": "بیش از ۱۷۰۰ بازی",
       "link": "https://www.digikala.com/landing/gaming/?&promo_name=%D8%A8%DB%8C%D8%B4+%D8%A7%D8%B2+%DB%B1%DB%B7%DB%B0%DB%B0+%D8%A8%D8%A7%D8%B2%DB%8C&promo_position=home_slider_new_v2&promo_creative=212051&bCode=212051"
     },
     {
       "id": 211879,
       "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/70a0bf53a7582a39b2394ff44c67dcc509e8a28c_1787728981.gif?x-oss-process=image",
+      "imageMobileSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/d424c28e03817bde12223310fa771ae1cc21b75c_1788337880.gif?x-oss-process=image",
       "title": "پارتنرشیپ-ویتالیر",
       "link": "https://about.digikala.com/campaigns/vitalayer/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D9%88%DB%8C%D8%AA%D8%A7%D9%84%DB%8C%D8%B1&promo_position=home_slider_new_v2&promo_creative=210196&bCode=211879"
     },
     {
       "id": 212337,
       "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/acd05b820a92b7c3ba2b386c169134d287d06ad0_1788334047.gif?x-oss-process=image",
+      "imageMobileSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/0e13d051c150cbc7f2e2d51ffa68858a4f021977_1788624142.gif?x-oss-process=image",
       "title": "جمعه بازار خودرو و ابزارآلات - وب",
       "link": "https://www.digikala.com/landing/jomebazar/?&promo_name=%D8%AC%D9%85%D8%B9%D9%87+%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1+%D8%AE%D9%88%D8%AF%D8%B1%D9%88+%D9%88+%D8%A7%D8%A8%D8%B2%D8%A7%D8%B1%D8%A2%D9%84%D8%A7%D8%AA+-+%D9%88%D8%A8&promo_position=home_slider_new_v2&promo_creative=212337&bCode=212337"
     },
     {
-      "id": 207483,
-      "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/f837d4422335566819c2ad534c2dd316c4048cab_1776755004.jpg?x-oss-process=image/quality,q_95",
-      "title": "لپ‌تاپ‌های متناسب",
-      "link": "https://www.digikala.com/landing/laptop-tablet/?utm_source=onsite&utm_medium=banner&utm_campaign=laptopday&utm_content=050227&utm_term=slider&promo_name=%D9%84%D9%BE%E2%80%8C%D8%AA%D8%A7%D9%BE%E2%80%8C%D9%87%D8%A7%DB%8C+%D9%85%D8%AA%D9%86%D8%A7%D8%B3%D8%A8&promo_position=home_slider_new_v2&promo_creative=207483&bCode=207483"
-    },
-    {
       "id": 211886,
       "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/45748afdec558a37d8868530dca6b7f1f20c7e20_1787729202.jpg?x-oss-process=image/quality,q_95",
+      "imageMobileSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/1da0e5458b206d7533aee6df70b1b02e8e7fbf39_1780914284.jpg?x-oss-process=image/quality,q_95",
       "title": "پارتنرشیپ-کسری",
       "link": "https://www.digikala.com/landing/kasraproducts/?utm_source=Digi&utm_medium=digikala&utm_campaign=kasra&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%DA%A9%D8%B3%D8%B1%DB%8C&promo_position=home_slider_new_v2&promo_creative=211441&bCode=211886"
     },
     {
-      "id": 212053,
-      "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/eb43a170c92349a9d9400d1cb957fe29a8b80725_1787956704.gif?x-oss-process=image",
-      "title": "عطر اورجینال",
-      "link": "https://www.digikala.com/landing/hb-orginal-perfume/?&promo_name=%D8%B9%D8%B7%D8%B1+%D8%A7%D9%88%D8%B1%D8%AC%DB%8C%D9%86%D8%A7%D9%84&promo_position=home_slider_new_v2&promo_creative=212053&bCode=212053"
-    },
-    {
       "id": 212227,
       "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/19245f611d74cf2203e1d78fcb151097e9957226_1788268932.jpg?x-oss-process=image/quality,q_95",
+      "imageMobileSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/7d0ffd5e5404bb70aa784963efd55feceb0f26c2_1788612869.jpg?x-oss-process=image/quality,q_95",
       "title": "طلا رو ۴قسطه بخر",
       "link": "https://www.digikala.com/landing/gold-installment/?&promo_name=%D8%B7%D9%84%D8%A7+%D8%B1%D9%88+%DB%B4+%D9%82%D8%B3%D8%B7%D9%87+%D8%A8%D8%AE%D8%B1&promo_position=home_slider_new_v2&promo_creative=212227&bCode=212227"
     },
     {
       "id": 211888,
       "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/23f28e34e9a1491a4509a9ddd432552b40d1ea49_1787729349.jpg?x-oss-process=image/quality,q_95",
+      "imageMobileSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/535c0c1dcd8930648a9a39971162bded7dbb07ad_1788350109.jpg?x-oss-process=image/quality,q_95",
       "title": "پارتنرشیپ-آوندفر",
       "link": "https://www.digikala.com/landing/avandfar05/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D8%A2%D9%88%D9%86%D8%AF%D9%81%D8%B1&promo_position=home_slider_new_v2&promo_creative=211888&bCode=211888"
     },
     {
-      "id": 211890,
-      "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/21fbdf1c50224cd7091c11c358ec4814dd7c692c_1787729428.jpg?x-oss-process=image/quality,q_95",
-      "title": "پارتنرشیپ-پت",
-      "link": "https://www.digikala.com/landing/pet-brand-collab/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D9%BE%D8%AA&promo_position=home_top_second&promo_creative=211729&bCode=211890"
-    },
-    {
       "id": 211894,
       "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/60d206d5faabe3406a62885fa4c38f3628caa251_1787748864.jpg?x-oss-process=image/quality,q_95",
+      "imageMobileSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/bff8eba426a84598a5105124cb74ee2584189347_1787557775.jpg?x-oss-process=image/quality,q_95",
       "title": "پارتنرشیپ-گلرنگ",
       "link": "https://www.digikala.com/landing/golrang/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%DA%AF%D9%84%D8%B1%D9%86%DA%AF&promo_position=home_slider_new_v2&promo_creative=211894&bCode=211894"
     },
     {
       "id": 212383,
       "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/a14da7bde13017ca235d6584bfdf245808c6e66d_1788501976.jpg?x-oss-process=image/quality,q_95",
+      "imageMobileSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/f03853013072e0161fce0ae0b7234d77193b4cb5_1788337971.gif?x-oss-process=image",
       "title": "ارسال رایگان کالای دیجیتال",
       "link": "https://www.digikala.com/seller/HXU26/?&promo_name=%D8%A7%D8%B1%D8%B3%D8%A7%D9%84+%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86+%DA%A9%D8%A7%D9%84%D8%A7%DB%8C+%D8%AF%DB%8C%D8%AC%DB%8C%D8%AA%D8%A7%D9%84&promo_position=home_slider_new_v2&promo_creative=212383&bCode=212383"
     },
     {
       "id": 211896,
       "imageSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/62eb9f2c3c4b15bd497fa4d822f66246b41d66c8_1787729785.jpg?x-oss-process=image/quality,q_95",
+      "imageMobileSrc": "https://dkstatics-public.digikala.com/digikala-adservice-banners/f837d4422335566819c2ad534c2dd316c4048cab_1776755004.jpg?x-oss-process=image/quality,q_95",
       "title": "پارتنرشیپ-بینگو",
       "link": "https://dgka.me/0JY9Ii/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D8%A8%DB%8C%D9%86%DA%AF%D9%88&promo_position=home_slider_new_v2&promo_creative=211896&bCode=211896"
     }
@@ -5684,6 +5697,32 @@
       "title": "فیدیبو",
       "description": "خرید کتاب و دانلود کتاب الکترونیک",
       "url": "https://fidibo.com/?utm_source=digikala&utm_medium=circle_badge&utm_campaign=fidibo&promo_name=fidibo&promo_position=circle_badge&inbrowser=1"
+    }
+  ],
+  "herobanners": [
+    {
+      "id": 211433,
+      "title": "مکمل سوخت و اکتان - وب",
+      "url": "https://www.digikala.com/product-list/plp_432138199/?sort=7&promo_name=%D9%85%DA%A9%D9%85%D9%84+%D8%B3%D9%88%D8%AE%D8%AA+%D9%88+%D8%A7%DA%A9%D8%AA%D8%A7%D9%86+-+%D9%88%D8%A8&promo_position=home_top&promo_creative=211433&bCode=211433",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/c401674337c935e8f89c4d2bb1493b94eb74b30d_1785680588.gif?x-oss-process=image"
+    },
+    {
+      "id": 212369,
+      "title": "پارتنرشیپ-پارسیس",
+      "url": "https://www.digikala.com/brand/parsis/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D9%BE%D8%A7%D8%B1%D8%B3%DB%8C%D8%B3&promo_position=home_top_second&promo_creative=211908&bCode=212369",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/0b04a69dd09ab5022bd9902b2dd872ff3973bb1f_1788356916.jpg?x-oss-process=image/quality,q_95"
+    },
+    {
+      "id": 212371,
+      "title": "پارتنرشیپ-کلاژن گلد",
+      "url": "https://www.digikala.com/brand/colleagen-gold/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%DA%A9%D9%84%D8%A7%DA%98%D9%86+%DA%AF%D9%84%D8%AF&promo_position=home_top&promo_creative=212371&bCode=212371",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/30e3a83bb0ebbc80c33924446253f0788160128f_1788350408.jpg?x-oss-process=image/quality,q_95"
+    },
+    {
+      "id": 212501,
+      "title": "ترم نو، ورژن نو",
+      "url": "https://www.digikala.com/landing/1405-bts-student-style/?&promo_name=%D8%AA%D8%B1%D9%85+%D9%86%D9%88%D8%8C+%D9%88%D8%B1%DA%98%D9%86+%D9%86%D9%88&promo_position=home_top&promo_creative=212501&bCode=212501",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/6f303a2af4a63e8680f9a03e2ac62bd845128895_1788644330.jpg?x-oss-process=image/quality,q_95"
     }
   ],
   "list": [
@@ -5954,24 +5993,6 @@
       "discount": "۳٪",
       "newPrice": "۵۸,۹۹۹,۰۰۰",
       "oldPrice": "۶۱,۰۰۰,۰۰۰"
-    }
-  ],
-  "ads": [
-    {
-      "title": "پارتنرشیپ کاسیو",
-      "img": "./img/ads/img-1.jpg"
-    },
-    {
-      "title": "پارتنرشیپ سافتلن",
-      "img": "./img/ads/img-2.jpg"
-    },
-    {
-      "title": "همراه اول",
-      "img": "./img/ads/img-3.jpg"
-    },
-    {
-      "title": "محبوب ترین کنسول بازی در دیجی کالا",
-      "img": "./img/ads/img-4.jpg"
     }
   ],
   "amazing": [
@@ -6510,28 +6531,6 @@
       "url": "/product/dkp-22112503/کتابخانه-رومیزی-سه-طبقه-سیماژ-مدل-cz1014"
     }
   ],
-  "ads2": [
-    {
-      "id": 1,
-      "title": "خرید سرماه آرایش و بهداشتی",
-      "img": "./img/ads/img-5.jpg"
-    },
-    {
-      "id": 2,
-      "title": "پارتنرشیپ تی سی اچ",
-      "img": "./img/ads/img-6.jpg"
-    },
-    {
-      "id": 3,
-      "title": "انواع کفش های مردانه و زنانه",
-      "img": "./img/ads/img-7.jpg"
-    },
-    {
-      "id": 4,
-      "title": "کولر اقتصادی",
-      "img": "./img/ads/img-8.jpg"
-    }
-  ],
   "amazingmobile": [
     {
       "border": true,
@@ -6928,424 +6927,6 @@
       ]
     }
   ],
-  "optionsM1": [
-    {
-      "title": "جوراب ساق بلند مردانه لنتر مدل ساده کد orkid - 012 رنگ سفید بسته 12 عددی",
-      "img": "./img/options/mobile/1/img-1.jpg",
-      "discount": "۵٪",
-      "oldPrice": "۹۰۰,۰۰۰",
-      "newPrice": "۸۵۵,۰۰۰"
-    },
-    {
-      "title": "جوراب ساق بلند مردانه سیرداش مدل 110 بسته 6 عددی",
-      "img": "./img/options/mobile/1/img-2.jpg",
-      "discount": "۶۵٪",
-      "oldPrice": "۲,۶۸۹,۰۰۰",
-      "newPrice": "۹۴۹,۰۰۰"
-    },
-    {
-      "title": "جوراب ساق بلند مردانه لنتر مدل ساده کد SAM رنگ مشکی مجموعه 12 عددی",
-      "img": "./img/options/mobile/1/img-3.jpg",
-      "discount": "۵٪",
-      "oldPrice": "۸۸۰,۰۰۰",
-      "newPrice": "۸۳۵,۰۰۰"
-    },
-    {
-      "title": "جوراب ساق بلند مردانه سیرداش مدل 134 بسته 6 عددی",
-      "img": "./img/options/mobile/1/img-4.jpg",
-      "discount": "۶۵٪",
-      "oldPrice": "۲,۶۸۹,۰۰۰",
-      "newPrice": "۹۴۹,۰۰۰"
-    },
-    {
-      "title": "جوراب ساق بلند مردانه سیرداش مدل 185 بسته 6 عددی",
-      "img": "./img/options/mobile/1/img-5.jpg",
-      "discount": "۶۵٪",
-      "oldPrice": "۲,۶۸۹,۰۰۰",
-      "newPrice": "۹۴۹,۰۰۰"
-    },
-    {
-      "title": "جوراب ساق کوتاه مردانه لنتر مدل مچی کد RING-06 مجموعه 6 عددی",
-      "img": "./img/options/mobile/1/img-6.jpg",
-      "discount": "۹٪",
-      "oldPrice": "۴۸۰,۰۰۰",
-      "newPrice": "۴۳۵,۰۰۰"
-    },
-    {
-      "title": "جوراب ساق بلند مردانه تن پوش هنگامه مدل کش اسپرت حوله‌ای کد TO01",
-      "img": "./img/options/mobile/1/img-7.jpg",
-      "newPrice": "۲۹۰,۰۰۰"
-    },
-    {
-      "title": "جوراب مچی مردانه پاوین مدل میکس مجموعه 6 عددی",
-      "img": "./img/options/mobile/1/img-8.jpg",
-      "newPrice": "۳۸۰,۰۰۰"
-    },
-    {
-      "title": "جوراب ساق بلند مردانه سیرداش مدل 008 بسته 6 عددی",
-      "img": "./img/options/mobile/1/img-9.jpg",
-      "discount": "۶۵٪",
-      "oldPrice": "۲,۶۸۹,۰۰۰",
-      "newPrice": "۹۴۹,۰۰۰"
-    }
-  ],
-  "optionsM2": [
-    {
-      "title": "لپ تاپ 15.6 اینچی لنوو مدل V15 G2 IJL-Celeron N4500-8GB DDR4-256GB SSD-TN - کاستوم شده",
-      "img": "./img/options/mobile/2/img-1.jpg",
-      "newPrice": "۴۵,۹۰۰,۰۰۰"
-    },
-    {
-      "title": "لپ تاپ 15.6 اینچی لنوو مدل IdeaPad Slim 3 15IRU8-i3 1315U-8GB LPDDR5 4800MHz-256GB SSD-TN",
-      "img": "./img/options/mobile/2/img-2.jpg",
-      "discount": "۶٪",
-      "oldPrice": "۶۳,۰۰۰,۰۰۰",
-      "newPrice": "۵۸,۹۹۹,۰۰۰"
-    },
-    {
-      "title": "لپ تاپ 15.6 اینچی لنوو مدل V15 G2 IJL-Celeron N4500-4GB DDR4-256GB SSD-TN",
-      "img": "./img/options/mobile/2/img-3.jpg",
-      "discount": "۳٪",
-      "oldPrice": "۴۸,۰۰۰,۰۰۰",
-      "newPrice": "۴۶,۵۶۰,۰۰۰"
-    },
-    {
-      "title": "لپ تاپ 15.6 اینچی لنوو مدل LOQ 15IRX9-i7 13650HX-24GB DDR5 4800MHz-512GB SSD-RTX3050 6GB-FHD 144Hz",
-      "img": "./img/options/mobile/2/img-4.jpg",
-      "newPrice": "۱۷۵,۹۰۰,۰۰۰"
-    },
-    {
-      "title": "لپ تاپ 15.6 اینچی لنوو مدل V15 G4 IRU-i3 1315U-8GB DDR4 3200MHz-256GB SSD-TN",
-      "img": "./img/options/mobile/2/img-5.jpg",
-      "newPrice": "۶۵,۷۰۰,۰۰۰"
-    },
-    {
-      "title": "لپ تاپ 15.6 اینچی ایسوس مدل Vivobook 15 F1504VA-NJ826-i7 1355U-16GB DDR4 3200MHz-512GB SSD-TN-Fingerprint-Backlit",
-      "img": "./img/options/mobile/2/img-6.jpg",
-      "newPrice": "۱۰۷,۹۹۰,۰۰۰"
-    },
-    {
-      "title": "لپ تاپ 15.6 اینچی لنوو مدل V15 G4 AMN-Athlon Silver 7120U-8GB LPDDR5-256GB SSD-TN",
-      "img": "./img/options/mobile/2/img-7.jpg",
-      "newPrice": "۵۴,۵۰۰,۰۰۰"
-    },
-    {
-      "title": "لپ تاپ 15.6 اینچی لنوو مدل IdeaPad 1 15IJL7-Celeron N4500-8GB DDR4 2933MHz-256GB SSD-TN FHD",
-      "img": "./img/options/mobile/2/img-8.jpg",
-      "discount": "۴٪",
-      "oldPrice": "۴۶,۲۰۰,۰۰۰",
-      "newPrice": "۴۴,۴۹۹,۰۰۰"
-    },
-    {
-      "title": "لپ تاپ 14 اینچی ایسوس مدل Vivobook Go 14 E410KA-CL464-Celeron N4500-4GB DDR4 3200MHz-64GB eMMC-TN-W",
-      "img": "./img/options/mobile/2/img-9.jpg",
-      "newPrice": "۳۷,۵۰۰,۰۰۰"
-    }
-  ],
-  "optionsM3": [
-    {
-      "title": "سوییچ یاب آی کیو مدل Key Finder کد Smart-25",
-      "img": "./img/options/mobile/3/img-1.jpg",
-      "discount": "۲۶٪",
-      "oldPrice": "۴,۰۰۰,۰۰۰",
-      "newPrice": "۲,۹۶۰,۰۰۰"
-    },
-    {
-      "title": "سوییچ یاب آی کیو مدل Key Finder کد Smart-b25",
-      "img": "./img/options/mobile/3/img-2.jpg",
-      "discount": "۲۶٪",
-      "oldPrice": "۴,۰۰۰,۰۰۰",
-      "newPrice": "۲,۹۶۰,۰۰۰"
-    },
-    {
-      "title": "کلید یاب آی کیو مدل Key Finder کد Smart-r25",
-      "img": "./img/options/mobile/3/img-3.jpg",
-      "newPrice": "۵,۰۰۰,۰۰۰"
-    },
-    {
-      "title": "آینه وسط خودرو مدل استیل کد 54",
-      "img": "./img/options/mobile/3/img-4.jpg",
-      "newPrice": "۹۹۹,۰۰۰"
-    },
-    {
-      "title": "لوله خرطومی سیم کشی خودرو طاووس کابل پارسیان مدل تی 130/5",
-      "img": "./img/options/mobile/3/img-5.jpg",
-      "newPrice": "۳۳۰,۰۰۰"
-    },
-    {
-      "title": "خار میل جک صندوق خودرو مدل per02 مناسب برای پراید بسته چهار عددی",
-      "img": "./img/options/mobile/3/img-6.jpg",
-      "newPrice": "۹۵,۰۰۰"
-    },
-    {
-      "title": "استیکر خودرو کد 427",
-      "img": "./img/options/mobile/3/img-7.jpg",
-      "newPrice": "۸۵,۰۰۰"
-    },
-    {
-      "title": "کابل اتصال باتری خودرو طاووس کابل پارسیان مدل 110 دابل پلاس اف 7",
-      "img": "./img/options/mobile/3/img-8.jpg",
-      "newPrice": "۴,۵۰۰,۰۰۰"
-    },
-    {
-      "title": "کاردک شیشه دودی خودرو کد k110110",
-      "img": "./img/options/mobile/3/img-9.jpg",
-      "newPrice": "۴۱۸,۰۰۰"
-    }
-  ],
-  "optionsM4": [
-    {
-      "title": "مایع پولیش بدنه خودرو ساب سازان مدل K74 حجم 1000 میلی لیتر",
-      "img": "./img/options/mobile/4/img-1.jpg",
-      "newPrice": "۱,۶۵۰,۰۰۰"
-    },
-    {
-      "title": "اسپری پولیش داشبورد خودرو کاسپین مدل کوهستان جدید حجم 300 میلی‌ لیتر",
-      "img": "./img/options/mobile/4/img-2.jpg",
-      "newPrice": "۲۳۹,۰۰۰"
-    },
-    {
-      "title": "اسپری تمیز کننده و براق کننده لاستیک جردن حجم 650 میلی لیتر",
-      "img": "./img/options/mobile/4/img-3.jpg",
-      "newPrice": "۲۶۰,۰۰۰"
-    },
-    {
-      "title": "اسپری داشبورد خودرو کاسپین مدل Lavender حجم 300 میلی لیتر بسته 3 عددی",
-      "img": "./img/options/mobile/4/img-4.jpg",
-      "newPrice": "۷۴۴,۶۵۰"
-    },
-    {
-      "title": "اسپری تمیز کننده و براق کننده لاستیک خودرو گتسان مدل G-7130 حجم 500 میلی لیتر",
-      "img": "./img/options/mobile/4/img-5.jpg",
-      "newPrice": "۶۵۵,۹۱۰"
-    },
-    {
-      "title": "ژل براق کننده لاستیک خودرو فونیکس مدل WET_BLACK حجم 500 میلی لیتر",
-      "img": "./img/options/mobile/4/img-6.jpg",
-      "newPrice": "۳۲۰,۰۰۰"
-    },
-    {
-      "title": "اسپری تمیز کننده لاستیک خودرو جردن کد r1j1 به همراه واکس داشبورد",
-      "img": "./img/options/mobile/4/img-7.jpg",
-      "newPrice": "۳۹۲,۵۰۰"
-    },
-    {
-      "title": "واکس داشبورد ماشین رستاک حجم 150 میلی لیتر",
-      "img": "./img/options/mobile/4/img-8.jpg",
-      "newPrice": "۲۱۰,۰۰۰"
-    },
-    {
-      "title": "واکس و محافظ لاستیک خودرو مدل نانو حجم 300 میلی لیتر",
-      "img": "./img/options/mobile/4/img-9.jpg",
-      "newPrice": "۷۳۰,۰۰۰"
-    }
-  ],
-  "optionsM5": [
-    {
-      "title": "تی‌شرت آستین کوتاه مردانه رانژ مدل ساده 23RA05 - 420",
-      "img": "./img/options/mobile/5/img-1.jpg",
-      "newPrice": "۱,۴۹۰,۰۰۰"
-    },
-    {
-      "title": "تی شرت آستین کوتاه مردانه آریان نخ باف مدل z1861",
-      "img": "./img/options/mobile/5/img-2.jpg",
-      "discount": "۱۷٪",
-      "oldPrice": "۱,۱۰۰,۰۰۰",
-      "newPrice": "۹۰۸,۰۰۰"
-    },
-    {
-      "title": "تی‌شرت آستین کوتاه مردانه باینت مدل 373-14",
-      "img": "./img/options/mobile/5/img-3.jpg",
-      "discount": "۲۹٪",
-      "oldPrice": "۱,۴۰۰,۰۰۰",
-      "newPrice": "۹۹۸,۰۰۰"
-    },
-    {
-      "title": "تی‌شرت آستین بلند مردانه رانژ مدل ساده 23RA05 - 412",
-      "img": "./img/options/mobile/5/img-4.jpg",
-      "newPrice": "۱,۵۹۰,۰۰۰"
-    },
-    {
-      "title": "تی‌شرت آستین کوتاه مردانه باینت مدل 536-3",
-      "img": "./img/options/mobile/5/img-5.jpg",
-      "discount": "۳۰٪",
-      "oldPrice": "۱,۶۸۹,۰۰۰",
-      "newPrice": "۱,۱۸۹,۰۰۰"
-    },
-    {
-      "title": "تی شرت آستین بلند مردانه رانژ مدل 21RA29D09M-1409-01",
-      "img": "./img/options/mobile/5/img-6.jpg",
-      "newPrice": "۱,۵۹۰,۰۰۰"
-    },
-    {
-      "title": "تی شرت آستین کوتاه مردانه رانژ مدل 22RA07D04M-2426-01",
-      "img": "./img/options/mobile/5/img-7.jpg",
-      "newPrice": "۱,۴۹۰,۰۰۰"
-    },
-    {
-      "title": "تی‌شرت کلاه‌دار آستین کوتاه مردانه باینت مدل 323-11",
-      "img": "./img/options/mobile/5/img-8.jpg",
-      "discount": "۳۰٪",
-      "oldPrice": "۱,۶۸۹,۰۰۰",
-      "newPrice": "۱,۱۸۹,۰۰۰"
-    },
-    {
-      "title": "تی‌شرت آستین کوتاه مردانه باینت مدل 552-1",
-      "img": "./img/options/mobile/5/img-9.jpg",
-      "discount": "۳۰٪",
-      "oldPrice": "۱,۶۸۹,۰۰۰",
-      "newPrice": "۱,۱۸۹,۰۰۰"
-    }
-  ],
-  "optionsM6": [
-    {
-      "title": "جوراب زنانه پاوین مدل توت فرنگی مجموعه 6 عددی",
-      "img": "./img/options/mobile/6/img-1.jpg",
-      "newPrice": "۳۶۰,۰۰۰"
-    },
-    {
-      "title": "جوراب زنانه پاوین مدل قلب مجموعه 6 عددی",
-      "img": "./img/options/mobile/6/img-2.jpg",
-      "newPrice": "۳۰۸,۰۰۰"
-    },
-    {
-      "title": "جوراب زنانه مدل خرسی مجموعه 5 عددی",
-      "img": "./img/options/mobile/6/img-3.jpg",
-      "newPrice": "۲۸۰,۰۰۰"
-    },
-    {
-      "title": "جوراب زنانه پاوین مدل گاوی مجموعه 5 عددی",
-      "img": "./img/options/mobile/6/img-4.jpg",
-      "newPrice": "۲۸۰,۰۰۰"
-    },
-    {
-      "title": "جوراب زنانه پاوین مدل توت فرنگی نیم ساق بسته 5 عددی",
-      "img": "./img/options/mobile/6/img-5.jpg",
-      "newPrice": "۴۴۰,۰۰۰"
-    },
-    {
-      "title": "جوراب زنانه پاوین مدل زرافه ای ساقدار",
-      "img": "./img/options/mobile/6/img-6.jpg",
-      "newPrice": "۱۳۰,۰۰۰"
-    },
-    {
-      "title": "جوراب زنانه مدل پاوین خرسی بسته 5 عددی",
-      "img": "./img/options/mobile/6/img-7.jpg",
-      "newPrice": "۲۵۰,۰۰۰"
-    },
-    {
-      "title": "جوراب زنانه ال سون مدل هفت سین کد PH628",
-      "img": "./img/options/mobile/6/img-8.jpg",
-      "newPrice": "۲۸۷,۰۰۰"
-    },
-    {
-      "title": "جوراب زنانه پاوین مدل گوش دار مجموعه 4 عددی",
-      "img": "./img/options/mobile/6/img-9.jpg",
-      "newPrice": "۳۰۰,۰۰۰"
-    }
-  ],
-  "optionsM7": [
-    {
-      "title": "پایه نگهدارنده گوشی موبایل و تبلت بیسوس مدل LUSZ000013",
-      "img": "./img/options/mobile/7/img-1.jpg",
-      "newPrice": "۳,۹۹۰,۰۰۰"
-    },
-    {
-      "title": "پایه نگهدارنده گوشی موبایل و تبلت یوسمز مدل ZJ073",
-      "img": "./img/options/mobile/7/img-2.jpg",
-      "discount": "۲۲٪",
-      "oldPrice": "۹۸۷,۰۰۰",
-      "newPrice": "۷۷۰,۰۰۰"
-    },
-    {
-      "title": "نگهدارنده موبایل در هنگام شارژ جهان الکتریک مدل Si8 بسته 4 عددی",
-      "img": "./img/options/mobile/7/img-3.jpg",
-      "newPrice": "۱۹۹,۰۰۰"
-    },
-    {
-      "title": "پایه نگهدارنده گوشی موبایل یسیدو مدل C83",
-      "img": "./img/options/mobile/7/img-4.jpg",
-      "discount": "۸٪",
-      "oldPrice": "۴۲۰,۰۰۰",
-      "newPrice": "۳۸۵,۰۰۰"
-    },
-    {
-      "title": "پایه نگهدارنده گوشی موبایل و تبلت ارلدام مدل ET-EH70",
-      "img": "./img/options/mobile/7/img-5.jpg",
-      "newPrice": "۵۱۴,۰۰۰"
-    },
-    {
-      "title": "پایه نگهدارنده گوشی موبایل و تبلت یسیدو مدل C141 کد MS",
-      "img": "./img/options/mobile/7/img-6.jpg",
-      "discount": "۱۵٪",
-      "oldPrice": "۳۵۰,۰۰۰",
-      "newPrice": "۲۹۷,۵۰۰"
-    },
-    {
-      "title": "پایه نگهدارنده گوشی موبایل و تبلت یسیدو مدل گردنی C291",
-      "img": "./img/options/mobile/7/img-7.jpg",
-      "newPrice": "۲,۴۵۰,۰۰۰"
-    },
-    {
-      "title": "پایه نگهدارنده گوشی موبایل و تبلت آرسون مدل AN-C45",
-      "img": "./img/options/mobile/7/img-8.jpg",
-      "newPrice": "۳۸۰,۰۰۰"
-    },
-    {
-      "title": "پایه نگهدارنده گوشی موبایل و تبلت مدل PRO",
-      "img": "./img/options/mobile/7/img-9.jpg",
-      "newPrice": "۳۵۰,۰۰۰"
-    }
-  ],
-  "optionsM8": [
-    {
-      "title": "بازی آموزشی مدل کتاب پارچه ای سیاه و سفید نوزاد - دنیا را ببین",
-      "img": "./img/options/mobile/8/img-1.jpg",
-      "discount": "۷٪",
-      "oldPrice": "۲۹۰,۰۰۰",
-      "newPrice": "۲۶۹,۷۰۰"
-    },
-    {
-      "title": "بازی آموزشی انگلیسی باروچین مدل پازل حیوانات مزرعه کد p-2",
-      "img": "./img/options/mobile/8/img-2.jpg",
-      "newPrice": "۲۹۵,۵۰۰"
-    },
-    {
-      "title": "خمیربازی آریا مدل آدمکی 1027",
-      "img": "./img/options/mobile/8/img-3.jpg",
-      "newPrice": "۸۲۰,۰۰۰"
-    },
-    {
-      "title": "بازی آموزشی انتشارات ماه کوچولو مدل مکعب ابری پارچه ای بسته 2 عددی",
-      "img": "./img/options/mobile/8/img-4.jpg",
-      "newPrice": "۲۳۰,۰۰۰"
-    },
-    {
-      "title": "بازی آموزشی هوکیا مدل مونتی بازی پاستلی",
-      "img": "./img/options/mobile/8/img-5.jpg",
-      "newPrice": "۴۰۵,۹۱۰"
-    },
-    {
-      "title": "بازی آموزشی حیوانات مدل اشکال ماهیگیری",
-      "img": "./img/options/mobile/8/img-6.jpg",
-      "newPrice": "۱,۰۰۰,۰۰۰"
-    },
-    {
-      "title": "بازی آموزشی رنگ آمیزی اسلایم تپلی مدل 2000 بسته 25 عددی",
-      "img": "./img/options/mobile/8/img-7.jpg",
-      "newPrice": "۱,۲۱۷,۷۰۰"
-    },
-    {
-      "title": "بازی آموزشی مدل کتاب پارچه ای سیاه و سفید نوزاد",
-      "img": "./img/options/mobile/8/img-8.jpg",
-      "newPrice": "۲۱۲,۰۰۰"
-    },
-    {
-      "title": "خمیر بازی آریا مدل سطلی کد 1068",
-      "img": "./img/options/mobile/8/img-9.jpg",
-      "newPrice": "۳۲۰,۰۰۰"
-    }
-  ],
   "chosen": [
     {
       "title": "محصول منتخب شماره ۱",
@@ -7658,52 +7239,6 @@
       "img": "./img/indemand/img-18.jpg"
     }
   ],
-  "options2": [
-    {
-      "title": "تی شرت مردانه",
-      "subtitle": "بر اساس سلیقه شما",
-      "url": "#",
-      "images": [
-        "./img/options/2/img-1.jpg",
-        "./img/options/2/img-2.jpg",
-        "./img/options/2/img-3.jpg",
-        "./img/options/2/img-4.jpg"
-      ]
-    },
-    {
-      "title": "جوراب زنانه",
-      "subtitle": "بر اساس سلیقه شما",
-      "url": "#",
-      "images": [
-        "./img/options/2/img-5.jpg",
-        "./img/options/2/img-6.jpg",
-        "./img/options/2/img-7.jpg",
-        "./img/options/2/img-8.jpg"
-      ]
-    },
-    {
-      "title": "پایه نگهدارنده گوشی و تبلت",
-      "subtitle": "بر اساس سلیقه شما",
-      "url": "#",
-      "images": [
-        "./img/options/2/img-9.jpg",
-        "./img/options/2/img-10.jpg",
-        "./img/options/2/img-11.jpg",
-        "./img/options/2/img-12.jpg"
-      ]
-    },
-    {
-      "title": "بازی آموزشی",
-      "subtitle": "بر اساس سلیقه شما",
-      "url": "#",
-      "images": [
-        "./img/options/2/img-13.jpg",
-        "./img/options/2/img-14.jpg",
-        "./img/options/2/img-15.jpg",
-        "./img/options/2/img-16.jpg"
-      ]
-    }
-  ],
   "blog": [
     {
       "mobile": true,
@@ -7816,59 +7351,6 @@
       { "img": "./img/footer/img13.svg", "href": "#" },
       { "img": "./img/footer/img14.svg", "href": "#" }
     ]
-  },
-  "fixedSupermarket": {
-    "buttonTitle": "سوپرمارکت",
-    "buttonTagline": "تنوع بالا و پرتخفیف",
-    "basketIcon": "./img/fixed-button/basket-svgrepo-com.svg",
-    "modalTitle": "یکی از سوپرمارکت های زیر را انتخاب کنید",
-    "modalSubtitle": "فقط در شهر های تهران و کرج",
-    "cards": [
-      {
-        "href": "#",
-        "title": "پرتخفیف و متنوع",
-        "titleIcon": "./img/fixed-button/svgexport-24.svg",
-        "tag": {
-          "icon": "./img/fixed-button/truck.svg",
-          "text": "ارسال سریع",
-          "variant": "green"
-        },
-        "illustration": "./img/fixed-button/right.png"
-      },
-      {
-        "href": "#",
-        "title": "ارسال فوری",
-        "titleIcon": "./img/fixed-button/svgexport-24.svg",
-        "tag": {
-          "icon": "./img/fixed-button/clock.svg",
-          "text": "۴۵ دقیقه‌ای",
-          "variant": "orange"
-        },
-        "illustration": "./img/fixed-button/left.png"
-      }
-    ]
-  },
-  "fixedHelp": {
-    "icon": "./img/fixed-button/svgexport-27.svg",
-    "mobileFloatingText": "پشتیبانی آنلاین",
-    "headerTitle": "پشتیبانی آنلاین",
-    "greeting": "سلام 👋👋",
-    "intro": "اینجا می‌توانید تعدادی از پرسش های متداول را ببینید یا در صورت تمایل با ما آنلاین گفتگو کنید!",
-    "faq": [
-      {
-        "question": "چگونه میتوانیم یک پروفایل جدید ایجاد کنم؟",
-        "answer": "در وب سایت روی گزینه \"ثبت نام\" کلیک کنید. میتوانید با استفاده از شماره موبایل ثبت نام خود را انجام دهید. (کد فعال سازی برایتان پیامک میشود .) بعد از وارد نمودن کد فعالسازی ، ثبت نام انجام می شود. سپس روی گزینه تکمیل اطلاعات کلیک و اطلاعات خود را تکمیل نمایید."
-      },
-      {
-        "question": "چطور در دیجی کالا سفارش خود را ثبت کنم ؟",
-        "answer": "بعد از ورود به پروفایل ، کالای مدنظر خود را به سبد خرید اضافه کنید ، پس از انتخاب آدرس میتوانید نوع پرداخت خود را انتخاب کنید.بعد از اتمام ثبت سفارش ، سیستم کد سفارش شما را نمایش خواهد داد."
-      },
-      {
-        "question": "کالایی را که در طرح پیشنهاد شگفت انگیز می باشد می توان با تعداد بیش از یک عدد خریداری کرد؟",
-        "answer": "به دلیل اینکه طرح پیشنهاد شگفت انگیز یک طرح تشویقی خرید است، دیجی‌کالا تعهدی در قبال سفارش‏‌های تعدادی ندارد و در صورتی که امکان فروش بیشتر از یک عدد وجود داشته باشد، لازم با مشتری انجام خواهد شد."
-      }
-    ],
-    "callUs": { "label": "تماس با ما", "href": "#" }
   },
   "menu": [
     {

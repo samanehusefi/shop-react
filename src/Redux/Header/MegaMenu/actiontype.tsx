@@ -1,0 +1,2 @@
+export const GET_MEGA_MENU = "GET_MEGA_MENU";
+export const SET_ACTIVE_MEGA_MENU = "SET_ACTIVE_MEGA_MENU";

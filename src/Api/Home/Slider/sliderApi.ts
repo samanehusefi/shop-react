@@ -1,13 +1,7 @@
 import type { ISlider } from "../../../Types/Home/ISlider";
-
+import { getDbData } from "../../dbApi";
 export const getSlider = async (): Promise<ISlider[]> => {
-  const response = await fetch(`${import.meta.env.BASE_URL}db.json`);
-
-  if (!response.ok) {
-    throw new Error("خطا در دریافت اطلاعات Slider");
-  }
-
-  const data = await response.json();
+  const data = await getDbData();
 
   return data.slider;
 };
