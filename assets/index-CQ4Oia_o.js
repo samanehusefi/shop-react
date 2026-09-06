@@ -135,17 +135,7 @@ Error generating stack: `+e.message+`
 \r
                 sm:min-h-[300px]\r
                 sm:p-6\r
-              `,children:[(0,H.jsx)(`img`,{src:`/assets/icon/SearchNotFound.svg`,className:`\r
-                  h-40\r
-                  w-40\r
-                  opacity-70\r
-\r
-                  sm:h-52\r
-                  sm:w-52\r
-\r
-                  md:h-60\r
-                  md:w-60\r
-                `,alt:`نتیجه‌ای یافت نشد`}),(0,H.jsx)(`p`,{className:`\r
+              `,children:[(0,H.jsx)(`img`,{src:`/shop-react/assets/icon/SearchNotFound.svg`,className:`h-40 w-40 opacity-70 sm:h-52 sm:w-52 md:h-60 md:w-60`,alt:`نتیجه‌ای یافت نشد`}),(0,H.jsx)(`p`,{className:`\r
                   text-xs\r
                   font-bold\r
                   text-red-500\r
