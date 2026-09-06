@@ -2,9 +2,9 @@ import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../../../../../Redux/store";
 import { setActiveMegaMenu } from "../../../../../Redux/Header/MegaMenu/action";
 import { menuIcons, LuMenu } from "./MenuIcons";
+import Address from "../Address/Address";
 
 interface MenuProps {
-  isMegaMenuOpen: boolean;
   setIsMegaMenuOpen: (value: boolean) => void;
 }
 
@@ -16,7 +16,7 @@ const Menu = ({ setIsMegaMenuOpen }: MenuProps) => {
 
   return (
     <nav dir="rtl" className="w-full bg-white">
-      <div className="mx-auto flex w-full items-center px-4">
+      <div className="mx-auto flex w-full items-center px-4 py-1">
         <div
           className="relative"
           onMouseEnter={() => {
@@ -26,7 +26,6 @@ const Menu = ({ setIsMegaMenuOpen }: MenuProps) => {
               dispatch(setActiveMegaMenu(megaMenu[0].id));
             }
           }}
-          onMouseLeave={() => setIsMegaMenuOpen(false)}
         >
           <button
             type="button"
@@ -48,7 +47,7 @@ const Menu = ({ setIsMegaMenuOpen }: MenuProps) => {
             <button
               key={item.id}
               type="button"
-              className="flex items-center group relative gap-2 whitespace-nowrap px-4 py-3 text-sm text-gray-600 transition-colors hover:border-b-red-500 "
+              className="group relative flex items-center gap-2 whitespace-nowrap px-4 py-3 text-sm text-gray-600 transition-colors"
             >
               {Icon && <Icon size={18} strokeWidth={1.8} />}
               {item.title}
@@ -56,15 +55,8 @@ const Menu = ({ setIsMegaMenuOpen }: MenuProps) => {
             </button>
           );
         })}
-
         <div className="mr-auto flex items-center">
-          <button
-            type="button"
-            className="flex items-center gap-2 whitespace-nowrap px-4 py-3 text-sm font-medium text-orange-500"
-          >
-            <span>📍</span>
-            انتخاب آدرس
-          </button>
+          <Address />
         </div>
       </div>
     </nav>

@@ -31,11 +31,15 @@ const Header = () => {
       >
         <HeaderMain />
 
-        <div className="relative hidden w-full md:block">
+        <div
+          className="relative hidden w-full md:block"
+          onMouseLeave={() => setIsMegaMenuOpen(false)}
+        >
           <Menu
             isMegaMenuOpen={isMegaMenuOpen}
             setIsMegaMenuOpen={setIsMegaMenuOpen}
           />
+
           {isMegaMenuOpen && <MegaMenu />}
         </div>
       </div>

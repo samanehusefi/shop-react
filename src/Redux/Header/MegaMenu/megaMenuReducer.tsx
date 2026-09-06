@@ -1,7 +1,7 @@
-import type { IMegaMenuData } from "../../../Types/Header/IMegaMenu";
+import type { IMegaMenu } from "../../../Types/Header/IMegaMenu";
 import { GET_MEGA_MENU, SET_ACTIVE_MEGA_MENU } from "./actiontype";
 interface IMegaMenuState {
-  megaMenu: IMegaMenuData[];
+  megaMenu: IMegaMenu[];
   activeMegaMenu: string | null;
 }
 
@@ -16,7 +16,7 @@ interface ISetActiveMegaMenuAction {
 }
 interface IGetMegaMenuAction {
   type: typeof GET_MEGA_MENU;
-  payload: IMegaMenuData[];
+  payload: IMegaMenu[];
 }
 type MegaMenuAction = IGetMegaMenuAction | ISetActiveMegaMenuAction;
 
