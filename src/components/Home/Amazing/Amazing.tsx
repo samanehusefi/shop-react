@@ -82,7 +82,7 @@ const Amazing = () => {
   };
 
   return (
-    <section className="mx-auto w-full max-w-[1400px] px-0 py-2 sm:px-4 sm:py-4">
+    <section className="mx-auto w-full max-w-[1440px] px-0 py-2 sm:px-4 sm:py-4">
       <div className="overflow-hidden bg-[#ef394e] sm:rounded-[20px] sm:p-2 md:p-3">
         <div className="flex flex-col md:flex-row">
           <div className="flex w-full items-center justify-between px-3 py-2 text-white md:hidden">

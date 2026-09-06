@@ -13,7 +13,9 @@ import type { AppDispatch } from "../../../Redux/store";
 
 const Header = () => {
   const dispatch = useDispatch<AppDispatch>();
+
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     dispatch(fetchHeader());
@@ -21,25 +23,48 @@ const Header = () => {
     dispatch(getNavBarAction());
   }, [dispatch]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+
+      if (window.scrollY > 50) {
+        setIsMegaMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header>
       <TopBanner />
 
       <div
-        className="relative z-40 flex w-full flex-wrap bg-white  shadow transition-all duration-500 ease-in-out "
-        id="navbar"
+        className={`z-40 bg-white ${
+          isScrolled ? "fixed left-0 right-0 top-0" : "relative"
+        }`}
       >
         <HeaderMain />
+      </div>
 
+      {!isScrolled && (
         <div
-          className="relative hidden w-full md:block"
+          className={`relative hidden w-full md:block transition-transform duration-1000 ease-in-out ${
+            isScrolled
+              ? "-translate-y-full pointer-events-none"
+              : "translate-y-0"
+          }`}
           onMouseLeave={() => setIsMegaMenuOpen(false)}
         >
           <Menu setIsMegaMenuOpen={setIsMegaMenuOpen} />
 
-          {isMegaMenuOpen && <MegaMenu />}
+          {!isScrolled && isMegaMenuOpen && <MegaMenu />}
         </div>
-      </div>
+      )}
     </header>
   );
 };
