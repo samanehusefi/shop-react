@@ -5263,155 +5263,6 @@
       "type": "link"
     }
   ],
-  "locationCity": [
-    {
-      "city": "تهران"
-    },
-    {
-      "city": "کرج"
-    },
-    {
-      "city": "اصفهان"
-    },
-    {
-      "city": "مشهد"
-    },
-    {
-      "city": "ساری"
-    },
-    {
-      "city": "رشت"
-    },
-    {
-      "city": "اهواز"
-    },
-    {
-      "city": "تبریز"
-    },
-    {
-      "city": "شیراز"
-    },
-    {
-      "city": "ارومیه"
-    }
-  ],
-  "cities": [
-    { "city": "تهران", "province": "تهران" },
-    { "city": "ری", "province": "تهران" },
-    { "city": "اسلامشهر", "province": "تهران" },
-
-    { "city": "کرج", "province": "البرز" },
-    { "city": "فردیس", "province": "البرز" },
-    { "city": "نظرآباد", "province": "البرز" },
-
-    { "city": "اصفهان", "province": "اصفهان" },
-    { "city": "کاشان", "province": "اصفهان" },
-    { "city": "نجف‌آباد", "province": "اصفهان" },
-
-    { "city": "مشهد", "province": "خراسان رضوی" },
-    { "city": "نیشابور", "province": "خراسان رضوی" },
-    { "city": "سبزوار", "province": "خراسان رضوی" },
-
-    { "city": "تبریز", "province": "آذربایجان شرقی" },
-    { "city": "مراغه", "province": "آذربایجان شرقی" },
-    { "city": "مرند", "province": "آذربایجان شرقی" },
-
-    { "city": "ارومیه", "province": "آذربایجان غربی" },
-    { "city": "خوی", "province": "آذربایجان غربی" },
-    { "city": "مهاباد", "province": "آذربایجان غربی" },
-
-    { "city": "اردبیل", "province": "اردبیل" },
-    { "city": "پارس‌آباد", "province": "اردبیل" },
-    { "city": "مشگین‌شهر", "province": "اردبیل" },
-
-    { "city": "اهواز", "province": "خوزستان" },
-    { "city": "دزفول", "province": "خوزستان" },
-    { "city": "آبادان", "province": "خوزستان" },
-
-    { "city": "شیراز", "province": "فارس" },
-    { "city": "مرودشت", "province": "فارس" },
-    { "city": "جهرم", "province": "فارس" },
-
-    { "city": "قم", "province": "قم" },
-
-    { "city": "کرمان", "province": "کرمان" },
-    { "city": "رفسنجان", "province": "کرمان" },
-    { "city": "جیرفت", "province": "کرمان" },
-
-    { "city": "رشت", "province": "گیلان" },
-    { "city": "انزلی", "province": "گیلان" },
-    { "city": "لاهیجان", "province": "گیلان" },
-
-    { "city": "گرگان", "province": "گلستان" },
-    { "city": "گنبدکاووس", "province": "گلستان" },
-    { "city": "علی‌آباد", "province": "گلستان" },
-
-    { "city": "همدان", "province": "همدان" },
-    { "city": "ملایر", "province": "همدان" },
-    { "city": "نهاوند", "province": "همدان" },
-
-    { "city": "یزد", "province": "یزد" },
-    { "city": "میبد", "province": "یزد" },
-    { "city": "اردکان", "province": "یزد" },
-
-    { "city": "زنجان", "province": "زنجان" },
-    { "city": "ابهر", "province": "زنجان" },
-    { "city": "خرمدره", "province": "زنجان" },
-
-    { "city": "ساری", "province": "مازندران" },
-    { "city": "بابل", "province": "مازندران" },
-    { "city": "آمل", "province": "مازندران" },
-
-    { "city": "اراک", "province": "مرکزی" },
-    { "city": "ساوه", "province": "مرکزی" },
-    { "city": "خمین", "province": "مرکزی" },
-
-    { "city": "قزوین", "province": "قزوین" },
-    { "city": "البرز", "province": "قزوین" },
-    { "city": "تاکستان", "province": "قزوین" },
-
-    { "city": "سنندج", "province": "کردستان" },
-    { "city": "سقز", "province": "کردستان" },
-    { "city": "مریوان", "province": "کردستان" },
-
-    { "city": "کرمانشاه", "province": "کرمانشاه" },
-    { "city": "اسلام‌آباد غرب", "province": "کرمانشاه" },
-    { "city": "هرسین", "province": "کرمانشاه" },
-
-    { "city": "ایلام", "province": "ایلام" },
-    { "city": "دهلران", "province": "ایلام" },
-
-    { "city": "بوشهر", "province": "بوشهر" },
-    { "city": "گناوه", "province": "بوشهر" },
-    { "city": "دشتی", "province": "بوشهر" },
-
-    { "city": "بیرجند", "province": "خراسان جنوبی" },
-    { "city": "قائن", "province": "خراسان جنوبی" },
-
-    { "city": "بجنورد", "province": "خراسان شمالی" },
-    { "city": "شیروان", "province": "خراسان شمالی" },
-
-    { "city": "خرم‌آباد", "province": "لرستان" },
-    { "city": "بروجرد", "province": "لرستان" },
-
-    { "city": "یاسوج", "province": "کهگیلویه و بویراحمد" },
-    { "city": "دوگنبدان", "province": "کهگیلویه و بویراحمد" },
-
-    { "city": "زاهدان", "province": "سیستان و بلوچستان" },
-    { "city": "چابهار", "province": "سیستان و بلوچستان" },
-    { "city": "ایرانشهر", "province": "سیستان و بلوچستان" },
-
-    { "city": "بندرعباس", "province": "هرمزگان" },
-    { "city": "قشم", "province": "هرمزگان" },
-    { "city": "بندر لنگه", "province": "هرمزگان" },
-
-    { "city": "شهرکرد", "province": "چهارمحال و بختیاری" },
-    { "city": "بروجن", "province": "چهارمحال و بختیاری" },
-
-    { "city": "سمنان", "province": "سمنان" },
-    { "city": "شاهرود", "province": "سمنان" },
-    { "city": "دامغان", "province": "سمنان" }
-  ],
   "services": [
     {
       "active": false,
@@ -5455,56 +5306,6 @@
     { "title": "لباس زنانه" },
     { "title": "عطر و ادکلن" },
     { "title": "محصولات آرایشی و بهداشتی" }
-  ],
-  "Story": [
-    {
-      "text": "بالش طبی هوشمند مدل ...",
-      "img": "./img/story/img-1.jpg"
-    },
-    {
-      "text": "انواع ماسک اتومات جو...",
-      "img": "./img/story/img-2.jpg"
-    },
-    {
-      "text": "پروژکتور انکر مدل A2...",
-      "img": "./img/story/img-3.jpg"
-    },
-    {
-      "text": "تا قبل عید پوستتو نج...",
-      "img": "./img/story/img-4.jpg"
-    },
-    {
-      "text": "چرا لانچر نت باکس مت...",
-      "img": "./img/story/img-5.jpg"
-    },
-    {
-      "text": "جارو شارژی ارزون!",
-      "img": "./img/story/img-6.jpg"
-    },
-    {
-      "text": "منقل روزینکس",
-      "img": "./img/story/img-7.jpg"
-    },
-    {
-      "text": "یه بخاری بخاری دوقول...",
-      "img": "./img/story/img-8.jpg"
-    },
-    {
-      "text": "ساخت فلش انگشتی!",
-      "img": "./img/story/img-9.jpg"
-    },
-    {
-      "text": "مراحل پاک کردن آرایش",
-      "img": "./img/story/img-10.jpg"
-    },
-    {
-      "text": "انواع منگنه‌کوب دستی",
-      "img": "./img/story/img-11.jpg"
-    },
-    {
-      "text": "مقایسه‌ی نت باکس پرس",
-      "img": "./img/story/img-12.jpg"
-    }
   ],
   "slider": [
     {
@@ -5699,30 +5500,90 @@
       "url": "https://fidibo.com/?utm_source=digikala&utm_medium=circle_badge&utm_campaign=fidibo&promo_name=fidibo&promo_position=circle_badge&inbrowser=1"
     }
   ],
-  "herobanners": [
+  "banners": [
     {
       "id": 211433,
       "title": "مکمل سوخت و اکتان - وب",
       "url": "https://www.digikala.com/product-list/plp_432138199/?sort=7&promo_name=%D9%85%DA%A9%D9%85%D9%84+%D8%B3%D9%88%D8%AE%D8%AA+%D9%88+%D8%A7%DA%A9%D8%AA%D8%A7%D9%86+-+%D9%88%D8%A8&promo_position=home_top&promo_creative=211433&bCode=211433",
-      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/c401674337c935e8f89c4d2bb1493b94eb74b30d_1785680588.gif?x-oss-process=image"
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/c401674337c935e8f89c4d2bb1493b94eb74b30d_1785680588.gif?x-oss-process=image",
+      "position": "hero"
     },
     {
       "id": 212369,
       "title": "پارتنرشیپ-پارسیس",
       "url": "https://www.digikala.com/brand/parsis/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D9%BE%D8%A7%D8%B1%D8%B3%DB%8C%D8%B3&promo_position=home_top_second&promo_creative=211908&bCode=212369",
-      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/0b04a69dd09ab5022bd9902b2dd872ff3973bb1f_1788356916.jpg?x-oss-process=image/quality,q_95"
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/0b04a69dd09ab5022bd9902b2dd872ff3973bb1f_1788356916.jpg?x-oss-process=image/quality,q_95",
+      "position": "hero"
     },
     {
       "id": 212371,
       "title": "پارتنرشیپ-کلاژن گلد",
       "url": "https://www.digikala.com/brand/colleagen-gold/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%DA%A9%D9%84%D8%A7%DA%98%D9%86+%DA%AF%D9%84%D8%AF&promo_position=home_top&promo_creative=212371&bCode=212371",
-      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/30e3a83bb0ebbc80c33924446253f0788160128f_1788350408.jpg?x-oss-process=image/quality,q_95"
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/30e3a83bb0ebbc80c33924446253f0788160128f_1788350408.jpg?x-oss-process=image/quality,q_95",
+      "position": "hero"
     },
     {
       "id": 212501,
       "title": "ترم نو، ورژن نو",
       "url": "https://www.digikala.com/landing/1405-bts-student-style/?&promo_name=%D8%AA%D8%B1%D9%85+%D9%86%D9%88%D8%8C+%D9%88%D8%B1%DA%98%D9%86+%D9%86%D9%88&promo_position=home_top&promo_creative=212501&bCode=212501",
-      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/6f303a2af4a63e8680f9a03e2ac62bd845128895_1788644330.jpg?x-oss-process=image/quality,q_95"
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/6f303a2af4a63e8680f9a03e2ac62bd845128895_1788644330.jpg?x-oss-process=image/quality,q_95",
+      "position": "hero"
+    },
+    {
+      "id": 212359,
+      "title": "پارتنرشیپ-چرم مشهد",
+      "url": "https://www.digikala.com/landing/mashhad-leather/?utm_source=social/&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%DA%86%D8%B1%D9%85+%D9%85%D8%B4%D9%87%D8%AF&promo_position=home_slider_new_v2&promo_creative=211723&camCode=1457&bCode=212359",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/391b92a3feb9483ce25764db596b9aa914dd91d4_1788354088.jpg?x-oss-process=image/quality,q_95",
+      "position": "top-banner"
+    },
+    {
+      "id": 212365,
+      "title": "پارتنرشیپ-گلرنگ",
+      "url": "https://www.digikala.com/landing/golrang/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%DA%AF%D9%84%D8%B1%D9%86%DA%AF&promo_position=home_top_second&promo_creative=212365&bCode=212365",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/8893a7b1d91a3e4b3e2f796e57ddf4d32ae3e40f_1788339447.jpg?x-oss-process=image/quality,q_95",
+      "position": "top-banner"
+    },
+    {
+      "id": 212367,
+      "title": "پارتنرشیپ-بینگو",
+      "url": "https://dgka.me/0JY9Ii/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D8%A8%DB%8C%D9%86%DA%AF%D9%88&promo_position=home_top_second&promo_creative=212367&bCode=212367",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/6a85fa4b60150d373f4b5416686856626b857038_1788339818.jpg?x-oss-process=image/quality,q_95",
+      "position": "top-banner"
+    },
+    {
+      "id": 212363,
+      "title": "پارتنرشیپ-نوریتا",
+      "url": "https://www.digikala.com/search/?q=%D9%86%D9%88%D8%B1%DB%8C%D8%AA%D8%A7&sort=1&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D9%86%D9%88%D8%B1%DB%8C%D8%AA%D8%A7&promo_position=home_top_second&promo_creative=212363&bCode=212363",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/ce842c5e72350b9c9379386991ce623bb331e768_1788339348.jpg?x-oss-process=image/quality,q_95",
+      "position": "top-banner"
+    },
+    {
+      "id": 212339,
+      "title": "پارتنرشیپ-آی کلین",
+      "url": "https://www.digikala.com/landing/iclean/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D8%A2%DB%8C+%DA%A9%D9%84%DB%8C%D9%86&promo_position=home_middle_third&promo_creative=210990&bCode=212339",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/6e4ad3187f05a25107747a2843016d76a43f26af_1788340266.jpg?x-oss-process=image/quality,q_95",
+      "position": "middle-banner"
+    },
+    {
+      "id": 212373,
+      "title": "پارتنرشیپ-وچه",
+      "url": "https://www.digikala.com/brand/voche/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D9%88%DA%86%D9%87&promo_position=home_top_second&promo_creative=211906&bCode=212373",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/2e924553666de2fcb89498d037484e1e1b227eab_1788353381.jpg?x-oss-process=image/quality,q_95",
+      "position": "middle-banner"
+    },
+    {
+      "id": 212343,
+      "title": "پارتنرشیپ-ویتارکس",
+      "url": "https://www.digikala.com/product-list/plp_443865200/?sort=7&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D9%88%DB%8C%D8%AA%D8%A7%D8%B1%DA%A9%D8%B3&promo_position=home_middle_third&promo_creative=212343&bCode=212343",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/0b3155358c4241f7c24a4ceed921a8036e52bcbe_1788337715.jpg?x-oss-process=image/quality,q_95",
+      "position": "bottom-banner"
+    },
+    {
+      "id": 212341,
+      "title": "پارتنرشیپ-ماکسیمیلیان",
+      "url": "https://www.digikala.com/product-list/plp_435219460/?&promo_name=%D9%BE%D8%A7%D8%B1%D8%AA%D9%86%D8%B1%D8%B4%DB%8C%D9%BE-%D9%85%D8%A7%DA%A9%D8%B3%DB%8C%E2%80%8C%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D9%86&promo_position=home_middle_third&promo_creative=211868&bCode=212341",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/d26a4cb8a41067b3d21dc94d29e36af8b4f1b27d_1788350337.gif?x-oss-process=image",
+      "position": "bottom-banner"
     }
   ],
   "list": [
