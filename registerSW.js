@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/shop-react/sw.js', { scope: '/shop-react/' })})}
