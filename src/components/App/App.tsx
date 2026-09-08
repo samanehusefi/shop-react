@@ -6,6 +6,7 @@ import TopBanner from "../Home/Banners/TopBanner/TopBanner";
 import Categories from "../Home/Categories/Categories";
 import CircleBadge from "../Home/CircleBadge/CircleBadge";
 import Slider from "../Home/Slider/Slider";
+import Footer from "../Layout/Footer/Footer";
 import Header from "../Layout/Header/Header";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <TopBanner />
         <MiddleBanner />
         <BottomBanner />
+        <Footer />
       </>
     </div>
   );

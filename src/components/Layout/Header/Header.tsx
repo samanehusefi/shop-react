@@ -41,19 +41,18 @@ const Header = () => {
 
   return (
     <header>
-      <TopBanner />
-
       <div
         className={`z-40 bg-white ${
           isScrolled ? "fixed left-0 right-0 top-0" : "relative"
         }`}
       >
+        <TopBanner />
         <HeaderMain />
       </div>
 
       {!isScrolled && (
         <div
-          className={`relative hidden w-full md:block transition-transform duration-1000 ease-in-out ${
+          className={`relative hidden z-50 w-full md:block transition-transform duration-1000 ease-in-out ${
             isScrolled
               ? "-translate-y-full pointer-events-none"
               : "translate-y-0"

@@ -1,0 +1,11 @@
+const CopyRightSection = () => {
+  return (
+    <div className="footer-copy-right">
+      برای استفاده از مطالب دیجی‌کالا، داشتن «هدف غیرتجاری» و ذکر «منبع» کافیست.
+      تمام حقوق این وب‌سایت نیز برای شرکت نوآوران فن آوازه (فروشگاه آنلاین
+      دیجی‌کالا) است.
+    </div>
+  );
+};
+
+export default CopyRightSection;

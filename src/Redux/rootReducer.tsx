@@ -9,6 +9,7 @@ import amazingReducer from "./Home/Amazing/amazingReducer";
 import NavBarReducer from "./Header/Navbar/navbarReducer";
 import bannerReducer from "./Home/Banner/bannerReducer";
 import categoriesReducer from "./Home/Categories/categoriesReducer";
+import footerReducer from "./Footer/footerReducer";
 const rootReducer = combineReducers({
   header: headerReducer,
   menu: menuReducer,
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   navbar: NavBarReducer,
   banner: bannerReducer,
   categories: categoriesReducer,
+  footer: footerReducer,
 });
 
 export default rootReducer;
