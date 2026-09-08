@@ -28,7 +28,7 @@ const AppDownloadSheet = ({ isOpen, onClose }: AppDownloadSheetProps) => {
       />
 
       <div
-        className={`fixed bottom-0 left-0 right-0 z-[9999] rounded-t-2xl bg-white p-4 transition-transform duration-300 lg:hidden ${
+        className={`fixed bottom-16 left-0 right-0 z-[9999] rounded-t-2xl bg-white p-4 transition-transform duration-300 lg:hidden ${
           isOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >
@@ -36,7 +36,11 @@ const AppDownloadSheet = ({ isOpen, onClose }: AppDownloadSheetProps) => {
           <h2 className="text-lg font-semibold">دانلود اپلیکیشن دیجی‌کالا</h2>
 
           <button type="button" onClick={onClose}>
-            <img className="h-8 w-8" src="/assets/icon/close.svg" alt="بستن" />
+            <img
+              className="h-8 w-8"
+              src={`${import.meta.env.BASE_URL}assets/icon/close.svg`}
+              alt="بستن"
+            />
           </button>
         </div>
 

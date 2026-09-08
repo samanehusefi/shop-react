@@ -6,8 +6,6 @@ import type { RootState } from "../../../Redux/store";
 const TopSection = () => {
   const logo = useSelector((state: RootState) => state.footer.logo);
 
-  console.log("logo:", logo);
-
   return (
     <div className="footer_first_section my-5">
       <div className="footer_logo">

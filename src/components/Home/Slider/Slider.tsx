@@ -22,6 +22,10 @@ const Slider = () => {
     dispatch(getSlider());
   }, [dispatch]);
 
+  if (!slider.length) {
+    return null;
+  }
+
   return (
     <div className="slider-container relative w-full">
       <Swiper
@@ -29,6 +33,7 @@ const Slider = () => {
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
+          pauseOnMouseEnter: false,
         }}
         pagination={{
           clickable: true,
@@ -37,7 +42,7 @@ const Slider = () => {
           nextEl: ".slider-next",
           prevEl: ".slider-prev",
         }}
-        loop
+        loop={slider.length > 1}
         className="slider-swiper"
       >
         {slider.map((item) => (

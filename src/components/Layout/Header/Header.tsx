@@ -42,8 +42,8 @@ const Header = () => {
   return (
     <header>
       <div
-        className={`z-40 bg-white ${
-          isScrolled ? "fixed left-0 right-0 top-0" : "relative"
+        className={`bg-white ${
+          isScrolled ? "fixed left-0 right-0 top-0 z-40" : "relative z-50"
         }`}
       >
         <TopBanner />
@@ -52,16 +52,12 @@ const Header = () => {
 
       {!isScrolled && (
         <div
-          className={`relative hidden z-50 w-full md:block transition-transform duration-1000 ease-in-out ${
-            isScrolled
-              ? "-translate-y-full pointer-events-none"
-              : "translate-y-0"
-          }`}
+          className="relative z-40 hidden w-full transition-transform duration-1000 ease-in-out md:block"
           onMouseLeave={() => setIsMegaMenuOpen(false)}
         >
           <Menu setIsMegaMenuOpen={setIsMegaMenuOpen} />
 
-          {!isScrolled && isMegaMenuOpen && <MegaMenu />}
+          {isMegaMenuOpen && <MegaMenu />}
         </div>
       )}
     </header>

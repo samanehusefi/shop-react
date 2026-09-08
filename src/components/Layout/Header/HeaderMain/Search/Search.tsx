@@ -20,7 +20,6 @@ const Search = () => {
 
   const searchRef = useRef<HTMLDivElement>(null);
 
-  // Search
   useEffect(() => {
     if (searchText.trim().length < 2) {
       setResults([]);
@@ -71,7 +70,6 @@ const Search = () => {
     search();
   }, [searchText]);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -100,8 +98,6 @@ const Search = () => {
       setIsOpen(false);
     }
   };
-
-  // Clear Search
   const handleClear = () => {
     dispatch(setSearchText(""));
     setResults([]);
@@ -133,8 +129,6 @@ const Search = () => {
         lg:max-w-2xl
       "
     >
-      {/* Search Box */}
-
       <div
         className="
           flex
@@ -154,8 +148,6 @@ const Search = () => {
         "
         dir="rtl"
       >
-        {/* Search Icon */}
-
         <FiSearch className="shrink-0 text-gray-500" size={19} />
 
         <input
@@ -169,19 +161,17 @@ const Search = () => {
           }}
           placeholder="جستجو"
           className="
-            min-w-0
-            flex-1
-            bg-transparent
-            text-xs
-            text-gray-700
-            outline-none
-            placeholder:text-gray-400
-
-            sm:text-sm
-          "
+    min-w-0
+    flex-1
+    bg-transparent
+    text-base
+    text-gray-700
+    outline-none
+    placeholder:text-gray-400
+    sm:text-sm
+    
+  "
         />
-
-        {/* Clear Button */}
 
         {searchText && (
           <button
@@ -217,22 +207,22 @@ const Search = () => {
         <div
           dir="rtl"
           className="
-            absolute
-            top-[46px]
-            right-0
-            left-0
-            z-50
-            overflow-hidden
-            rounded-xl
-            border
-            border-gray-200
-            bg-white
-            shadow-lg
+  absolute
+  top-[46px]
+  right-0
+  left-0
+  z-[300]
+  overflow-hidden
+  rounded-xl
+  border
+  border-gray-200
+  bg-white
+  shadow-lg
 
-            sm:top-[50px]
+  sm:top-[50px]
 
-            md:top-[54px]
-          "
+  md:top-[54px]
+"
         >
           {results.length > 0 ? (
             <div className="max-h-[60vh] overflow-y-auto py-1 sm:py-2">

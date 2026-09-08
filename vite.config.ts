@@ -3,7 +3,7 @@ import babel from "@rolldown/plugin-babel";
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
-// https://vite.dev/config/
+
 export default defineConfig({
   plugins: [
     react(),
@@ -14,8 +14,8 @@ export default defineConfig({
       registerType: "autoUpdate",
 
       manifest: {
-        name: "فروشگاه ",
-        short_name: "فروشگاه ",
+        name: "فروشگاه",
+        short_name: "فروشگاه",
         description:
           "فروشگاه، مرجع خرید آنلاین محصولات متنوع شامل دیجیتال، مد، ورزش، خانه و آشپزخانه با بهترین قیمت و کیفیت",
 
@@ -24,15 +24,16 @@ export default defineConfig({
 
         display: "standalone",
         lang: "fa",
+        dir: "rtl",
 
         icons: [
           {
-            src: "/assets/logo.png",
+            src: "assets/logo/Logo.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/assets/logo.png",
+            src: "assets/logo/Logo.png",
             sizes: "512x512",
             type: "image/png",
           },
@@ -40,8 +41,10 @@ export default defineConfig({
       },
     }),
   ],
+
   server: {
     port: 3000,
   },
-  base: process.env.NODE_ENV === "production" ? "/shop-react/" : "./",
+
+  base: process.env.NODE_ENV === "production" ? "/shop-react/" : "/",
 });
