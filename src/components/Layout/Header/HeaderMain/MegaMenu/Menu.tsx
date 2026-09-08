@@ -16,7 +16,7 @@ const Menu = ({ setIsMegaMenuOpen }: MenuProps) => {
 
   return (
     <nav dir="rtl" className="w-full bg-white">
-      <div className="mx-auto flex w-full items-center px-4 py-1">
+      <div className="mx-auto flex w-full items-center px-4 py-1 z-[200px]">
         <div
           className="relative"
           onMouseEnter={() => {

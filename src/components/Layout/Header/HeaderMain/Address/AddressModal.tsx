@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { LuX } from "react-icons/lu";
 import AddressMap from "./AddressMap";
 import SearchAddress from "./SearchAddress";
@@ -29,11 +30,11 @@ const AddressModal = ({ isOpen, onClose }: AddressModalProps) => {
     }
   };
 
-  return (
+  return createPortal(
     <div
       dir="rtl"
       onClick={handleOverlayClick}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 p-4"
+      className="fixed inset-0 z-[999999] flex items-center justify-center bg-black/50 p-4"
     >
       <div className="relative flex h-[80vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
         <div className="flex shrink-0 items-start justify-between border-b border-gray-200 px-6 py-5">
@@ -59,12 +60,12 @@ const AddressModal = ({ isOpen, onClose }: AddressModalProps) => {
         <div className="relative min-h-0 flex-1 p-4">
           <div className="h-full w-full overflow-hidden rounded-xl">
             <SearchAddress onSelect={handleAddressSelect} />
-
             <AddressMap position={position} />
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 };
 

@@ -32,7 +32,7 @@ const AddressMap = ({ position }: AddressMapProps) => {
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          className="map-light"
+        className="map-light"
       />
 
       <MapController position={position} />

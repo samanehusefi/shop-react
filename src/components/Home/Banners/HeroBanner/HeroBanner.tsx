@@ -23,12 +23,12 @@ const HeroBanner = () => {
             <a
               key={banner.id}
               href={banner.url}
-              className="block h-[160px] overflow-hidden rounded-2xl md:h-[240px]"
+              className="block h-[125px] overflow-hidden rounded-2xl md:h-[240px]"
             >
               <img
                 src={banner.image}
                 alt={banner.title}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-fill md:object-cover"
               />
             </a>
           ))}

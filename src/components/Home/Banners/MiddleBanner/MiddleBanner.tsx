@@ -30,7 +30,7 @@ const MiddleBanner = () => {
               <img
                 src={banner.image}
                 alt={banner.title}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-fill md:object-cover"
               />
             </a>
           ))}
