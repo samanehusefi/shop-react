@@ -17,7 +17,7 @@ const Logo = () => {
       title={logo.title}
       className="hidden md:flex items-center shrink-0"
     >
-      <img
+      <img   loading="lazy"
         src={logoSrc}
         alt={logo.alt}
         className="h-7 w-auto object-contain md:h-8"

@@ -40,6 +40,7 @@ const CircleBadge = () => {
                   <img
                     src={item.image}
                     alt={item.title}
+                    loading="lazy"
                     className="h-full w-full object-cover"
                   />
                 </div>
@@ -123,7 +124,7 @@ const CircleBadge = () => {
                   className="flex flex-col items-center text-center"
                 >
                   <div className="mb-2 h-[52px] w-[52px] overflow-hidden rounded-full">
-                    <img
+                    <img   loading="lazy"
                       src={item.image}
                       alt={item.title}
                       className="h-full w-full object-cover"

@@ -55,6 +55,8 @@ const Slider = () => {
                 />
 
                 <img
+                  loading="eager"
+                  fetchPriority="high"
                   src={item.imageSrc}
                   alt={item.title}
                   className="h-full w-full object-cover"

@@ -66,7 +66,7 @@ const FooterLinks = () => {
               <summary className="footer-Quick-summery">
                 <h3 className="footer-Quick-Link-heading">{group.title}</h3>
 
-                <img
+                <img   loading="lazy"
                   className="footer-Queick-svg"
                   src={`${import.meta.env.BASE_URL}assets/icon/chevron.svg`}
                   alt="chevron"
@@ -100,7 +100,7 @@ const FooterLinks = () => {
           <summary className="footer-Quick-summery">
             <h3 className="footer-Quick-Link-heading">شرکای تجاری</h3>
 
-            <img
+            <img   loading="lazy"
               className="footer-Queick-svg"
               src={`${import.meta.env.BASE_URL}assets/icon/chevron-down.svg`}
               alt="chevron"
@@ -117,7 +117,7 @@ const FooterLinks = () => {
                   rel="noreferrer"
                   href={brand.url}
                 >
-                  <img
+                  <img   loading="lazy"
                     src={`${import.meta.env.BASE_URL}${brand.src}`}
                     alt={brand.alt}
                     title={brand.title}
@@ -140,7 +140,7 @@ const FooterLinks = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
+                  <img   loading="lazy"
                     src={`${import.meta.env.BASE_URL}${item.src}`}
                     alt={item.alt}
                     title={item.title}

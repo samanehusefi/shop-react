@@ -194,6 +194,7 @@ const Amazing = () => {
                       src={item.image}
                       alt={item.title}
                       className="h-full w-full object-contain"
+                      loading="lazy"
                     />
                   </div>
 

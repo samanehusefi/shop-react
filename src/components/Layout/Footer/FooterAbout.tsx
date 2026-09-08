@@ -55,7 +55,7 @@ const FooterAbout = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img
+            <img   loading="lazy"
               className="inline-block w-full"
               src={`${import.meta.env.BASE_URL}${certificate.image}`}
               width="75"

@@ -173,6 +173,7 @@ const Categories = () => {
                             alt={category.title}
                             title={category.title}
                             className="h-full w-full object-cover"
+                              loading="lazy"
                           />
                         </div>
 

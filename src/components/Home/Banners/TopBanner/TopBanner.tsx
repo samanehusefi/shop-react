@@ -30,6 +30,7 @@ const TopBanner = () => {
               <img
                 src={banner.image}
                 alt={banner.title}
+                  loading="lazy"
                 className="h-full w-full object-fill md:object-cover"
               />
             </a>

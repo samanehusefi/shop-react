@@ -7,13 +7,13 @@ const TopBanner = () => {
       className="top-nav bg-gray-200 z-40 relative transition-all
       duration-300 overflow-hidden"
     >
-      <img
+      <img   loading="lazy"
         className="block lg:hidden"
         src={topNavGif}
         alt="header-top-banner"
       />
 
-      <img
+      <img   loading="lazy"
         className="hidden lg:block"
         src={topNavWebp}
         alt="header-top-banner"

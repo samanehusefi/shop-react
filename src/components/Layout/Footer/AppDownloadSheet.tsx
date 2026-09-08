@@ -36,7 +36,7 @@ const AppDownloadSheet = ({ isOpen, onClose }: AppDownloadSheetProps) => {
           <h2 className="text-lg font-semibold">دانلود اپلیکیشن دیجی‌کالا</h2>
 
           <button type="button" onClick={onClose}>
-            <img
+            <img   loading="lazy"
               className="h-8 w-8"
               src={`${import.meta.env.BASE_URL}assets/icon/close.svg`}
               alt="بستن"
@@ -56,7 +56,7 @@ const AppDownloadSheet = ({ isOpen, onClose }: AppDownloadSheetProps) => {
                 rel="noreferrer"
                 className="block"
               >
-                <img
+                <img   loading="lazy"
                   className="w-full"
                   src={`${import.meta.env.BASE_URL}${application.src}`}
                   alt={application.alt}

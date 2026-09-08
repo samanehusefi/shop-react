@@ -13,7 +13,7 @@ const FooterServices = () => {
     <div className="footer-support w-full">
       {sortedSupports.map((support) => (
         <a key={support.id} href={support.url} className="footer-support-box">
-          <img src={support.src} alt={support.alt} />
+          <img src={support.src} alt={support.alt}   loading="lazy"/>
 
           <p className="footer-support-text">{support.text}</p>
         </a>
