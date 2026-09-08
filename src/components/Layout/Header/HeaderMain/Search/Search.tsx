@@ -42,11 +42,11 @@ const Search = () => {
           }));
 
         // Categories
-        const groupingResults: ISearchResult[] = data.grouping
+        const categoriesResults: ISearchResult[] = data.categories
           .filter((item: any) => item.title.toLowerCase().includes(searchValue))
           .map((item: any) => ({
             title: item.title,
-            type: "category",
+            type: "categories",
           }));
 
         // Brands
@@ -57,7 +57,11 @@ const Search = () => {
             type: "brand",
           }));
 
-        setResults([...groupingResults, ...brandResults, ...incredibleResults]);
+        setResults([
+          ...categoriesResults,
+          ...brandResults,
+          ...incredibleResults,
+        ]);
       } catch (error) {
         console.error("Search error:", error);
         setResults([]);
@@ -105,7 +109,7 @@ const Search = () => {
   };
 
   const categories = results
-    .filter((result) => result.type === "category")
+    .filter((result) => result.type === "categories")
     .slice(0, 3);
 
   const brands = results

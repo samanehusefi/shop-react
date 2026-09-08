@@ -8,6 +8,7 @@ import circleBadgeReducer from "./Home/CircleBadge/circleBadgeReducer";
 import amazingReducer from "./Home/Amazing/amazingReducer";
 import NavBarReducer from "./Header/Navbar/navbarReducer";
 import bannerReducer from "./Home/Banner/bannerReducer";
+import categoriesReducer from "./Home/Categories/categoriesReducer";
 const rootReducer = combineReducers({
   header: headerReducer,
   menu: menuReducer,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   amazing: amazingReducer,
   navbar: NavBarReducer,
   banner: bannerReducer,
+  categories: categoriesReducer,
 });
 
 export default rootReducer;

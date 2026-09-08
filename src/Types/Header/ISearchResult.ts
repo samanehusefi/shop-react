@@ -2,4 +2,4 @@ export interface ISearchResult {
   title: string;
   type: SearchResultType;
 }
-export type SearchResultType = "product" | "category" | "brand" | "option";
+export type SearchResultType = "product" | "categories" | "brand" | "option";
