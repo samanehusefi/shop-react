@@ -19,7 +19,10 @@ const FooterDownload = ({ onOpen }: FooterDownloadProps) => {
     <div className="footer-app-download">
       <div className="footer-app-r-text">
         <div className="footer-app-r-img">
-          <img src="/assets/application/footerlogo2.webp" alt="دیجی‌کالا" />
+          <img
+            src={`${import.meta.env.BASE_URL}assets/application/footerlogo2.webp`}
+            alt="دیجی‌کالا"
+          />
         </div>
 
         <div className="footer-app-r-text">
@@ -37,7 +40,7 @@ const FooterDownload = ({ onOpen }: FooterDownloadProps) => {
               rel="noreferrer"
             >
               <img
-                src={application.src}
+                src={`${import.meta.env.BASE_URL}${application.src}`}
                 alt={application.alt}
                 title={application.title}
               />
@@ -46,7 +49,10 @@ const FooterDownload = ({ onOpen }: FooterDownloadProps) => {
         </div>
 
         <button type="button" className="footer-link-more" onClick={onOpen}>
-          <img src="/assets/application/More.svg" alt="بیشتر" />
+          <img
+            src={`${import.meta.env.BASE_URL}assets/application/More.svg`}
+            alt="بیشتر"
+          />
         </button>
       </div>
     </div>

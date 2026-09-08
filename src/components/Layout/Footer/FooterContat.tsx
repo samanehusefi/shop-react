@@ -61,7 +61,10 @@ const FooterContat = ({ onOpen }: FooterContatProps) => {
       <div className="footer-contact-Quick block lg:hidden">
         <div className="footer-Quick-contact">
           <div className="footer-Quick-contact-img">
-            <img src="/assets/icon/support.svg" alt="پشتیبانی" />
+            <img
+              src={`${import.meta.env.BASE_URL}assets/icon/support.svg`}
+              alt="پشتیبانی"
+            />
           </div>
 
           <div className="mr-2 flex flex-col">
@@ -85,7 +88,10 @@ const FooterContat = ({ onOpen }: FooterContatProps) => {
       <div className="footer-contact-Quick block lg:hidden">
         <div className="footer-Quick-app">
           <div className="footer-Quick-app-img">
-            <img src="/assets/logo/Logo.png" alt="دیجی‌کالا" />
+            <img
+              src={`${import.meta.env.BASE_URL}assets/logo/Logo.png`}
+              alt="دیجی‌کالا"
+            />
           </div>
 
           <div className="mr-2 flex flex-col">

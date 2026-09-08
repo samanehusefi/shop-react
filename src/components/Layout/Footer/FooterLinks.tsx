@@ -68,7 +68,7 @@ const FooterLinks = () => {
 
                 <img
                   className="footer-Queick-svg"
-                  src="/assets/icon/chevron.svg"
+                  src={`${import.meta.env.BASE_URL}assets/icon/chevron.svg`}
                   alt="chevron"
                 />
               </summary>
@@ -102,7 +102,7 @@ const FooterLinks = () => {
 
             <img
               className="footer-Queick-svg"
-              src="/assets/icon/chevron-down.svg"
+              src={`${import.meta.env.BASE_URL}assets/icon/chevron-down.svg`}
               alt="chevron"
             />
           </summary>
@@ -117,7 +117,11 @@ const FooterLinks = () => {
                   rel="noreferrer"
                   href={brand.url}
                 >
-                  <img src={brand.src} alt={brand.alt} title={brand.title} />
+                  <img
+                    src={`${import.meta.env.BASE_URL}${brand.src}`}
+                    alt={brand.alt}
+                    title={brand.title}
+                  />
                 </a>
               ))}
             </div>
@@ -136,7 +140,11 @@ const FooterLinks = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={item.src} alt={item.alt} title={item.title} />
+                  <img
+                    src={`${import.meta.env.BASE_URL}${item.src}`}
+                    alt={item.alt}
+                    title={item.title}
+                  />
                 </a>
               </div>
             ))}

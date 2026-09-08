@@ -8,7 +8,10 @@ const FooterMenuSection = ({ onOpen }: FooterMenuSectionProps) => {
       <div className="footer-contact-Quick block px-5 py-3">
         <div className="footer-Quick-app">
           <div className="footer-Quick-app-img">
-            <img src="/assets/logo/Logo.png" alt="دیجی‌کالا" />
+            <img
+              src={`${import.meta.env.BASE_URL}assets/logo/Logo.png`}
+              alt="دیجی‌کالا"
+            />
           </div>
 
           <div className="mr-2 flex flex-col">

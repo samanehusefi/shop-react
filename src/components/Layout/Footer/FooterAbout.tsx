@@ -57,7 +57,7 @@ const FooterAbout = () => {
           >
             <img
               className="inline-block w-full"
-              src={certificate.image}
+              src={`${import.meta.env.BASE_URL}${certificate.image}`}
               width="75"
               height="75"
               alt={certificate.title || "certificate"}

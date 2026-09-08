@@ -14,7 +14,7 @@ const TopSection = () => {
         {logo?.desktopSrc ? (
           <img
             className="footer_logo"
-            src={logo.desktopSrc}
+            src={`${import.meta.env.BASE_URL}${logo.desktopSrc}`}
             alt={logo.alt}
             title={logo.title}
           />

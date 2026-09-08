@@ -54,7 +54,7 @@ const AppDownloadSheet = ({ isOpen, onClose }: AppDownloadSheetProps) => {
               >
                 <img
                   className="w-full"
-                  src={application.src}
+                  src={`${import.meta.env.BASE_URL}${application.src}`}
                   alt={application.alt}
                   title={application.title}
                 />

@@ -20,7 +20,11 @@ const FooterBrands = () => {
             rel="noreferrer"
             href={brand.url}
           >
-            <img src={brand.src} alt={brand.alt} title={brand.title} />
+            <img
+              src={`${import.meta.env.BASE_URL}${brand.src}`}
+              alt={brand.alt}
+              title={brand.title}
+            />
           </a>
         ))}
       </div>
