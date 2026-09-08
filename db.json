@@ -7040,7 +7040,7 @@
         "id": 1,
         "title": "Coffe Bazzar",
         "url": "#",
-        "src": "/assets/application/coffe-bazzar.svg",
+        "src": "assets/application/coffe-bazzar.svg",
         "alt": "bazzar",
         "priority": "1"
       },
@@ -7048,7 +7048,7 @@
         "id": 2,
         "title": "Myket",
         "url": "#",
-        "src": "/assets/application/myket.svg",
+        "src": "assets/application/myket.svg",
         "alt": "myket",
         "priority": "2"
       },
@@ -7056,7 +7056,7 @@
         "id": 3,
         "title": "Sib App",
         "url": "#",
-        "src": "/assets/application/sib-app.svg",
+        "src": "assets/application/sib-app.svg",
         "alt": "sib",
         "priority": "3"
       }
@@ -7064,21 +7064,21 @@
 
     "applicationsMobile": [
       {
-        "src": "/assets/application/coffe-bazzar-dark-.svg",
+        "src": "assets/application/coffe-bazzar-dark-.svg",
         "alt": "coffe-bazzar",
         "title": "coffe-bazzar",
         "priority": "1",
         "url": "#"
       },
       {
-        "src": "/assets/application/myket-dark.svg",
+        "src": "assets/application/myket-dark.svg",
         "alt": "myket-dark",
         "title": "myket-dark",
         "priority": "2",
         "url": "#"
       },
       {
-        "src": "/assets/application/apk-badge-dark.svg",
+        "src": "assets/application/apk-badge-dark.svg",
         "alt": "apk-badge-dark",
         "title": "apk-badge-dark",
         "priority": "3",
@@ -7092,7 +7092,7 @@
         "alt": "magsvg",
         "priority": 1,
         "url": "#",
-        "src": "/assets/brands/magsvg.svg"
+        "src": "assets/brands/magsvg.svg"
       },
       {
         "id": 2,
@@ -7100,7 +7100,7 @@
         "alt": "digipay",
         "priority": 2,
         "url": "#",
-        "src": "/assets/brands/digipay.svg"
+        "src": "assets/brands/digipay.svg"
       },
       {
         "id": 3,
@@ -7108,7 +7108,7 @@
         "alt": "digistyle",
         "priority": 3,
         "url": "#",
-        "src": "/assets/brands/digistyle.svg"
+        "src": "assets/brands/digistyle.svg"
       },
       {
         "id": 4,
@@ -7116,7 +7116,7 @@
         "alt": "digiplus",
         "priority": 4,
         "url": "#",
-        "src": "/assets/brands/digiplus.svg"
+        "src": "assets/brands/digiplus.svg"
       },
       {
         "id": 5,
@@ -7124,7 +7124,7 @@
         "alt": "digiclub",
         "priority": 5,
         "url": "#",
-        "src": "/assets/brands/digiclub.svg"
+        "src": "assets/brands/digiclub.svg"
       },
       {
         "id": 6,
@@ -7132,7 +7132,7 @@
         "alt": "jet",
         "priority": 6,
         "url": "#",
-        "src": "/assets/brands/jet.svg"
+        "src": "assets/brands/jet.svg"
       },
       {
         "id": 7,
@@ -7140,7 +7140,7 @@
         "alt": "digiMehr",
         "priority": 7,
         "url": "#",
-        "src": "/assets/brands/digiMehr.svg"
+        "src": "assets/brands/digiMehr.svg"
       },
       {
         "id": 8,
@@ -7148,7 +7148,7 @@
         "alt": "diginext",
         "priority": 8,
         "url": "#",
-        "src": "/assets/brands/diginext.svg"
+        "src": "assets/brands/diginext.svg"
       },
       {
         "id": 9,
@@ -7156,7 +7156,7 @@
         "alt": "digiexpress",
         "priority": 9,
         "url": "#",
-        "src": "/assets/brands/digiexpress.svg"
+        "src": "assets/brands/digiexpress.svg"
       },
       {
         "id": 10,
@@ -7164,7 +7164,7 @@
         "alt": "ganjeh",
         "priority": 10,
         "url": "#",
-        "src": "/assets/brands/ganjeh.svg"
+        "src": "assets/brands/ganjeh.svg"
       },
       {
         "id": 11,
@@ -7172,7 +7172,7 @@
         "alt": "digify",
         "priority": 11,
         "url": "#",
-        "src": "/assets/brands/digify.svg"
+        "src": "assets/brands/digify.svg"
       },
       {
         "id": 12,
@@ -7180,7 +7180,7 @@
         "alt": "smartech",
         "priority": 12,
         "url": "#",
-        "src": "/assets/brands/smartech.svg"
+        "src": "assets/brands/smartech.svg"
       },
       {
         "id": 13,
@@ -7188,7 +7188,7 @@
         "alt": "digikala-business",
         "priority": 13,
         "url": "#",
-        "src": "/assets/brands/digikala-business.svg"
+        "src": "assets/brands/digikala-business.svg"
       },
       {
         "id": 14,
@@ -7196,7 +7196,7 @@
         "alt": "digiservice",
         "priority": 14,
         "url": "#",
-        "src": "/assets/brands/digiservice.svg"
+        "src": "assets/brands/digiservice.svg"
       },
       {
         "id": 15,
@@ -7204,7 +7204,7 @@
         "alt": "miare",
         "priority": 15,
         "url": "#",
-        "src": "/assets/brands/miare.svg"
+        "src": "assets/brands/miare.svg"
       },
       {
         "id": 16,
@@ -7212,7 +7212,7 @@
         "alt": "digividomart",
         "priority": 16,
         "url": "#",
-        "src": "/assets/brands/digividomart.svg"
+        "src": "assets/brands/digividomart.svg"
       }
     ],
     "mobileBrands": [
@@ -7220,7 +7220,7 @@
         "id": 1,
         "priority": 1,
         "url": "#",
-        "src": "/assets/brands/digimag.svg",
+        "src": "assets/brands/digimag.svg",
         "alt": "digimag",
         "title": "digimag"
       },
@@ -7228,7 +7228,7 @@
         "id": 2,
         "priority": 2,
         "url": "#",
-        "src": "/assets/brands/digipay.svg",
+        "src": "assets/brands/digipay.svg",
         "alt": "digipay",
         "title": "digipay"
       },
@@ -7236,7 +7236,7 @@
         "id": 3,
         "priority": 3,
         "url": "#",
-        "src": "/assets/brands/digistyle.svg",
+        "src": "assets/brands/digistyle.svg",
         "alt": "digistyle",
         "title": "digistyle"
       },
@@ -7244,7 +7244,7 @@
         "id": 4,
         "priority": 4,
         "url": "#",
-        "src": "/assets/brands/digiplus.svg",
+        "src": "assets/brands/digiplus.svg",
         "alt": "digiplus",
         "title": "digiplus"
       },
@@ -7252,7 +7252,7 @@
         "id": 5,
         "priority": 5,
         "url": "#",
-        "src": "/assets/brands/digiclub.svg",
+        "src": "assets/brands/digiclub.svg",
         "alt": "digiclub",
         "title": "digiclub"
       },
@@ -7260,7 +7260,7 @@
         "id": 6,
         "priority": 6,
         "url": "#",
-        "src": "/assets/brands/jet.svg",
+        "src": "assets/brands/jet.svg",
         "alt": "jet",
         "title": "jet"
       },
@@ -7268,7 +7268,7 @@
         "id": 7,
         "priority": 7,
         "url": "#",
-        "src": "/assets/brands/digify.svg",
+        "src": "assets/brands/digify.svg",
         "alt": "digify",
         "title": "digify"
       },
@@ -7276,7 +7276,7 @@
         "id": 8,
         "priority": 8,
         "url": "#",
-        "src": "/assets/brands/digiMehr.svg",
+        "src": "assets/brands/digiMehr.svg",
         "alt": "digiMehr",
         "title": "digiMehr"
       },
@@ -7284,7 +7284,7 @@
         "id": 9,
         "priority": 9,
         "url": "#",
-        "src": "/assets/brands/diginext.svg",
+        "src": "assets/brands/diginext.svg",
         "alt": "diginext",
         "title": "diginext"
       },
@@ -7292,7 +7292,7 @@
         "id": 10,
         "priority": 10,
         "url": "#",
-        "src": "/assets/brands/ganjeh.svg",
+        "src": "assets/brands/ganjeh.svg",
         "alt": "ganjeh",
         "title": "ganjeh"
       },
@@ -7300,7 +7300,7 @@
         "id": 11,
         "priority": 11,
         "url": "#",
-        "src": "/assets/brands/digiexpress.svg",
+        "src": "assets/brands/digiexpress.svg",
         "alt": "digiexpress",
         "title": "digiexpress"
       },
@@ -7308,7 +7308,7 @@
         "id": 12,
         "priority": 12,
         "url": "#",
-        "src": "/assets/brands/smartech.svg",
+        "src": "assets/brands/smartech.svg",
         "alt": "smartech",
         "title": "smartech"
       },
@@ -7316,7 +7316,7 @@
         "id": 13,
         "priority": 13,
         "url": "#",
-        "src": "/assets/brands/digikala-service.svg",
+        "src": "assets/brands/digikala-service.svg",
         "alt": "digikala-service",
         "title": "digikala-service"
       },
@@ -7324,7 +7324,7 @@
         "id": 14,
         "priority": 14,
         "url": "#",
-        "src": "/assets/brands/digikala-business.svg",
+        "src": "assets/brands/digikala-business.svg",
         "alt": "digikala-business",
         "title": "digikala-business"
       }
@@ -7333,25 +7333,25 @@
       {
         "id": 1,
         "title": "سامانه پایش مردمی رسانه‌های صوت و تصویر",
-        "image": "/assets/namad/sapra.png",
+        "image": "assets/namad/sapra.png",
         "url": "https://sapra.ir/"
       },
       {
         "id": 2,
         "title": "نشان ملی ثبت",
-        "image": "/assets/namad/rezi.png",
+        "image": "assets/namad/rezi.png",
         "url": "#"
       },
       {
         "id": 3,
         "title": "نماد کسب و کار های مجازی",
-        "image": "/assets/namad/kasbokar.png",
+        "image": "assets/namad/kasbokar.png",
         "url": "#"
       },
       {
         "id": 4,
         "title": "نماد اعتماد الکترونیک",
-        "image": "/assets/namad/enamad.png",
+        "image": "assets/namad/enamad.png",
         "url": "#"
       }
     ],
@@ -7470,7 +7470,7 @@
       {
         "id": 1,
         "title": "Instagram",
-        "src": "/assets/social/insta.svg",
+        "src": "assets/social/insta.svg",
         "url": "https://www.instagram.com/digikalacom/",
         "alt": "Instagram",
         "priority": 1
@@ -7478,7 +7478,7 @@
       {
         "id": 2,
         "title": "X",
-        "src": "/assets/social/x.svg",
+        "src": "assets/social/x.svg",
         "url": "https://twitter.com/digikalacom/",
         "alt": "X",
         "priority": 2
@@ -7486,7 +7486,7 @@
       {
         "id": 3,
         "title": "LinkedIn",
-        "src": "/assets/social/linkdin.svg",
+        "src": "assets/social/linkdin.svg",
         "url": "https://www.linkedin.com/company/digikala/mycompany/",
         "alt": "LinkedIn",
         "priority": 3
@@ -7494,7 +7494,7 @@
       {
         "id": 4,
         "title": "Aparat",
-        "src": "/assets/social/aparat.svg",
+        "src": "assets/social/aparat.svg",
         "url": "https://www.aparat.com/digikala/",
         "alt": "Aparat",
         "priority": 4
@@ -7502,7 +7502,7 @@
       {
         "id": 5,
         "title": "bale",
-        "src": "/assets/social/bale.png",
+        "src": "assets/social/bale.png",
         "url": "https://ble.ir/digikala",
         "alt": "bale",
         "priority": 5
@@ -7512,7 +7512,7 @@
       {
         "id": 1,
         "url": "#",
-        "src": "/assets/footer/express-delivery.svg",
+        "src": "assets/footer/express-delivery.svg",
         "alt": "xpress-delivery",
         "text": "امکان تحویل اکسپرس",
         "priority": "1"
@@ -7520,7 +7520,7 @@
       {
         "id": 2,
         "url": "#",
-        "src": "/assets/footer/cash-on-delivery.svg",
+        "src": "assets/footer/cash-on-delivery.svg",
         "alt": "cash-on-delivery",
         "text": "امکان پرداخت در محل",
         "priority": "2"
@@ -7528,7 +7528,7 @@
       {
         "id": 3,
         "url": "#",
-        "src": "/assets/footer/support.svg",
+        "src": "assets/footer/support.svg",
         "alt": "support",
         "text": "7 روز هفته، 24 ساعته",
         "priority": "3"
@@ -7536,7 +7536,7 @@
       {
         "id": 4,
         "url": "#",
-        "src": "/assets/footer/days-return.svg",
+        "src": "assets/footer/days-return.svg",
         "alt": "days-return",
         "text": "هفت روز ضمانت بازگشت کالا",
         "priority": "4"
@@ -7544,14 +7544,14 @@
       {
         "id": 5,
         "url": "#",
-        "src": "/assets/footer/original-products.svg",
+        "src": "assets/footer/original-products.svg",
         "alt": "original-products",
         "text": "ضمانت اصل بودن کالا",
         "priority": "5"
       }
     ],
     "logo": {
-      "desktopSrc": "/assets/logo/full-horizontal.svg",
+      "desktopSrc": "assets/logo/full-horizontal.svg",
       "alt": "digikala - دیجی کالا",
       "title": "digikala - دیجی کالا"
     },
