@@ -183,7 +183,7 @@ const BannerForm = () => {
                 className="w-full appearance-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-3.5 text-sm text-gray-700 outline-none transition hover:border-blue-300 hover:bg-white focus:border-blue-600 focus:bg-white focus:ring-2 focus:ring-blue-100"
               >
                 <option value="" disabled>
-                  انتخاب موقعیت نمایش
+                  انتخاب موقعیت نمایش تبلیغات
                 </option>
 
                 <option value="hero">بعد از شگفت انگیزها</option>

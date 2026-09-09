@@ -93,10 +93,12 @@ const Banners = () => {
     <div className="w-full min-w-0">
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-xl font-bold text-red-900 sm:text-2xl">تبلیغاتها</h1>
+          <h1 className="text-xl font-bold text-red-900 sm:text-2xl">
+            تبلیغات
+          </h1>
 
           <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
-            مدیریت تبلیغاتهای فروشگاه
+            مدیریت تبلیغات فروشگاه
           </p>
         </div>
 
