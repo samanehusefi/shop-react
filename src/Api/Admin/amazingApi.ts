@@ -1,4 +1,4 @@
-import type { IAmazing } from "../../../../Types/Home/IAmazing";
+import type { IAmazing } from "../../Types/Home/IAmazing";
 
 const API_URL = `${import.meta.env.VITE_API_URL}/amazing`;
 

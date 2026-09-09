@@ -1,8 +1,16 @@
 import type { ICircleBadge } from "../../Types/Home/ICircleBadge";
 
-const API_URL = `${import.meta.env.VITE_API_URL}/circle_badge`;
+const API_URL = "http://localhost:3001/circle_badge";
+
+const isProduction = import.meta.env.PROD;
 
 export const getAdminCircleBadge = async (): Promise<ICircleBadge[]> => {
+  if (isProduction) {
+    throw new Error(
+      "دریافت Circle Badge از API ادمین در نسخه آنلاین امکان‌پذیر نیست",
+    );
+  }
+
   const response = await fetch(API_URL);
 
   if (!response.ok) {
@@ -15,6 +23,10 @@ export const getAdminCircleBadge = async (): Promise<ICircleBadge[]> => {
 export const createCircleBadge = async (
   circleBadge: Omit<ICircleBadge, "id">,
 ): Promise<ICircleBadge> => {
+  if (isProduction) {
+    throw new Error("ایجاد Circle Badge در نسخه آنلاین امکان‌پذیر نیست");
+  }
+
   const items = await getAdminCircleBadge();
 
   const ids = items
@@ -45,6 +57,10 @@ export const updateCircleBadge = async (
   id: ICircleBadge["id"],
   data: Partial<Omit<ICircleBadge, "id">>,
 ): Promise<ICircleBadge> => {
+  if (isProduction) {
+    throw new Error("ویرایش Circle Badge در نسخه آنلاین امکان‌پذیر نیست");
+  }
+
   const response = await fetch(`${API_URL}/${id}`, {
     method: "PATCH",
     headers: {
@@ -63,6 +79,10 @@ export const updateCircleBadge = async (
 export const deleteCircleBadge = async (
   id: ICircleBadge["id"],
 ): Promise<void> => {
+  if (isProduction) {
+    throw new Error("حذف Circle Badge در نسخه آنلاین امکان‌پذیر نیست");
+  }
+
   const response = await fetch(`${API_URL}/${id}`, {
     method: "DELETE",
   });

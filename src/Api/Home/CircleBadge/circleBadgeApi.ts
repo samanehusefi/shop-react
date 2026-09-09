@@ -1,8 +1,15 @@
 import type { ICircleBadge } from "../../../Types/Home/ICircleBadge";
+import { getDbData } from "../../dbApi";
 
-const API_URL = `${import.meta.env.VITE_API_URL}/circle_badge`;
+const API_URL = "http://localhost:3001/circle_badge";
 
 export const getCircleBadge = async (): Promise<ICircleBadge[]> => {
+  if (import.meta.env.PROD) {
+    const data = await getDbData();
+
+    return data.circle_badge;
+  }
+
   const response = await fetch(API_URL);
 
   if (!response.ok) {
@@ -10,64 +17,4 @@ export const getCircleBadge = async (): Promise<ICircleBadge[]> => {
   }
 
   return response.json();
-};
-
-export const createCircleBadge = async (
-  circleBadge: Omit<ICircleBadge, "id">,
-): Promise<ICircleBadge> => {
-  const items = await getCircleBadge();
-
-  const ids = items
-    .map((item) => Number(item.id))
-    .filter((id) => Number.isInteger(id));
-
-  const newId = ids.length > 0 ? Math.max(...ids) + 1 : 1;
-
-  const response = await fetch(API_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      id: newId,
-      ...circleBadge,
-    }),
-  });
-
-  if (!response.ok) {
-    throw new Error("خطا در ایجاد Circle Badge");
-  }
-
-  return response.json();
-};
-
-export const updateCircleBadge = async (
-  id: ICircleBadge["id"],
-  circleBadge: Partial<Omit<ICircleBadge, "id">>,
-): Promise<ICircleBadge> => {
-  const response = await fetch(`${API_URL}/${id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(circleBadge),
-  });
-
-  if (!response.ok) {
-    throw new Error("خطا در ویرایش Circle Badge");
-  }
-
-  return response.json();
-};
-
-export const deleteCircleBadge = async (
-  id: ICircleBadge["id"],
-): Promise<void> => {
-  const response = await fetch(`${API_URL}/${id}`, {
-    method: "DELETE",
-  });
-
-  if (!response.ok) {
-    throw new Error("خطا در حذف Circle Badge");
-  }
 };

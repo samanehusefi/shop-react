@@ -55,7 +55,7 @@ const Banners = () => {
   };
 
   const handleDelete = async (id: IBanner["id"]) => {
-    const confirmed = window.confirm("آیا از حذف این بنر مطمئن هستید؟");
+    const confirmed = window.confirm("آیا از حذف این تبلیغات مطمئن هستید؟");
 
     if (!confirmed) {
       return;
@@ -74,7 +74,7 @@ const Banners = () => {
       dispatch(getBanners());
     } catch (error) {
       console.error(error);
-      alert("حذف بنر انجام نشد");
+      alert("حذف تبلیغات انجام نشد");
     }
   };
 
@@ -93,10 +93,10 @@ const Banners = () => {
     <div className="w-full min-w-0">
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-xl font-bold text-red-900 sm:text-2xl">بنرها</h1>
+          <h1 className="text-xl font-bold text-red-900 sm:text-2xl">تبلیغاتها</h1>
 
           <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
-            مدیریت بنرهای فروشگاه
+            مدیریت تبلیغاتهای فروشگاه
           </p>
         </div>
 
@@ -106,7 +106,7 @@ const Banners = () => {
           className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-green-700 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-green-800 sm:w-auto sm:px-5 sm:py-3"
         >
           <FaPlus />
-          افزودن بنر
+          افزودن تبلیغات
         </button>
       </div>
 
@@ -239,7 +239,7 @@ const Banners = () => {
                   </div>
 
                   <div className="mt-3 rounded-lg bg-gray-50 p-3">
-                    <p className="mb-1 text-xs text-gray-500">لینک بنر</p>
+                    <p className="mb-1 text-xs text-gray-500">لینک تبلیغات</p>
 
                     <a
                       href={banner.url}
@@ -328,7 +328,7 @@ const Banners = () => {
 
         {!loading && !error && banners.length === 0 && (
           <div className="p-8 text-center text-sm text-gray-500">
-            بنری وجود ندارد
+            تبلیغاتی وجود ندارد
           </div>
         )}
       </div>

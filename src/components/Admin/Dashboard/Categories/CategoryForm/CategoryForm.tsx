@@ -44,7 +44,7 @@ const CategoryForm = () => {
     );
 
     if (!selectedCategory) {
-      alert("دسته‌بندی مورد نظر پیدا نشد");
+      alert("دسته‌بندی محصول مورد نظر پیدا نشد");
       navigate("/dashboard/categories");
       return;
     }
@@ -83,7 +83,9 @@ const CategoryForm = () => {
       console.error(error);
 
       alert(
-        isEditMode ? "ویرایش دسته‌بندی انجام نشد" : "ایجاد دسته‌بندی انجام نشد",
+        isEditMode
+          ? "ویرایش دسته‌بندی محصولات انجام نشد"
+          : "ایجاد دسته‌بندی محصولات انجام نشد",
       );
     } finally {
       setLoading(false);
@@ -93,7 +95,7 @@ const CategoryForm = () => {
   if (isEditMode && categoriesLoading) {
     return (
       <div className="rounded-xl bg-white p-8 text-center text-gray-500">
-        در حال دریافت اطلاعات دسته‌بندی...
+        در حال دریافت اطلاعات دسته‌بندی محصولات...
       </div>
     );
   }
@@ -111,13 +113,15 @@ const CategoryForm = () => {
 
         <div>
           <h1 className="text-2xl font-bold text-red-900">
-            {isEditMode ? "ویرایش دسته‌بندی" : "افزودن دسته‌بندی"}
+            {isEditMode
+              ? "ویرایش دسته‌بندی محصولات"
+              : "افزودن دسته‌بندی محصولات"}
           </h1>
 
           <p className="mt-2 text-sm text-gray-500">
             {isEditMode
-              ? "ویرایش اطلاعات دسته‌بندی"
-              : "ایجاد یک دسته‌بندی جدید"}
+              ? "ویرایش اطلاعات دسته‌بندی محصولات"
+              : "ایجاد یک دسته‌بندی محصولات جدید"}
           </p>
         </div>
       </div>
@@ -133,7 +137,7 @@ const CategoryForm = () => {
               type="text"
               value={title}
               onChange={(event) => setTitle(event.target.value)}
-              placeholder="عنوان دسته‌بندی"
+              placeholder="عنوان دسته‌بندی محصولات"
               className="w-full rounded-xl border border-blue-200 bg-gray-50 px-4 py-3.5 text-sm outline-none transition hover:border-blue-300 hover:bg-white focus:border-blue-600 focus:bg-white focus:ring-2 focus:ring-blue-100"
             />
           </div>
@@ -147,7 +151,7 @@ const CategoryForm = () => {
               type="text"
               value={url}
               onChange={(event) => setUrl(event.target.value)}
-              placeholder="لینک دسته‌بندی"
+              placeholder="لینک دسته‌بندی محصولات"
               className="w-full rounded-xl border border-blue-200 bg-gray-50 px-4 py-3.5 text-sm outline-none transition hover:border-blue-300 hover:bg-white focus:border-blue-600 focus:bg-white focus:ring-2 focus:ring-blue-100"
             />
           </div>
@@ -161,7 +165,7 @@ const CategoryForm = () => {
               type="text"
               value={image}
               onChange={(event) => setImage(event.target.value)}
-              placeholder="آدرس تصویر دسته‌بندی"
+              placeholder="آدرس تصویر دسته‌بندی محصولات"
               className="w-full rounded-xl border border-blue-200 bg-gray-50 px-4 py-3.5 text-sm outline-none transition hover:border-blue-300 hover:bg-white focus:border-blue-600 focus:bg-white focus:ring-2 focus:ring-blue-100"
             />
 
@@ -179,7 +183,7 @@ const CategoryForm = () => {
           <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-gray-50 p-4">
             <div>
               <p className="text-sm font-medium text-gray-700">
-                وضعیت دسته‌بندی
+                وضعیت دسته‌بندی محصولات 
               </p>
 
               <p className="mt-1 text-xs text-gray-500">

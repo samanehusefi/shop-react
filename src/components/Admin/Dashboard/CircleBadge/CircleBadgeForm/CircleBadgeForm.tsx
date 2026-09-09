@@ -107,9 +107,7 @@ const CircleBadgeForm = () => {
           </h1>
 
           <p className="mt-2 text-sm text-gray-500">
-            {isEditMode
-              ? "ویرایش اطلاعات Circle Badge"
-              : "ایجاد یک Circle Badge جدید"}
+            {isEditMode ? "ویرایش اطلاعات خدمات" : "ایجاد یک خدمات جدید"}
           </p>
         </div>
       </div>
@@ -200,7 +198,7 @@ const CircleBadgeForm = () => {
               <div className="mt-4">
                 <img
                   src={image}
-                  alt={title || "Circle Badge"}
+                  alt={title || "خدمات"}
                   className="h-20 w-20 rounded-full object-cover"
                 />
               </div>

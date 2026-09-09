@@ -42,7 +42,7 @@ const BannerForm = () => {
     );
 
     if (!selectedBanner) {
-      alert("بنر مورد نظر پیدا نشد");
+      alert("تبلیغات مورد نظر پیدا نشد");
       navigate("/dashboard/banners");
       return;
     }
@@ -80,7 +80,9 @@ const BannerForm = () => {
     } catch (error) {
       console.error(error);
 
-      alert(isEditMode ? "ویرایش بنر انجام نشد" : "ایجاد بنر انجام نشد");
+      alert(
+        isEditMode ? "ویرایش تبلیغات انجام نشد" : "ایجاد تبلیغات انجام نشد",
+      );
     } finally {
       setLoading(false);
     }
@@ -89,7 +91,7 @@ const BannerForm = () => {
   if (isEditMode && bannersLoading) {
     return (
       <div className="rounded-xl bg-white p-8 text-center text-gray-500">
-        در حال دریافت اطلاعات بنر...
+        در حال دریافت اطلاعات تبلیغات...
       </div>
     );
   }
@@ -107,11 +109,11 @@ const BannerForm = () => {
 
         <div>
           <h1 className="text-2xl font-bold text-red-900">
-            {isEditMode ? "ویرایش بنر" : "افزودن بنر"}
+            {isEditMode ? "ویرایش تبلیغات" : "افزودن تبلیغات"}
           </h1>
 
           <p className="mt-2 text-sm text-gray-500">
-            {isEditMode ? "ویرایش اطلاعات بنر" : "ایجاد یک بنر جدید"}
+            {isEditMode ? "ویرایش اطلاعات تبلیغات" : "ایجاد یک تبلیغات جدید"}
           </p>
         </div>
       </div>

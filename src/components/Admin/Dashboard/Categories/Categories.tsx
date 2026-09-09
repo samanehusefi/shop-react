@@ -55,12 +55,12 @@ const Categories = () => {
       dispatch(getCategoriesAction());
     } catch (error) {
       console.error(error);
-      alert("تغییر وضعیت دسته‌بندی انجام نشد");
+      alert("تغییر وضعیت دسته‌بندی محصولات انجام نشد");
     }
   };
 
   const handleDelete = async (id: ICategory["id"]) => {
-    const confirmed = window.confirm("آیا از حذف این دسته‌بندی مطمئن هستید؟");
+    const confirmed = window.confirm("آیا از حذف این دسته‌بندی  محصولات مطمئن هستید؟");
 
     if (!confirmed) {
       return;
@@ -79,7 +79,7 @@ const Categories = () => {
       dispatch(getCategoriesAction());
     } catch (error) {
       console.error(error);
-      alert("حذف دسته‌بندی انجام نشد");
+      alert("حذف دسته‌بندی محصولات انجام نشد");
     }
   };
 
@@ -97,11 +97,11 @@ const Categories = () => {
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl font-bold text-red-900 sm:text-2xl">
-            دسته‌بندی‌ها
+            دسته‌بندی‌ محصولات
           </h1>
 
           <p className="mt-2 text-xs text-gray-500 sm:text-sm">
-            مدیریت دسته‌بندی‌های فروشگاه
+            مدیریت دسته‌بندی‌ محصولاتی فروشگاه
           </p>
         </div>
 

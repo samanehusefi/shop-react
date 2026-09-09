@@ -25,7 +25,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
       icon: <MdDashboard />,
     },
     {
-      title: "دسته‌بندی‌ها",
+      title: "دسته‌بندی‌ محصولات",
       path: "/dashboard/categories",
       icon: <MdViewList />,
     },
@@ -48,11 +48,6 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
       title: "شگفت‌انگیزها",
       path: "/dashboard/amazing",
       icon: <MdLocalOffer />,
-    },
-    {
-      title: "Footer",
-      path: "/dashboard/footer",
-      icon: <MdMiscellaneousServices />,
     },
   ];
 
