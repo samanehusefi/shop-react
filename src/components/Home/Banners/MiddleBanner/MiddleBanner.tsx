@@ -2,15 +2,17 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import type { AppDispatch, RootState } from "../../../../Redux/store";
-import { getBannersAction } from "../../../../Redux/Home/Banner/action";
+import { getBanners } from "../../../../Redux/Home/Banner/action";
 
 const MiddleBanner = () => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const banners = useSelector((state: RootState) => state.banner.banners);
+  const banners = useSelector(
+    (state: RootState) => state.banner.banners,
+  );
 
   useEffect(() => {
-    dispatch(getBannersAction());
+    dispatch(getBanners());
   }, [dispatch]);
 
   const middleBanners = banners.filter(
@@ -30,7 +32,7 @@ const MiddleBanner = () => {
               <img
                 src={banner.image}
                 alt={banner.title}
-                  loading="lazy"
+                loading="lazy"
                 className="h-full w-full object-fill md:object-cover"
               />
             </a>

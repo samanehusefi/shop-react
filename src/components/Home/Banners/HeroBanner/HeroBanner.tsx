@@ -2,18 +2,22 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import type { AppDispatch, RootState } from "../../../../Redux/store";
-import { getBannersAction } from "../../../../Redux/Home/Banner/action";
+import { getBanners } from "../../../../Redux/Home/Banner/action";
 
 const HeroBanner = () => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const banners = useSelector((state: RootState) => state.banner.banners);
+  const banners = useSelector(
+    (state: RootState) => state.banner.banners,
+  );
 
   useEffect(() => {
-    dispatch(getBannersAction());
+    dispatch(getBanners());
   }, [dispatch]);
 
-  const heroBanners = banners.filter((banner) => banner.position === "hero");
+  const heroBanners = banners.filter(
+    (banner) => banner.position === "hero",
+  );
 
   return (
     <section className="mb-8 w-full">
@@ -28,7 +32,7 @@ const HeroBanner = () => {
               <img
                 src={banner.image}
                 alt={banner.title}
-                  loading="lazy"
+                loading="lazy"
                 className="h-full w-full object-fill md:object-cover"
               />
             </a>
