@@ -20,7 +20,9 @@ const BannerModal = ({
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
   const [image, setImage] = useState("");
-  const [position, setPosition] = useState<IBanner["position"]>("hero");
+  const [position, setPosition] = useState<IBanner["position"] | "select">(
+    "select",
+  );
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -50,7 +52,12 @@ const BannerModal = ({
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!title.trim() || !url.trim() || !image.trim()) {
+    if (
+      !title.trim() ||
+      !url.trim() ||
+      !image.trim() ||
+      position === "select"
+    ) {
       setError("تمام فیلدها الزامی هستند");
       return;
     }
@@ -63,7 +70,7 @@ const BannerModal = ({
         title: title.trim(),
         url: url.trim(),
         image: image.trim(),
-        position,
+        position: position as IBanner["position"],
       };
 
       if (banner) {
@@ -151,7 +158,9 @@ const BannerModal = ({
             <select
               value={position}
               onChange={(event) =>
-                setPosition(event.target.value as IBanner["position"])
+                setPosition(
+                  event.target.value as IBanner["position"] | "select",
+                )
               }
               className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 outline-none focus:border-red-900"
             >

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 import Sidebar from "../AdminLayout/Sidebar/Sidebar";
-import { FaKey, FaPowerOff, FaUser } from "react-icons/fa";
+import { FaPowerOff, FaUser } from "react-icons/fa";
 
 const AdminLayout = () => {
   return (
@@ -10,10 +10,11 @@ const AdminLayout = () => {
 
       <main className="mr-64 min-h-screen">
         <header className="flex h-16 items-center justify-between border-b border-gray-200 bg-white px-6">
-          <h3 className="flex text-lg font-semibold text-gray-700">
-            <FaUser className="mx-2 fill-red-800 items-center" />
+          <h3 className="flex items-center text-lg font-semibold text-gray-700">
+            <FaUser className="mx-2 text-red-800" />
             خوش آمدید، <span className="text-red-800">ادمین</span>
           </h3>
+
           <button
             type="button"
             onClick={() => {
