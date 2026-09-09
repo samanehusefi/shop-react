@@ -25,7 +25,7 @@ const Login = () => {
       <div className="w-full justify-center max-w-md rounded-2xl bg-white p-8 shadow-lg">
         <img
           loading="lazy"
-          src="/assets/logo/full-horizontal.svg"
+          src={`${import.meta.env.BASE_URL}assets/logo/full-horizontal.svg`}
           alt="دیجیکالا"
           className="h-11 justify-items-center w-full my-2 object-contain md:h-4"
         />

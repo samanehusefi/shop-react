@@ -3,18 +3,44 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import type { AppDispatch, RootState } from "../../../Redux/store";
+
 import { getCategoriesAction } from "../../../Redux/Home/Categories/action";
+import { getBanners } from "../../../Redux/Home/Banner/action";
+import { getSlider } from "../../../Redux/Home/Slider/action";
+import { getCircleBadge } from "../../../Redux/Home/CircleBadge/action";
+import { getAmazing } from "../../../Redux/Home/Amazing/action";
+import DashboardSkeleton from "./DashboardSkeleton";
 
 const Dashboard = () => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
 
-  const { categories, loading, error } = useSelector(
-    (state: RootState) => state.categories,
+  const {
+    categories,
+    loading: categoriesLoading,
+    error: categoriesError,
+  } = useSelector((state: RootState) => state.categories);
+
+  const { banners, loading: bannersLoading } = useSelector(
+    (state: RootState) => state.banner,
   );
+
+  const { slider, loading: sliderLoading } = useSelector(
+    (state: RootState) => state.slider,
+  );
+
+  const { circleBadge, loading: circleBadgeLoading } = useSelector(
+    (state: RootState) => state.circleBadge,
+  );
+
+  const { amazing } = useSelector((state: RootState) => state.amazing);
 
   useEffect(() => {
     dispatch(getCategoriesAction());
+    dispatch(getBanners());
+    dispatch(getSlider());
+    dispatch(getCircleBadge());
+    dispatch(getAmazing());
   }, [dispatch]);
 
   const activeCategories = categories.filter(
@@ -25,78 +51,198 @@ const Dashboard = () => {
     (category) => !category.isActive,
   ).length;
 
-  return (
-    <div>
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-red-700">داشبورد</h1>
+  const activeCircleBadges = circleBadge.filter(
+    (item) => item.is_digikala_service,
+  ).length;
 
-        <p className="mt-2 text-sm text-gray-500">خلاصه وضعیت فروشگاه</p>
+  const inactiveCircleBadges = circleBadge.filter(
+    (item) => !item.is_digikala_service,
+  ).length;
+
+  if (
+    categoriesLoading ||
+    bannersLoading ||
+    sliderLoading ||
+    circleBadgeLoading
+  ) {
+    return <DashboardSkeleton />;
+  }
+
+  const cardClass =
+    "w-full rounded-xl bg-white p-4 text-right shadow-sm transition hover:-translate-y-1 hover:shadow-md sm:p-5 lg:p-6";
+
+  return (
+    <div className="w-full min-w-0">
+      <div className="mb-5 sm:mb-6">
+        <h1 className="text-xl font-bold text-red-700 sm:text-2xl">داشبورد</h1>
+
+        <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
+          خلاصه وضعیت فروشگاه
+        </p>
       </div>
 
-      {error && (
-        <div className="mb-6 rounded-xl bg-red-50 p-4 text-sm text-red-600">
+      {categoriesError && (
+        <div className="mb-5 rounded-xl bg-red-50 p-3 text-xs text-red-600 sm:mb-6 sm:p-4 sm:text-sm">
           خطا در دریافت اطلاعات
         </div>
       )}
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 sm:gap-5 lg:gap-6">
         <button
           type="button"
           onClick={() => navigate("/dashboard/categories")}
-          className="rounded-xl bg-white p-6 text-right shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          className={cardClass}
         >
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-semibold text-gray-800">دسته‌بندی‌ها</h2>
-
-            <span className="rounded-lg bg-red-100 px-3 py-1 text-sm text-red-700">
-              مدیریت
-            </span>
+          <div className="mb-3 sm:mb-4">
+            <h2 className="text-sm font-semibold text-gray-800 sm:text-base">
+              دسته‌بندی‌ها
+            </h2>
           </div>
 
-          <div className="text-3xl font-bold text-red-700">
-            {loading ? "..." : categories.length}
+          <div className="text-2xl font-bold text-red-700 sm:text-3xl">
+            {categories.length}
           </div>
 
-          <p className="mt-2 text-sm text-gray-500">تعداد کل دسته‌بندی‌ها</p>
+          <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
+            تعداد کل دسته‌بندی‌ها
+          </p>
         </button>
 
-        <div className="rounded-xl bg-white p-6 shadow-sm">
-          <h2 className="mb-4 font-semibold text-gray-800">بنرها</h2>
-
-          <div className="text-3xl font-bold text-red-700">-</div>
-
-          <p className="mt-2 text-sm text-gray-500">تعداد کل بنرها</p>
-        </div>
-
-        <div className="rounded-xl bg-white p-6 shadow-sm">
-          <h2 className="mb-4 font-semibold text-gray-800">اسلایدرها</h2>
-
-          <div className="text-3xl font-bold text-red-700">-</div>
-
-          <p className="mt-2 text-sm text-gray-500">تعداد کل اسلایدرها</p>
-        </div>
-      </div>
-
-      <div className="mt-6 rounded-xl bg-white p-6 shadow-sm">
-        <h2 className="mb-6 text-lg font-semibold text-gray-800">
-          وضعیت دسته‌بندی‌ها
-        </h2>
-
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div className="rounded-xl bg-green-50 p-5">
-            <p className="text-sm text-gray-500">دسته‌بندی‌های فعال</p>
-
-            <p className="mt-2 text-2xl font-bold text-green-700">
-              {loading ? "..." : activeCategories}
-            </p>
+        <button
+          type="button"
+          onClick={() => navigate("/dashboard/banners")}
+          className={cardClass}
+        >
+          <div className="mb-3 sm:mb-4">
+            <h2 className="text-sm font-semibold text-gray-800 sm:text-base">
+              تبلیغات
+            </h2>
           </div>
 
-          <div className="rounded-xl bg-red-50 p-5">
-            <p className="text-sm text-gray-500">دسته‌بندی‌های غیرفعال</p>
+          <div className="text-2xl font-bold text-red-700 sm:text-3xl">
+            {banners.length}
+          </div>
 
-            <p className="mt-2 text-2xl font-bold text-red-700">
-              {loading ? "..." : inactiveCategories}
-            </p>
+          <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
+            تعداد کل تبلیغات
+          </p>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => navigate("/dashboard/slider")}
+          className={cardClass}
+        >
+          <div className="mb-3 sm:mb-4">
+            <h2 className="text-sm font-semibold text-gray-800 sm:text-base">
+              اسلایدرها
+            </h2>
+          </div>
+
+          <div className="text-2xl font-bold text-red-700 sm:text-3xl">
+            {slider.length}
+          </div>
+
+          <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
+            تعداد کل اسلایدرها
+          </p>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => navigate("/dashboard/circle-badge")}
+          className={cardClass}
+        >
+          <div className="mb-3 sm:mb-4">
+            <h2 className="text-sm font-semibold text-gray-800 sm:text-base">
+              خدمات فروشگاه
+            </h2>
+          </div>
+
+          <div className="text-2xl font-bold text-red-700 sm:text-3xl">
+            {circleBadge.length}
+          </div>
+
+          <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
+            تعداد کل خدمات فروشگاه
+          </p>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => navigate("/dashboard/amazing")}
+          className={cardClass}
+        >
+          <div className="mb-3 sm:mb-4">
+            <h2 className="text-sm font-semibold text-gray-800 sm:text-base">
+              شگفت‌انگیزها
+            </h2>
+          </div>
+
+          <div className="text-2xl font-bold text-red-700 sm:text-3xl">
+            {amazing.length}
+          </div>
+
+          <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
+            تعداد کل شگفت‌انگیزها
+          </p>
+        </button>
+      </div>
+
+      <div className="mt-5 grid grid-cols-1 gap-4 sm:mt-6 sm:gap-5 xl:grid-cols-2 lg:gap-6">
+        <div className="rounded-xl bg-white p-4 shadow-sm sm:p-5">
+          <h2 className="mb-3 text-sm font-semibold text-gray-800 sm:mb-4 sm:text-base">
+            وضعیت دسته‌بندی‌ها
+          </h2>
+
+          <div className="grid grid-cols-1 gap-3 min-[400px]:grid-cols-2">
+            <div className="rounded-lg bg-green-50 p-3 sm:p-4">
+              <p className="text-xs text-gray-500">دسته‌بندی‌های فعال</p>
+
+              <p className="mt-1 text-lg font-bold text-green-700 sm:text-xl">
+                {activeCategories}
+              </p>
+            </div>
+
+            <div className="rounded-lg bg-red-50 p-3 sm:p-4">
+              <p className="text-xs text-gray-500">دسته‌بندی‌های غیرفعال</p>
+
+              <p className="mt-1 text-lg font-bold text-red-700 sm:text-xl">
+                {inactiveCategories}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-xl bg-white p-4 shadow-sm sm:p-5">
+          <h2 className="mb-3 text-sm font-semibold text-gray-800 sm:mb-4 sm:text-base">
+            وضعیت خدمات فروشگاه
+          </h2>
+
+          <div className="grid grid-cols-1 gap-3 min-[400px]:grid-cols-2">
+            <button
+              type="button"
+              onClick={() => navigate("/dashboard/circle-badge")}
+              className="rounded-lg bg-green-50 p-3 text-right transition hover:-translate-y-0.5 hover:shadow-sm sm:p-4"
+            >
+              <p className="text-xs text-gray-500">خدمات فعال</p>
+
+              <p className="mt-1 text-lg font-bold text-green-700 sm:text-xl">
+                {activeCircleBadges}
+              </p>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => navigate("/dashboard/circle-badge")}
+              className="rounded-lg bg-red-50 p-3 text-right transition hover:-translate-y-0.5 hover:shadow-sm sm:p-4"
+            >
+              <p className="text-xs text-gray-500">خدمات غیرفعال</p>
+
+              <p className="mt-1 text-lg font-bold text-red-700 sm:text-xl">
+                {inactiveCircleBadges}
+              </p>
+            </button>
           </div>
         </div>
       </div>

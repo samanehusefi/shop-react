@@ -20,7 +20,11 @@ const CircleBadge = () => {
     dispatch(getCircleBadge());
   }, [dispatch]);
 
-  const visibleItems = circleBadge.slice(0, 9);
+  const activeCircleBadge = circleBadge.filter(
+    (item) => item.is_digikala_service,
+  );
+
+  const visibleItems = activeCircleBadge.slice(0, 9);
 
   return (
     <>
@@ -124,7 +128,8 @@ const CircleBadge = () => {
                   className="flex flex-col items-center text-center"
                 >
                   <div className="mb-2 h-[52px] w-[52px] overflow-hidden rounded-full">
-                    <img   loading="lazy"
+                    <img
+                      loading="lazy"
                       src={item.image}
                       alt={item.title}
                       className="h-full w-full object-cover"

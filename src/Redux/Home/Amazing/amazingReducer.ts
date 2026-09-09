@@ -4,10 +4,14 @@ import { GET_AMAZING } from "./actiontype";
 
 interface AmazingState {
   amazing: IAmazing[];
+  loading: boolean;
+  error: string | null;
 }
 
 const initialState: AmazingState = {
   amazing: [],
+  loading: false,
+  error: null,
 };
 
 const amazingReducer = (
@@ -22,6 +26,8 @@ const amazingReducer = (
       return {
         ...state,
         amazing: action.payload ?? [],
+        loading: false,
+        error: null,
       };
 
     default:

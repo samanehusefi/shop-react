@@ -10,31 +10,39 @@ import {
 import { useNavigate } from "react-router-dom";
 
 import type { AppDispatch, RootState } from "../../../../Redux/store";
-import { getSlider } from "../../../../Redux/Home/Slider/action";
-import { deleteSlider } from "../../../../Api/Admin/sliderApi";
-import type { ISlider } from "../../../../Types/Home/ISlider";
+import { getCircleBadge } from "../../../../Redux/Home/CircleBadge/action";
+import type { ICircleBadge } from "../../../../Types/Home/ICircleBadge";
 
-const Slider = () => {
+import {
+  deleteCircleBadge,
+  updateCircleBadge,
+} from "../../../../Api/Admin/circleBadgeApi";
+
+const CircleBadge = () => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
 
-  const { slider, loading, error } = useSelector(
-    (state: RootState) => state.slider,
+  const { circleBadge, loading, error } = useSelector(
+    (state: RootState) => state.circleBadge,
   );
 
   const [currentPage, setCurrentPage] = useState(1);
+  const [statusLoadingId, setStatusLoadingId] = useState<number | null>(null);
 
   const itemsPerPage = 10;
 
-  const totalPages = Math.ceil(slider.length / itemsPerPage);
+  useEffect(() => {
+    dispatch(getCircleBadge());
+  }, [dispatch]);
+
+  const totalPages = Math.ceil(circleBadge.length / itemsPerPage);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
 
-  const currentSlider = slider.slice(startIndex, startIndex + itemsPerPage);
-
-  useEffect(() => {
-    dispatch(getSlider());
-  }, [dispatch]);
+  const currentItems = circleBadge.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
 
   useEffect(() => {
     if (totalPages > 0 && currentPage > totalPages) {
@@ -47,34 +55,53 @@ const Slider = () => {
   }, [currentPage, totalPages]);
 
   const handleAdd = () => {
-    navigate("/dashboard/slider/create");
+    navigate("/dashboard/circle-badge/create");
   };
 
-  const handleEdit = (item: ISlider) => {
-    navigate(`/dashboard/slider/edit/${item.id}`);
+  const handleEdit = (item: ICircleBadge) => {
+    navigate(`/dashboard/circle-badge/edit/${item.id}`);
   };
 
-  const handleDelete = async (id: ISlider["id"]) => {
-    const confirmed = window.confirm("آیا از حذف این اسلایدر مطمئن هستید؟");
+  const handleDelete = async (id: ICircleBadge["id"]) => {
+    const confirmed = window.confirm(
+      "آیا از حذف این Circle Badge مطمئن هستید؟",
+    );
 
     if (!confirmed) {
       return;
     }
 
     try {
-      await deleteSlider(id);
+      await deleteCircleBadge(id);
 
       if (
         currentPage > 1 &&
-        slider.length - 1 <= (currentPage - 1) * itemsPerPage
+        circleBadge.length - 1 <= (currentPage - 1) * itemsPerPage
       ) {
         setCurrentPage((page) => page - 1);
       }
 
-      dispatch(getSlider());
+      dispatch(getCircleBadge());
     } catch (error) {
       console.error(error);
-      alert("حذف اسلایدر انجام نشد");
+      alert("حذف مورد انجام نشد");
+    }
+  };
+
+  const handleToggleStatus = async (item: ICircleBadge) => {
+    setStatusLoadingId(item.id);
+
+    try {
+      await updateCircleBadge(item.id, {
+        is_digikala_service: !item.is_digikala_service,
+      });
+
+      dispatch(getCircleBadge());
+    } catch (error) {
+      console.error(error);
+      alert("تغییر وضعیت انجام نشد");
+    } finally {
+      setStatusLoadingId(null);
     }
   };
 
@@ -83,11 +110,11 @@ const Slider = () => {
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl font-bold text-red-900 sm:text-2xl">
-            اسلایدرها
+            خدمات فروشگاه
           </h1>
 
           <p className="mt-2 text-xs text-gray-500 sm:text-sm">
-            مدیریت اسلایدرهای فروشگاه
+            مدیریت خدمات فروشگاه
           </p>
         </div>
 
@@ -97,7 +124,7 @@ const Slider = () => {
           className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-green-700 px-5 py-3 text-sm font-medium text-white transition hover:bg-green-800 sm:w-auto"
         >
           <FaPlus />
-          افزودن اسلایدر
+          افزودن مورد جدید
         </button>
       </div>
 
@@ -114,23 +141,24 @@ const Slider = () => {
           </div>
         )}
 
-        {!loading && !error && slider.length > 0 && (
+        {!loading && !error && circleBadge.length > 0 && (
           <>
             <div className="hidden overflow-x-auto md:block">
               <table className="w-full min-w-[1000px] text-right">
                 <thead className="border-b border-gray-200 bg-gray-50">
                   <tr>
-                    <th className="px-6 py-4">ID</th>
-                    <th className="px-6 py-4">تصویر دسکتاپ</th>
-                    <th className="px-6 py-4">تصویر موبایل</th>
+                    <th className="px-6 py-4">شناسه</th>
+                    <th className="px-6 py-4">تصویر</th>
                     <th className="px-6 py-4">عنوان</th>
+                    <th className="px-6 py-4">توضیحات</th>
+                    <th className="px-6 py-4">وضعیت</th>
                     <th className="px-6 py-4">لینک</th>
                     <th className="px-6 py-4">عملیات</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  {currentSlider.map((item: ISlider) => (
+                  {currentItems.map((item: ICircleBadge) => (
                     <tr
                       key={item.id}
                       className="border-b border-gray-100 last:border-0"
@@ -141,34 +169,65 @@ const Slider = () => {
 
                       <td className="px-6 py-4">
                         <img
-                          src={item.imageSrc}
+                          src={item.image}
                           alt={item.title}
-                          className="h-12 w-20 rounded-lg object-cover"
+                          className="h-12 w-12 rounded-full object-cover"
                         />
+                      </td>
+
+                      <td className="px-6 py-4 font-medium text-gray-700">
+                        {item.title}
+                      </td>
+
+                      <td className="max-w-xs px-6 py-4 text-gray-500">
+                        <div className="line-clamp-2">
+                          {item.description || "-"}
+                        </div>
                       </td>
 
                       <td className="px-6 py-4">
-                        <img
-                          src={item.imageMobileSrc}
-                          alt={item.title}
-                          className="h-12 w-12 rounded-lg object-cover"
-                        />
-                      </td>
+                        <button
+                          type="button"
+                          onClick={() => handleToggleStatus(item)}
+                          disabled={statusLoadingId === item.id}
+                          className={`relative flex h-7 w-12 items-center rounded-full p-1 transition ${
+                            item.is_digikala_service
+                              ? "bg-green-600"
+                              : "bg-gray-300"
+                          } ${
+                            statusLoadingId === item.id
+                              ? "cursor-not-allowed opacity-60"
+                              : "cursor-pointer"
+                          }`}
+                        >
+                          <span
+                            className={`h-5 w-5 rounded-full bg-white shadow-sm transition-transform ${
+                              item.is_digikala_service
+                                ? "-translate-x-5"
+                                : "translate-x-0"
+                            }`}
+                          />
+                        </button>
 
-                      <td className="max-w-xs px-6 py-4">
-                        <span className="block truncate font-medium text-gray-700">
-                          {item.title}
+                        <span
+                          className={`mt-1 block text-xs ${
+                            item.is_digikala_service
+                              ? "text-green-600"
+                              : "text-gray-500"
+                          }`}
+                        >
+                          {item.is_digikala_service ? "فعال" : "غیرفعال"}
                         </span>
                       </td>
 
                       <td className="max-w-xs px-6 py-4">
                         <a
-                          href={item.link}
+                          href={item.url}
                           target="_blank"
                           rel="noreferrer"
                           className="block truncate text-sm text-blue-600 hover:text-blue-800"
                         >
-                          {item.link}
+                          {item.url}
                         </a>
                       </td>
 
@@ -200,41 +259,76 @@ const Slider = () => {
             </div>
 
             <div className="divide-y divide-gray-100 md:hidden">
-              {currentSlider.map((item: ISlider) => (
+              {currentItems.map((item: ICircleBadge) => (
                 <div key={item.id} className="p-4">
                   <div className="flex items-start gap-3">
-                    <div className="flex h-16 w-20 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-gray-100 bg-gray-50">
+                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-gray-100 bg-gray-50">
                       <img
-                        src={item.imageSrc}
+                        src={item.image}
                         alt={item.title}
-                        className="h-full w-full object-cover"
+                        className="h-14 w-14 rounded-full object-cover"
                       />
                     </div>
 
                     <div className="min-w-0 flex-1">
                       <div className="mb-1 text-xs text-gray-400">
-                        ID: {item.id}
+                        شناسه: {item.id}
                       </div>
 
-                      <h3 className="text-sm font-semibold text-gray-800">
+                      <h3 className="truncate text-sm font-semibold text-gray-800">
                         {item.title}
                       </h3>
                     </div>
+
+                    <button
+                      type="button"
+                      onClick={() => handleToggleStatus(item)}
+                      disabled={statusLoadingId === item.id}
+                      className={`relative flex h-7 w-12 shrink-0 items-center rounded-full p-1 transition ${
+                        item.is_digikala_service
+                          ? "bg-green-600"
+                          : "bg-gray-300"
+                      } ${
+                        statusLoadingId === item.id
+                          ? "cursor-not-allowed opacity-60"
+                          : "cursor-pointer"
+                      }`}
+                    >
+                      <span
+                        className={`h-5 w-5 rounded-full bg-white shadow-sm transition-transform ${
+                          item.is_digikala_service
+                            ? "-translate-x-5"
+                            : "translate-x-0"
+                        }`}
+                      />
+                    </button>
                   </div>
 
-                  <div className="mt-4">
-                    <div className="mb-3">
-                      <span className="mb-2 block text-xs text-gray-400">
-                        تصویر موبایل
+                  <div className="mt-4 space-y-3">
+                    <div>
+                      <span className="mb-1 block text-xs text-gray-400">
+                        وضعیت
                       </span>
 
-                      <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-lg border border-gray-100 bg-gray-50">
-                        <img
-                          src={item.imageMobileSrc}
-                          alt={item.title}
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
+                      <span
+                        className={`text-xs font-medium ${
+                          item.is_digikala_service
+                            ? "text-green-600"
+                            : "text-gray-500"
+                        }`}
+                      >
+                        {item.is_digikala_service ? "فعال" : "غیرفعال"}
+                      </span>
+                    </div>
+
+                    <div>
+                      <span className="mb-1 block text-xs text-gray-400">
+                        توضیحات
+                      </span>
+
+                      <p className="text-sm leading-6 text-gray-600">
+                        {item.description || "-"}
+                      </p>
                     </div>
 
                     <div>
@@ -243,12 +337,12 @@ const Slider = () => {
                       </span>
 
                       <a
-                        href={item.link}
+                        href={item.url}
                         target="_blank"
                         rel="noreferrer"
                         className="block truncate text-sm text-blue-600 hover:text-blue-800"
                       >
-                        {item.link || "-"}
+                        {item.url || "-"}
                       </a>
                     </div>
                   </div>
@@ -326,9 +420,9 @@ const Slider = () => {
           </>
         )}
 
-        {!loading && !error && slider.length === 0 && (
+        {!loading && !error && circleBadge.length === 0 && (
           <div className="p-8 text-center text-sm text-gray-500">
-            اسلایدری وجود ندارد
+            موردی وجود ندارد
           </div>
         )}
       </div>
@@ -336,4 +430,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default CircleBadge;

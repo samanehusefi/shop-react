@@ -43,7 +43,9 @@ const Header = () => {
     <header>
       <div
         className={`bg-white ${
-          isScrolled ? "fixed left-0 right-0 top-0 z-40" : "relative z-50"
+          isScrolled
+            ? "fixed left-0 right-0 top-0 z-40 shadow-lg"
+            : "relative z-50"
         }`}
       >
         <TopBanner />

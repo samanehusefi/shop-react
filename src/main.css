@@ -248,3 +248,7 @@ body {
     lg:rounded-lg px-4  py-2 text-sm  cursor-pointer;
 }
 /*#endregion Footer*/
+a,
+button {
+  @apply cursor-pointer;
+}

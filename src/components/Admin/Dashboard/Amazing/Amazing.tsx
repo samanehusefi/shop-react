@@ -10,30 +10,30 @@ import {
 import { useNavigate } from "react-router-dom";
 
 import type { AppDispatch, RootState } from "../../../../Redux/store";
-import { getBanners } from "../../../../Redux/Home/Banner/action";
-import { deleteBanner } from "../../../../Api/Admin/bannerApi";
-import type { IBanner } from "../../../../Types/Home/IBanner";
+import { getAmazing } from "../../../../Redux/Home/Amazing/action";
+import { deleteAmazing } from "../../../../Api/Admin/amazingApi";
+import type { IAmazing } from "../../../../Types/Home/IAmazing";
 
-const Banners = () => {
+const Amazing = () => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
 
-  const { banners, loading, error } = useSelector(
-    (state: RootState) => state.banner,
+  const { amazing, loading, error } = useSelector(
+    (state: RootState) => state.amazing,
   );
 
   const [currentPage, setCurrentPage] = useState(1);
 
   const itemsPerPage = 10;
 
-  const totalPages = Math.ceil(banners.length / itemsPerPage);
+  const totalPages = Math.ceil(amazing.length / itemsPerPage);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
 
-  const currentBanners = banners.slice(startIndex, startIndex + itemsPerPage);
+  const currentItems = amazing.slice(startIndex, startIndex + itemsPerPage);
 
   useEffect(() => {
-    dispatch(getBanners());
+    dispatch(getAmazing());
   }, [dispatch]);
 
   useEffect(() => {
@@ -47,56 +47,41 @@ const Banners = () => {
   }, [currentPage, totalPages]);
 
   const handleAdd = () => {
-    navigate("/dashboard/banners/create");
+    navigate("/dashboard/amazing/create");
   };
 
-  const handleEdit = (banner: IBanner) => {
-    navigate(`/dashboard/banners/edit/${banner.id}`);
+  const handleEdit = (item: IAmazing) => {
+    navigate(`/dashboard/amazing/edit/${item.id}`);
   };
 
-  const handleDelete = async (id: IBanner["id"]) => {
-    const confirmed = window.confirm("آیا از حذف این بنر مطمئن هستید؟");
+  const handleDelete = async (id: IAmazing["id"]) => {
+    const confirmed = window.confirm(
+      "آیا از حذف این مورد شگفت‌انگیز مطمئن هستید؟",
+    );
 
     if (!confirmed) {
       return;
     }
 
     try {
-      await deleteBanner(id);
-
-      if (
-        currentPage > 1 &&
-        banners.length - 1 <= (currentPage - 1) * itemsPerPage
-      ) {
-        setCurrentPage((page) => page - 1);
-      }
-
-      dispatch(getBanners());
+      await deleteAmazing(id);
+      dispatch(getAmazing());
     } catch (error) {
       console.error(error);
-      alert("حذف بنر انجام نشد");
+      alert("حذف شگفت‌انگیز انجام نشد");
     }
-  };
-
-  const getPositionTitle = (position: IBanner["position"]) => {
-    const positions: Record<IBanner["position"], string> = {
-      hero: "بعد از شگفت انگیزها",
-      "top-banner": "بعد از دسته بندی ها",
-      "middle-banner": "بعد از محصولات",
-      "bottom-banner": "بعد از برند",
-    };
-
-    return positions[position];
   };
 
   return (
     <div className="w-full min-w-0">
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-xl font-bold text-red-900 sm:text-2xl">بنرها</h1>
+          <h1 className="text-xl font-bold text-red-900 sm:text-2xl">
+            شگفت‌انگیزها
+          </h1>
 
           <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
-            مدیریت بنرهای فروشگاه
+            مدیریت آیتم‌های شگفت‌انگیز فروشگاه
           </p>
         </div>
 
@@ -106,7 +91,7 @@ const Banners = () => {
           className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-green-700 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-green-800 sm:w-auto sm:px-5 sm:py-3"
         >
           <FaPlus />
-          افزودن بنر
+          افزودن شگفت‌انگیز
         </button>
       </div>
 
@@ -123,10 +108,10 @@ const Banners = () => {
           </div>
         )}
 
-        {!loading && !error && banners.length > 0 && (
+        {!loading && !error && amazing.length > 0 && (
           <>
             <div className="hidden overflow-x-auto md:block">
-              <table className="w-full min-w-[1000px] text-right">
+              <table className="w-full min-w-[900px] text-right">
                 <thead className="border-b border-gray-200 bg-gray-50">
                   <tr>
                     <th className="px-5 py-4 text-sm">ID</th>
@@ -135,60 +120,47 @@ const Banners = () => {
 
                     <th className="px-5 py-4 text-sm">عنوان</th>
 
-                    <th className="px-5 py-4 text-sm">موقعیت</th>
-
-                    <th className="px-5 py-4 text-sm">لینک</th>
+                    <th className="px-5 py-4 text-sm">برند</th>
 
                     <th className="px-5 py-4 text-sm">عملیات</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  {currentBanners.map((banner: IBanner) => (
+                  {currentItems.map((item: IAmazing) => (
                     <tr
-                      key={banner.id}
+                      key={item.id}
                       className="border-b border-gray-100 last:border-0"
                     >
                       <td className="px-5 py-4 font-medium text-gray-700">
-                        {banner.id}
+                        {item.id}
                       </td>
 
                       <td className="px-5 py-4">
                         <img
-                          src={banner.image}
-                          alt={banner.title}
+                          src={item.image}
+                          alt={item.title}
                           className="h-14 w-24 rounded-lg object-cover"
                         />
                       </td>
 
                       <td className="max-w-xs px-5 py-4">
                         <span className="block truncate font-medium text-gray-700">
-                          {banner.title}
+                          {item.title}
                         </span>
                       </td>
 
                       <td className="px-5 py-4">
-                        <span className="inline-block rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">
-                          {getPositionTitle(banner.position)}
+                        <span className="rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">
+                          {item.brand.title}
                         </span>
-                      </td>
-
-                      <td className="max-w-xs px-5 py-4">
-                        <a
-                          href={banner.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="block truncate text-sm text-blue-600 transition hover:text-blue-800"
-                        >
-                          {banner.url}
-                        </a>
                       </td>
 
                       <td className="px-5 py-4">
                         <div className="flex gap-2">
                           <button
                             type="button"
-                            onClick={() => handleEdit(banner)}
+                            onClick={() => handleEdit(item)}
                             className="flex cursor-pointer items-center gap-2 rounded-lg bg-yellow-500 px-3 py-2 text-sm text-red-900 transition hover:bg-yellow-600"
                           >
                             <FaEdit />
@@ -197,7 +169,7 @@ const Banners = () => {
 
                           <button
                             type="button"
-                            onClick={() => handleDelete(banner.id)}
+                            onClick={() => handleDelete(item.id)}
                             className="flex cursor-pointer items-center gap-2 rounded-lg bg-rose-600 px-3 py-2 text-sm text-white transition hover:bg-rose-700"
                           >
                             <FaTrash />
@@ -212,49 +184,36 @@ const Banners = () => {
             </div>
 
             <div className="divide-y divide-gray-100 md:hidden">
-              {currentBanners.map((banner: IBanner) => (
-                <div key={banner.id} className="p-4">
+              {currentItems.map((item: IAmazing) => (
+                <div key={item.id} className="p-4">
                   <div className="flex gap-3">
                     <img
-                      src={banner.image}
-                      alt={banner.title}
+                      src={item.image}
+                      alt={item.title}
                       className="h-20 w-28 shrink-0 rounded-lg object-cover"
                     />
 
                     <div className="min-w-0 flex-1">
                       <div className="mb-2 flex items-center justify-between gap-2">
-                        <span className="shrink-0 rounded-md bg-gray-100 px-2 py-1 text-xs text-gray-500">
-                          ID: {banner.id}
+                        <span className="rounded-md bg-gray-100 px-2 py-1 text-xs text-gray-500">
+                          ID: {item.id}
                         </span>
 
                         <span className="truncate rounded-md bg-gray-100 px-2 py-1 text-xs text-gray-700">
-                          {getPositionTitle(banner.position)}
+                          {item.brand.title}
                         </span>
                       </div>
 
                       <h2 className="line-clamp-2 text-sm font-semibold leading-6 text-gray-800">
-                        {banner.title}
+                        {item.title}
                       </h2>
                     </div>
                   </div>
 
-                  <div className="mt-3 rounded-lg bg-gray-50 p-3">
-                    <p className="mb-1 text-xs text-gray-500">لینک بنر</p>
-
-                    <a
-                      href={banner.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="block truncate text-xs text-blue-600 hover:text-blue-800"
-                    >
-                      {banner.url}
-                    </a>
-                  </div>
-
-                  <div className="mt-3 grid grid-cols-2 gap-2">
+                  <div className="mt-4 grid grid-cols-2 gap-2">
                     <button
                       type="button"
-                      onClick={() => handleEdit(banner)}
+                      onClick={() => handleEdit(item)}
                       className="flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-yellow-500 px-3 py-2.5 text-xs font-medium text-red-900 transition hover:bg-yellow-600"
                     >
                       <FaEdit />
@@ -263,7 +222,7 @@ const Banners = () => {
 
                     <button
                       type="button"
-                      onClick={() => handleDelete(banner.id)}
+                      onClick={() => handleDelete(item.id)}
                       className="flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-rose-600 px-3 py-2.5 text-xs font-medium text-white transition hover:bg-rose-700"
                     >
                       <FaTrash />
@@ -274,19 +233,20 @@ const Banners = () => {
               ))}
             </div>
 
-            {totalPages > 0 && (
+            {totalPages > 1 && (
               <div className="flex flex-col gap-4 border-t border-gray-200 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-                <span className="text-center text-xs text-gray-500 sm:text-right sm:text-sm">
-                  صفحه {currentPage} از {totalPages}
-                </span>
+                <div className="text-center text-xs text-gray-500 sm:text-right sm:text-sm">
+                  نمایش {startIndex + 1} تا{" "}
+                  {Math.min(startIndex + itemsPerPage, amazing.length)} از{" "}
+                  {amazing.length} مورد
+                </div>
 
                 <div className="flex items-center justify-center gap-1.5 sm:gap-2">
                   <button
                     type="button"
                     disabled={currentPage === 1}
                     onClick={() => setCurrentPage((page) => page - 1)}
-                    className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-gray-300 text-sm text-gray-700 transition hover:border-green-600 hover:bg-green-50 disabled:cursor-not-allowed disabled:opacity-40"
-                    title="صفحه قبل"
+                    className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-gray-200 text-sm text-gray-600 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     <FaChevronRight />
                   </button>
@@ -303,7 +263,7 @@ const Banners = () => {
                         className={`flex h-9 min-w-9 cursor-pointer items-center justify-center rounded-lg px-2 text-xs transition sm:px-3 sm:text-sm ${
                           currentPage === page
                             ? "bg-green-600 text-white"
-                            : "border border-gray-300 text-gray-700 hover:bg-green-50"
+                            : "border border-gray-200 text-gray-600 hover:bg-gray-50"
                         }`}
                       >
                         {page}
@@ -315,8 +275,7 @@ const Banners = () => {
                     type="button"
                     disabled={currentPage === totalPages}
                     onClick={() => setCurrentPage((page) => page + 1)}
-                    className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-gray-300 text-sm text-gray-700 transition hover:border-green-600 hover:bg-green-50 disabled:cursor-not-allowed disabled:opacity-40"
-                    title="صفحه بعد"
+                    className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-gray-200 text-sm text-gray-600 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     <FaChevronLeft />
                   </button>
@@ -326,9 +285,9 @@ const Banners = () => {
           </>
         )}
 
-        {!loading && !error && banners.length === 0 && (
+        {!loading && !error && amazing.length === 0 && (
           <div className="p-8 text-center text-sm text-gray-500">
-            بنری وجود ندارد
+            آیتم شگفت‌انگیزی وجود ندارد
           </div>
         )}
       </div>
@@ -336,4 +295,4 @@ const Banners = () => {
   );
 };
 
-export default Banners;
+export default Amazing;

@@ -1,12 +1,12 @@
-import type { ICircleBadge } from "../../../Types/Home/ICircleBadge";
+import type { ICircleBadge } from "../../Types/Home/ICircleBadge";
 
 const API_URL = `${import.meta.env.VITE_API_URL}/circle_badge`;
 
-export const getCircleBadge = async (): Promise<ICircleBadge[]> => {
+export const getAdminCircleBadge = async (): Promise<ICircleBadge[]> => {
   const response = await fetch(API_URL);
 
   if (!response.ok) {
-    throw new Error("خطا در دریافت اطلاعات Circle Badge");
+    throw new Error("خطا در دریافت Circle Badge");
   }
 
   return response.json();
@@ -15,7 +15,7 @@ export const getCircleBadge = async (): Promise<ICircleBadge[]> => {
 export const createCircleBadge = async (
   circleBadge: Omit<ICircleBadge, "id">,
 ): Promise<ICircleBadge> => {
-  const items = await getCircleBadge();
+  const items = await getAdminCircleBadge();
 
   const ids = items
     .map((item) => Number(item.id))
@@ -43,14 +43,14 @@ export const createCircleBadge = async (
 
 export const updateCircleBadge = async (
   id: ICircleBadge["id"],
-  circleBadge: Partial<Omit<ICircleBadge, "id">>,
+  data: Partial<Omit<ICircleBadge, "id">>,
 ): Promise<ICircleBadge> => {
   const response = await fetch(`${API_URL}/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(circleBadge),
+    body: JSON.stringify(data),
   });
 
   if (!response.ok) {

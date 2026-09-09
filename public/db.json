@@ -8121,77 +8121,77 @@
   ],
   "circle_badge": [
     {
-      "id": "674",
+      "id": 674,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/856d2daf9782a77d34755204955c745d401582f2_1784737192.png",
-      "is_digikala_service": false,
+      "is_digikala_service": true,
       "title": "سوپرمارکت",
       "url": "https://www.digikalajet.com/?utm_source=digikala-superweb"
     },
     {
-      "id": "302",
+      "id": 302,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/57c39ef7e3df9682a1c50da73500c74faadf5eb6_1782816426.png",
       "is_digikala_service": true,
       "title": "طلا و نقره دیجیتال",
       "url": "https://www.digikala.com/wealth/my-assets/"
     },
     {
-      "id": "661",
+      "id": 661,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/ae21e2324e1f2261bb9cc7feff58fa34b258afc8_1782109141.png",
       "is_digikala_service": true,
       "title": "دیجی‌استایل",
       "url": "https://dgka.me/BSkZpp"
     },
     {
-      "id": "698",
+      "id": 698,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/ddfa309853a7636203cc1b5e983436fadee06020_1787409799.png",
-      "is_digikala_service": false,
+      "is_digikala_service": true,
       "title": "لوازم مدرسه",
       "url": "https://www.digikala.com/landing/payday-stationery/"
     },
     {
-      "id": "369",
+      "id": 369,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/a921b5cf530fa6bc3c6d2c6222c35ceeeac68937_1741071269.png",
-      "is_digikala_service": false,
+      "is_digikala_service": true,
       "title": "حراج لپ‌تاپ تبلت",
       "url": "https://www.digikala.com/landing/laptop-tablet/?sort=7&utm_source=onsite&utm_medium=CircleBadge&utm_campaign=LT&utm_content=050511"
     },
     {
-      "id": "707",
+      "id": 707,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/8e556e24462a2bb362983c5de0e902ecef6e947f_1788191007.png",
-      "is_digikala_service": false,
+      "is_digikala_service": true,
       "title": "کفش اورجینال",
       "url": "https://www.digikala.com/landing/freeshipping-orginal-shoes/"
     },
     {
-      "id": "101",
+      "id": 101,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/74a5ac2c42df40e2b9e9a1f7ef2fbb87a8f13cad_1771936893.png",
       "is_digikala_service": true,
       "title": "اشتراک پلاس",
       "url": "https://www.digikala.com/plus/landing/"
     },
     {
-      "id": "645",
+      "id": 645,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/682cb9c6aa593f26e1908cb0354285628e916a79_1785602818.jpg",
-      "is_digikala_service": false,
+      "is_digikala_service": true,
       "title": "دیجی‌کارت",
       "url": "https://www.digikala.com/superapp/fintech/card/"
     },
     {
-      "id": "616",
+      "id": 616,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/1d7ecb2d442364097e01a04c28490d4d06e0fd3a_1784998161.png",
       "is_digikala_service": true,
       "title": "وام بانکی، اعتبار خرید",
       "url": "https://api.digikala.com/super-app/v1/sso/fintech/?redirect_url=%2F%3Fsa_user%3Dtrue"
     },
     {
-      "id": "629",
+      "id": 629,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/90c00fca89e03d02b1ce1975945f31e1bc2bea49_1778407356.png",
-      "is_digikala_service": false,
+      "is_digikala_service": true,
       "title": "دیجی‌کالا سرویس",
       "url": "https://service.digikala.com/?utm_source=Digikala&utm_medium=services+badge&utm_id=5"
     },
     {
-      "id": "161",
+      "id": 161,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/90c00fca89e03d02b1ce1975945f31e1bc2bea49_1771938147.png",
       "is_digikala_service": true,
       "title": "دیجی‌کالا سرویس",
@@ -8199,7 +8199,7 @@
       "url": "https://service.digikala.com/?utm_source=Digikala&utm_medium=services+badge&utm_id=5"
     },
     {
-      "id": "143",
+      "id": 143,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/329707595e5f96a150ba945f8addc4f89a169c97_1771937703.png",
       "is_digikala_service": true,
       "title": "دیجی‌کالا مهر",
@@ -8207,7 +8207,7 @@
       "url": "https://mehr.digikala.com"
     },
     {
-      "id": "465",
+      "id": 465,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/1c4d561bc4265d58276a82e4469da6426dcbea32_1760874026.png",
       "is_digikala_service": true,
       "title": "همکاری در فروش دیجی کالا",
@@ -8215,7 +8215,7 @@
       "url": "https://www.digikala.com/s/n4fjou"
     },
     {
-      "id": "111",
+      "id": 111,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/5a0f696a3c982cd3820e8bd037298f030d94334d_1771938061.png",
       "is_digikala_service": true,
       "title": "دیجی‌کالا بیزینس",
@@ -8223,7 +8223,7 @@
       "url": "https://b2b.digikala.com/?utm_source=DK&utm_medium=CircleBadge&utm_campaign=Dktraffic"
     },
     {
-      "id": "452",
+      "id": 452,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/3e62b2b704747a5b795f2b750b6af65be0eb66b0_1771938242.png",
       "is_digikala_service": true,
       "title": "بومی‌محلی",
@@ -8231,15 +8231,15 @@
       "url": "https://www.digikala.com/landing/boomi-mahali/"
     },
     {
-      "id": "248",
+      "id": 248,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/bcfb2f367141fb0e3db4e1a3def0bb987513e678_1769854388.png",
-      "is_digikala_service": false,
+      "is_digikala_service": true,
       "title": "فروشگاه حضوری",
       "description": "خرید انواع کالای دیجیتال از دیجی‌کالا به صورت حضوری‎‌",
       "url": "https://www.digikala.com/s/9yuqow"
     },
     {
-      "id": "107",
+      "id": 107,
       "image": "https://dkstatics-public.digikala.com/digikala-bellatrix/c1ef1dc1b1a193f48e33a920f7f0c5e4dc5840bc_1785139639.jpg",
       "is_digikala_service": true,
       "title": "فیدیبو",
@@ -8335,7 +8335,7 @@
   ],
   "amazing": [
     {
-      "id": "15229254",
+      "id": 15229254,
       "title": "کتاب تاریخ مصور ایران باستان اثر احسان رضایی و فاطمه شفیعی‌سروستانی نشر سایان 4 جلدی - جلد 1 تا 4",
       "image": "https://dkstatics-public.digikala.com/digikala-products/64befbccde92db44d19fe012942bf25b74d1718d_1713867221.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8355,7 +8355,7 @@
       "url": "/product/dkp-15229254/کتاب-تاریخ-مصور-ایران-باستان-اثر-احسان-رضایی-و-فاطمه-شفیعی-سروستانی-نشر-سایان-4-جلدی-جلد-1-تا-4"
     },
     {
-      "id": "21691319",
+      "id": 21691319,
       "title": "شارژر دیواری 45 وات وونک مدل PD-45W به همراه کابل دو متری USB-C",
       "image": "https://dkstatics-public.digikala.com/digikala-products/6a3489f074142b7f68c74a6344ce6304aab65532_1776860410.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8385,7 +8385,7 @@
       "url": "/product/dkp-21691319/شارژر-دیواری-45-وات-وونک-مدل-pd45w-به-همراه-کابل-دو-متری-usb-c"
     },
     {
-      "id": "17709258",
+      "id": 17709258,
       "title": "آبسردکن آوکس مدل ES Tron",
       "image": "https://dkstatics-public.digikala.com/digikala-products/02b5ad20cdc26eda9755c292e86bebab1cc7a5d7_1787418088.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8411,7 +8411,7 @@
       "url": "/product/dkp-17709258/آبسردکن-آوکس-مدل-es-tron"
     },
     {
-      "id": "4514649",
+      "id": 4514649,
       "title": "صندلی غذاخوری کودک زویه مدل z110",
       "image": "https://dkstatics-public.digikala.com/digikala-products/246a09ab0f4e0dd79b490869f1d7760939213010_1613985382.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8477,7 +8477,7 @@
       "url": "/product/dkp-4514649/صندلی-غذاخوری-کودک-زویه-مدل-z110"
     },
     {
-      "id": "16362642",
+      "id": 16362642,
       "title": "سرویس غذاخوری 29 پارچه 6 نفر چینی زرین ایران مدل نئوکلاسیک سفید درجه 3",
       "image": "https://dkstatics-public.digikala.com/digikala-products/eefbedb38f5cdae50fdb5921aa751d8cadb423b3_1784987843.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8503,7 +8503,7 @@
       "url": "/product/dkp-16362642/سرویس-غذاخوری-29-پارچه-6-نفر-چینی-زرین-ایران-مدل-نئوکلاسیک-سفید-درجه-3"
     },
     {
-      "id": "12275862",
+      "id": 12275862,
       "title": "سشوار حرفه‌ای کنورث مدل KW-9040 با موتور AC قدرتمند 9000 وات، تنظیمات دما سه حالته، دو سرعت، فناوری یونیزاسیون، باد سرد برای تثبیت حالت، طراحی کم‌صدا، همراه با متمرکزکننده باریک و پهن",
       "image": "https://dkstatics-public.digikala.com/digikala-products/2da34ba4a2316c1db6b412c41b3942886b4989db_1755788226.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8537,7 +8537,7 @@
       "url": "/product/dkp-12275862/سشوار-حرفهای-کنورث-مدل-kw-9040-با-موتور-ac-قدرتمند-9000-وات-تنظیمات-دما-سه-حالته-دو-سرعت-فناوری-یونیزاسیون-باد-سرد-برای-تثبیت-حالت-طراحی-کمصدا-همراه-با-متمرکزکننده-باریک-و-پهن"
     },
     {
-      "id": "18010485",
+      "id": 18010485,
       "title": "ادوپرفیوم زنانه پریمیر نوت مدل PACO RABANNE LADY MILLION با رایحه معتدل حجم 100 میلی‌لیتر",
       "image": "https://dkstatics-public.digikala.com/digikala-products/0a224bf790219758677d6b35b44ef2fc2f0fa168_1736930959.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8557,7 +8557,7 @@
       "url": "/product/dkp-18010485/ادوپرفیوم-زنانه-پریمیر-نوت-مدل-paco-rabanne-lady-million-با-رایحه-معتدل-حجم-100-میلیلیتر"
     },
     {
-      "id": "21046789",
+      "id": 21046789,
       "title": "تبلت 12.1 اینچ شیائومی مدل Redmi Pad 2 Pro Wi-Fi، ظرفیت 256 گیگابایت و رم 8 گیگابایت، رزولوشن دوربین 8 مگاپیکسل، پشتیبانی از قلم و کیبورد",
       "image": "https://dkstatics-public.digikala.com/digikala-products/39aaf321b92c950fc9b5a0bfdbdfb783460c2714_1771426159.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8591,7 +8591,7 @@
       "url": "/product/dkp-21046789/تبلت-121-اینچ-شیائومی-مدل-redmi-pad-2-pro-wi-fi-ظرفیت-256-گیگابایت-و-رم-8-گیگابایت-رزولوشن-دوربین-8-مگاپیکسل-پشتیبانی-از-قلم-و-کیبورد"
     },
     {
-      "id": "19655055",
+      "id": 19655055,
       "title": "چای ساز روی هم هایبورگ مدل TM-4010",
       "image": "https://dkstatics-public.digikala.com/digikala-products/87f5732b86ffe8d41011314df961658e945134de_1786910234.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8617,7 +8617,7 @@
       "url": "/product/dkp-19655055/چای-ساز-روی-هم-هایبورگ-مدل-tm-4010"
     },
     {
-      "id": "21407787",
+      "id": 21407787,
       "title": "دستگاه سنباده‌زن 350 وات روماتون مدل 2330",
       "image": "https://dkstatics-public.digikala.com/digikala-products/d460add87c4fc03ed814919b44993212c85e294a_1770463370.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8637,7 +8637,7 @@
       "url": "/product/dkp-21407787/دستگاه-سنبادهزن-350-وات-روماتون-مدل-2330"
     },
     {
-      "id": "22200135",
+      "id": 22200135,
       "title": "دستگاه بخور سرد هیسکا مدل H40",
       "image": "https://dkstatics-public.digikala.com/digikala-products/3aa1261cee3c467118866ce49586e930553b7c53_1783589524.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8663,7 +8663,7 @@
       "url": "/product/dkp-22200135/دستگاه-بخور-سرد-هیسکا-مدل-h40"
     },
     {
-      "id": "19655614",
+      "id": 19655614,
       "title": "کرم ضد لک روز صورت تیلسیم مدل Alpha Arbutin مناسب برای پوست معمولی حجم 50 میلی لیتر",
       "image": "https://dkstatics-public.digikala.com/digikala-products/25afbe50fb7ece9396806ac4de73130142a4a76f_1751102511.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8683,7 +8683,7 @@
       "url": "/product/dkp-19655614/کرم-ضد-لک-روز-صورت-تیلسیم-مدل-alpha-arbutin-مناسب-برای-پوست-معمولی-حجم-50-میلی-لیتر"
     },
     {
-      "id": "18010463",
+      "id": 18010463,
       "title": "ادوپرفیوم زنانه پریمیر نوت مدل DIAMANTE AMARILLO F با رایحه معتدل حجم 100 میلی‌لیتر",
       "image": "https://dkstatics-public.digikala.com/digikala-products/0a224bf790219758677d6b35b44ef2fc2f0fa168_1736930932.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8703,7 +8703,7 @@
       "url": "/product/dkp-18010463/ادوپرفیوم-زنانه-پریمیر-نوت-مدل-diamante-amarillo-f-با-رایحه-معتدل-حجم-100-میلیلیتر"
     },
     {
-      "id": "4143172",
+      "id": 4143172,
       "title": "لاستیک موتور سیکلت ایران یاسا مدل YS سایز 17-300 مناسب برای محور عقب هوندا",
       "image": "https://dkstatics-public.digikala.com/digikala-products/33e0d4ce75c691b03c03479b26057fd25b276aa8_1609584287.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8723,7 +8723,7 @@
       "url": "/product/dkp-4143172/لاستیک-موتور-سیکلت-ایران-یاسا-مدل-ys-سایز-17-300-مناسب-برای-محور-عقب-هوندا"
     },
     {
-      "id": "3373704",
+      "id": 3373704,
       "title": "لگو سری کلاسیک مدل Creative Suitcase 10713",
       "image": "https://dkstatics-public.digikala.com/digikala-products/c1027203085bcb4c9a4d9fc7e69e9fd95529474f_1599721548.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8753,7 +8753,7 @@
       "url": "/product/dkp-3373704/لگو-سری-کلاسیک-مدل-creative-suitcase-10713"
     },
     {
-      "id": "1786016",
+      "id": 1786016,
       "title": "کاندوم کلایمکس مدل AMAZING بسته 12 عددی",
       "image": "https://dkstatics-public.digikala.com/digikala-products/112067678.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8773,7 +8773,7 @@
       "url": "/product/dkp-1786016/کاندوم-کلایمکس-مدل-amazing-بسته-12-عددی"
     },
     {
-      "id": "11227934",
+      "id": 11227934,
       "title": "قرص ویتامین ب 3 یوروویتال بسته 60 عددی",
       "image": "https://dkstatics-public.digikala.com/digikala-products/fabfc06ae9704cce2fe89285e3138b00d75042b9_1683033873.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8793,7 +8793,7 @@
       "url": "/product/dkp-11227934/قرص-ویتامین-ب-3-یوروویتال-بسته-60-عددی"
     },
     {
-      "id": "22109767",
+      "id": 22109767,
       "title": "کیبورد و ماوس بی‌سیم هیسکا مدل H-MK25",
       "image": "https://dkstatics-public.digikala.com/digikala-products/a61d5741ee2daa81fc6aef56a0e5aa2d1ec66a18_1784564896.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
@@ -8819,7 +8819,7 @@
       "url": "/product/dkp-22109767/کیبورد-و-ماوس-بیسیم-هیسکا-مدل-h-mk25"
     },
     {
-      "id": "22112503",
+      "id": 22112503,
       "title": "کتابخانه رومیزی سه طبقه سیماژ مدل CZ1014",
       "image": "https://dkstatics-public.digikala.com/digikala-products/aec6daba353cbb8814b42a39930d94c4f9106d3e_1782655421.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
       "price": {
