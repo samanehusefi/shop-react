@@ -16,6 +16,8 @@ const Categories = () => {
   const navigate = useNavigate();
 
   const [currentPage, setCurrentPage] = useState(1);
+  const [actionLoading, setActionLoading] = useState<number | null>(null);
+
   const itemsPerPage = 10;
 
   const { categories, loading, error } = useSelector(
@@ -23,7 +25,9 @@ const Categories = () => {
   );
 
   useEffect(() => {
-    dispatch(getCategoriesAction());
+    dispatch(getCategoriesAction()).catch((error) => {
+      console.error("خطا در دریافت دسته‌بندی‌ها:", error);
+    });
   }, [dispatch]);
 
   useEffect(() => {
@@ -47,39 +51,60 @@ const Categories = () => {
   };
 
   const handleToggleActive = async (category: ICategory) => {
+    setActionLoading(category.id);
+
     try {
       await updateCategory(category.id, {
         isActive: !category.isActive,
       });
 
-      dispatch(getCategoriesAction());
+      await dispatch(getCategoriesAction());
     } catch (error) {
-      console.error(error);
-      alert("تغییر وضعیت دسته‌بندی محصولات انجام نشد");
+      console.error("خطا در تغییر وضعیت دسته‌بندی:", error);
+
+      alert(
+        error instanceof Error
+          ? error.message
+          : "تغییر وضعیت دسته‌بندی محصولات انجام نشد",
+      );
+    } finally {
+      setActionLoading(null);
     }
   };
 
   const handleDelete = async (id: ICategory["id"]) => {
-    const confirmed = window.confirm("آیا از حذف این دسته‌بندی  محصولات مطمئن هستید؟");
+    const confirmed = window.confirm(
+      "آیا از حذف این دسته‌بندی محصولات مطمئن هستید؟",
+    );
 
     if (!confirmed) {
       return;
     }
 
+    setActionLoading(id);
+
     try {
       await deleteCategory(id);
 
-      if (
-        currentPage > 1 &&
-        categories.length - 1 <= (currentPage - 1) * itemsPerPage
-      ) {
-        setCurrentPage((page) => page - 1);
-      }
+      const updatedCategories = await dispatch(getCategoriesAction());
 
-      dispatch(getCategoriesAction());
+      const totalPages = Math.ceil(updatedCategories.length / itemsPerPage);
+
+      if (totalPages === 0) {
+        setCurrentPage(1);
+      } else if (currentPage > totalPages) {
+        setCurrentPage(totalPages);
+      }
     } catch (error) {
-      console.error(error);
-      alert("حذف دسته‌بندی محصولات انجام نشد");
+      console.error("خطا در حذف دسته‌بندی:", error);
+
+      alert(
+        error instanceof Error
+          ? error.message
+          : "حذف دسته‌بندی محصولات انجام نشد",
+      );
+    } finally {
+      setActionLoading(null);
     }
   };
 
@@ -97,11 +122,11 @@ const Categories = () => {
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl font-bold text-red-900 sm:text-2xl">
-            دسته‌بندی‌ محصولات
+            دسته‌بندی محصولات
           </h1>
 
           <p className="mt-2 text-xs text-gray-500 sm:text-sm">
-            مدیریت دسته‌بندی‌ محصولاتی فروشگاه
+            مدیریت دسته‌بندی محصولات فروشگاه
           </p>
         </div>
 
@@ -117,17 +142,35 @@ const Categories = () => {
       <div className="overflow-hidden rounded-xl bg-white shadow-sm">
         {loading && (
           <div className="p-6 text-center text-sm text-gray-500">
-            در حال دریافت اطلاعات...
+            <span className="loading loading-spinner loading-sm"></span>
           </div>
         )}
 
-        {error && (
-          <div className="p-6 text-center text-sm text-red-500">
-            خطا در دریافت اطلاعات
+        {!loading && error && (
+          <div className="flex min-h-60 flex-col items-center justify-center gap-3 p-6 text-center">
+            <p className="text-sm font-medium text-red-600">
+              دریافت اطلاعات دسته‌بندی‌ها انجام نشد
+            </p>
+
+            <p className="text-xs text-gray-500">{error}</p>
+
+            <button
+              type="button"
+              onClick={() => dispatch(getCategoriesAction())}
+              className="rounded-lg bg-blue-600 px-4 py-2 text-sm text-white transition hover:bg-blue-700"
+            >
+              تلاش مجدد
+            </button>
           </div>
         )}
 
-        {!loading && !error && (
+        {!loading && !error && categories.length === 0 && (
+          <div className="flex min-h-60 items-center justify-center p-6 text-sm text-gray-500">
+            دسته‌بندی‌ای برای نمایش وجود ندارد
+          </div>
+        )}
+
+        {!loading && !error && categories.length > 0 && (
           <>
             <div className="hidden overflow-x-auto md:block">
               <table className="w-full min-w-[900px] text-right">
@@ -168,19 +211,30 @@ const Categories = () => {
                       <td className="px-6 py-4">
                         <button
                           type="button"
+                          disabled={actionLoading === category.id}
                           onClick={() => handleToggleActive(category)}
                           className={`relative h-6 w-11 cursor-pointer rounded-full transition-colors ${
                             category.isActive ? "bg-green-600" : "bg-gray-300"
+                          } ${
+                            actionLoading === category.id
+                              ? "cursor-not-allowed opacity-50"
+                              : ""
                           }`}
                           aria-label={
                             category.isActive ? "غیرفعال کردن" : "فعال کردن"
                           }
                         >
-                          <span
-                            className={`absolute top-1 h-4 w-4 rounded-full bg-white transition-transform ${
-                              category.isActive ? "right-1" : "right-6"
-                            }`}
-                          />
+                          {actionLoading === category.id ? (
+                            <span className="absolute inset-0 flex items-center justify-center">
+                              <span className="loading loading-spinner loading-xs"></span>
+                            </span>
+                          ) : (
+                            <span
+                              className={`absolute top-1 h-4 w-4 rounded-full bg-white transition-transform ${
+                                category.isActive ? "right-1" : "right-6"
+                              }`}
+                            />
+                          )}
                         </button>
                       </td>
 
@@ -197,10 +251,15 @@ const Categories = () => {
 
                           <button
                             type="button"
+                            disabled={actionLoading === category.id}
                             onClick={() => handleDelete(category.id)}
-                            className="flex cursor-pointer items-center gap-1.5 rounded-lg bg-rose-600 px-3 py-2 text-sm text-white transition hover:bg-rose-700"
+                            className="flex cursor-pointer items-center gap-1.5 rounded-lg bg-rose-600 px-3 py-2 text-sm text-white transition hover:bg-rose-700 disabled:cursor-not-allowed disabled:opacity-50"
                           >
-                            <FaTrash />
+                            {actionLoading === category.id ? (
+                              <span className="loading loading-spinner loading-xs"></span>
+                            ) : (
+                              <FaTrash />
+                            )}
                             حذف
                           </button>
                         </div>
@@ -235,19 +294,23 @@ const Categories = () => {
 
                     <button
                       type="button"
+                      disabled={actionLoading === category.id}
                       onClick={() => handleToggleActive(category)}
                       className={`relative h-6 w-11 shrink-0 cursor-pointer rounded-full transition-colors ${
                         category.isActive ? "bg-green-600" : "bg-gray-300"
                       }`}
-                      aria-label={
-                        category.isActive ? "غیرفعال کردن" : "فعال کردن"
-                      }
                     >
-                      <span
-                        className={`absolute top-1 h-4 w-4 rounded-full bg-white transition-transform ${
-                          category.isActive ? "right-1" : "right-6"
-                        }`}
-                      />
+                      {actionLoading === category.id ? (
+                        <span className="absolute inset-0 flex items-center justify-center">
+                          <span className="loading loading-spinner loading-xs"></span>
+                        </span>
+                      ) : (
+                        <span
+                          className={`absolute top-1 h-4 w-4 rounded-full bg-white transition-transform ${
+                            category.isActive ? "right-1" : "right-6"
+                          }`}
+                        />
+                      )}
                     </button>
                   </div>
 
@@ -263,10 +326,15 @@ const Categories = () => {
 
                     <button
                       type="button"
+                      disabled={actionLoading === category.id}
                       onClick={() => handleDelete(category.id)}
-                      className="flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-rose-600 px-3 py-2.5 text-xs font-medium text-white transition hover:bg-rose-700 sm:text-sm"
+                      className="flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-rose-600 px-3 py-2.5 text-xs font-medium text-white transition hover:bg-rose-700 disabled:cursor-not-allowed disabled:opacity-50 sm:text-sm"
                     >
-                      <FaTrash />
+                      {actionLoading === category.id ? (
+                        <span className="loading loading-spinner loading-xs"></span>
+                      ) : (
+                        <FaTrash />
+                      )}
                       حذف
                     </button>
                   </div>
@@ -286,7 +354,6 @@ const Categories = () => {
                     disabled={currentPage === 1}
                     onClick={() => setCurrentPage((page) => page - 1)}
                     className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-gray-300 text-sm text-gray-700 transition hover:border-green-600 hover:bg-green-50 disabled:cursor-not-allowed disabled:opacity-40"
-                    title="صفحه قبل"
                   >
                     <FaChevronRight />
                   </button>
@@ -314,7 +381,6 @@ const Categories = () => {
                     disabled={currentPage === totalPages}
                     onClick={() => setCurrentPage((page) => page + 1)}
                     className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-gray-300 text-sm text-gray-700 transition hover:border-green-600 hover:bg-green-50 disabled:cursor-not-allowed disabled:opacity-40"
-                    title="صفحه بعد"
                   >
                     <FaChevronLeft />
                   </button>

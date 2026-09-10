@@ -1,30 +1,26 @@
+import { getAdminCategories } from "../../../Api/Admin/categoriesApi";
 import type { AppDispatch } from "../../store";
-
-import {
-  GET_CATEGORIES_REQUEST,
-  GET_CATEGORIES_SUCCESS,
-  GET_CATEGORIES_FAILURE,
-} from "./actionType";
-
-import { getCategories } from "../../../Api/Home/Categories/CategoriesApi";
+import { GET_CATEGORIES, GET_CATEGORIES_ERROR } from "./actionType";
 
 export const getCategoriesAction = () => async (dispatch: AppDispatch) => {
-  dispatch({
-    type: GET_CATEGORIES_REQUEST,
-  });
-
   try {
-    const data = await getCategories();
+    const data = await getAdminCategories();
 
     dispatch({
-      type: GET_CATEGORIES_SUCCESS,
+      type: GET_CATEGORIES,
       payload: data,
     });
+
+    return data;
   } catch (error) {
+    console.error("خطا در دریافت دسته‌بندی‌ها:", error);
+
     dispatch({
-      type: GET_CATEGORIES_FAILURE,
+      type: GET_CATEGORIES_ERROR,
       payload:
         error instanceof Error ? error.message : "خطا در دریافت دسته‌بندی‌ها",
     });
+
+    throw error;
   }
 };

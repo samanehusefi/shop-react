@@ -1,5 +1,4 @@
 import type { IAmazing } from "../../../Types/Home/IAmazing";
-
 import { GET_AMAZING } from "./actiontype";
 
 interface AmazingState {

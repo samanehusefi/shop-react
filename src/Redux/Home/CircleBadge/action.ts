@@ -1,31 +1,16 @@
+import { getAdminCircleBadge } from "../../../Api/Admin/circleBadgeApi";
 import type { AppDispatch } from "../../store";
-
-import {
-  GET_CIRCLE_BADGE_FAILURE,
-  GET_CIRCLE_BADGE_REQUEST,
-  GET_CIRCLE_BADGE_SUCCESS,
-} from "./actiontype";
-
-import { getCircleBadge as getCircleBadgeApi } from "../../../Api/Home/CircleBadge/circleBadgeApi";
+import { GET_CIRCLE_BADGE } from "./actiontype";
 
 export const getCircleBadge = () => async (dispatch: AppDispatch) => {
-  dispatch({
-    type: GET_CIRCLE_BADGE_REQUEST,
-  });
-
   try {
-    const data = await getCircleBadgeApi();
+    const data = await getAdminCircleBadge();
 
     dispatch({
-      type: GET_CIRCLE_BADGE_SUCCESS,
+      type: GET_CIRCLE_BADGE,
       payload: data,
     });
   } catch (error) {
-    dispatch({
-      type: GET_CIRCLE_BADGE_FAILURE,
-      payload: "خطا در دریافت اطلاعات Circle Badge",
-    });
-
     console.error("خطا در دریافت Circle Badge:", error);
   }
 };

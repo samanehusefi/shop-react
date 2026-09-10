@@ -52,7 +52,7 @@ const Categories = () => {
     return (
       <section className="w-full py-6" dir="rtl">
         <p className="text-center text-sm text-gray-500">
-          در حال دریافت دسته‌بندی‌ها...
+          <span className="loading loading-spinner loading-sm"></span>
         </p>
       </section>
     );
@@ -173,7 +173,7 @@ const Categories = () => {
                             alt={category.title}
                             title={category.title}
                             className="h-full w-full object-cover"
-                              loading="lazy"
+                            loading="lazy"
                           />
                         </div>
 

@@ -1,10 +1,5 @@
 import type { ISlider } from "../../../Types/Home/ISlider";
-
-import {
-  GET_SLIDER_REQUEST,
-  GET_SLIDER_SUCCESS,
-  GET_SLIDER_FAILURE,
-} from "./actiontype";
+import { GET_SLIDER } from "./actiontype";
 
 interface SliderState {
   slider: ISlider[];
@@ -22,30 +17,16 @@ const sliderReducer = (
   state = initialState,
   action: {
     type: string;
-    payload?: ISlider[] | string;
+    payload?: ISlider[];
   },
 ): SliderState => {
   switch (action.type) {
-    case GET_SLIDER_REQUEST:
-      return {
-        ...state,
-        loading: true,
-        error: null,
-      };
-
-    case GET_SLIDER_SUCCESS:
+    case GET_SLIDER:
       return {
         ...state,
         slider: action.payload as ISlider[],
         loading: false,
         error: null,
-      };
-
-    case GET_SLIDER_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        error: action.payload as string,
       };
 
     default:

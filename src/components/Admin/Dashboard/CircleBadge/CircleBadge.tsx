@@ -39,10 +39,7 @@ const CircleBadge = () => {
 
   const startIndex = (currentPage - 1) * itemsPerPage;
 
-  const currentItems = circleBadge.slice(
-    startIndex,
-    startIndex + itemsPerPage,
-  );
+  const currentItems = circleBadge.slice(startIndex, startIndex + itemsPerPage);
 
   useEffect(() => {
     if (totalPages > 0 && currentPage > totalPages) {
@@ -131,10 +128,9 @@ const CircleBadge = () => {
       <div className="overflow-hidden rounded-xl bg-white shadow-sm">
         {loading && (
           <div className="p-6 text-center text-sm text-gray-500">
-            در حال دریافت اطلاعات...
+            <span className="loading loading-spinner loading-sm"></span>
           </div>
         )}
-
         {error && (
           <div className="p-6 text-center text-sm text-red-500">
             خطا در دریافت اطلاعات

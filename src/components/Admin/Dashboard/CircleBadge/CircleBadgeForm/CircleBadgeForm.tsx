@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+
 import {
   createCircleBadge,
+  getAdminCircleBadge,
   updateCircleBadge,
 } from "../../../../../Api/Admin/circleBadgeApi";
+
 import type { ICircleBadge } from "../../../../../Types/Home/ICircleBadge";
+
 const CircleBadgeForm = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -19,6 +23,7 @@ const CircleBadgeForm = () => {
   const [isDigikalaService, setIsDigikalaService] = useState(false);
 
   const [loading, setLoading] = useState(false);
+  const [pageLoading, setPageLoading] = useState(false);
 
   useEffect(() => {
     if (!id) {
@@ -31,26 +36,30 @@ const CircleBadgeForm = () => {
     }
 
     const loadCircleBadge = async () => {
+      setPageLoading(true);
+
       try {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/circle_badge/${id}`,
+        const data = await getAdminCircleBadge();
+
+        const selectedCircleBadge = data.find(
+          (item: ICircleBadge) => Number(item.id) === Number(id),
         );
 
-        if (!response.ok) {
-          throw new Error("خطا در دریافت اطلاعات");
+        if (!selectedCircleBadge) {
+          throw new Error("اطلاعات Circle Badge پیدا نشد");
         }
 
-        const data: ICircleBadge = await response.json();
-
-        setImage(data.image);
-        setTitle(data.title);
-        setDescription(data.description || "");
-        setUrl(data.url);
-        setIsDigikalaService(data.is_digikala_service);
+        setImage(selectedCircleBadge.image);
+        setTitle(selectedCircleBadge.title);
+        setDescription(selectedCircleBadge.description || "");
+        setUrl(selectedCircleBadge.url);
+        setIsDigikalaService(selectedCircleBadge.is_digikala_service);
       } catch (error) {
-        console.error(error);
+        console.error("خطا در دریافت Circle Badge:", error);
         alert("اطلاعات مورد نظر دریافت نشد");
         navigate("/dashboard/circle-badge");
+      } finally {
+        setPageLoading(false);
       }
     };
 
@@ -67,7 +76,7 @@ const CircleBadgeForm = () => {
     setLoading(true);
 
     try {
-      const data = {
+      const data: Omit<ICircleBadge, "id"> = {
         image: image.trim(),
         title: title.trim(),
         description: description.trim(),
@@ -83,12 +92,21 @@ const CircleBadgeForm = () => {
 
       navigate("/dashboard/circle-badge");
     } catch (error) {
-      console.error(error);
+      console.error("خطا در ذخیره Circle Badge:", error);
+
       alert(isEditMode ? "ویرایش انجام نشد" : "ایجاد مورد جدید انجام نشد");
     } finally {
       setLoading(false);
     }
   };
+
+  if (pageLoading) {
+    return (
+      <div className="rounded-xl bg-white p-8 text-center text-gray-500">
+        <span className="loading loading-dots loading-xl"></span>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -181,6 +199,7 @@ const CircleBadgeForm = () => {
               />
             </button>
           </div>
+
           <div>
             <label className="mb-2 block text-sm font-medium text-gray-700">
               آدرس تصویر
@@ -204,6 +223,7 @@ const CircleBadgeForm = () => {
               </div>
             )}
           </div>
+
           <div className="flex justify-end gap-3 border-t border-gray-200 pt-6">
             <button
               type="button"
@@ -220,11 +240,15 @@ const CircleBadgeForm = () => {
               }
               className="flex-1 rounded-lg bg-green-600 px-4 py-3 text-sm font-medium text-white hover:bg-green-700 disabled:opacity-60"
             >
-              {loading
-                ? "در حال ذخیره..."
-                : isEditMode
-                  ? "ذخیره تغییرات"
-                  : "ایجاد مورد"}
+              {loading ? (
+                <span className="flex items-center justify-center">
+                  <span className="loading loading-spinner loading-sm"></span>
+                </span>
+              ) : isEditMode ? (
+                "ذخیره تغییرات"
+              ) : (
+                "ایجاد مورد"
+              )}
             </button>
           </div>
         </form>

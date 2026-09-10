@@ -1,16 +1,23 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaArrowRight, FaPlus, FaTrash } from "react-icons/fa";
 
 import type { IAmazing } from "../../../../../Types/Home/IAmazing";
+import type { AppDispatch } from "../../../../../Redux/store";
+
 import {
   createAmazing,
+  getAdminAmazing,
   updateAmazing,
 } from "../../../../../Api/Admin/amazingApi";
+
+import { getAmazing } from "../../../../../Redux/Home/Amazing/action";
 
 const AmazingForm = () => {
   const navigate = useNavigate();
   const { id } = useParams();
+  const dispatch = useDispatch<AppDispatch>();
 
   const isEditMode = Boolean(id);
 
@@ -44,36 +51,42 @@ const AmazingForm = () => {
       setPageLoading(true);
 
       try {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/amazing/${id}`,
+        const data = await getAdminAmazing();
+
+        const selectedAmazing = data.find(
+          (item) => Number(item.id) === Number(id),
         );
 
-        if (!response.ok) {
-          throw new Error("خطا در دریافت اطلاعات");
+        if (!selectedAmazing) {
+          throw new Error("اطلاعات شگفت‌انگیز پیدا نشد");
         }
 
-        const data: IAmazing = await response.json();
+        setTitle(selectedAmazing.title);
+        setImage(selectedAmazing.image);
+        setUrl(selectedAmazing.url);
 
-        setTitle(data.title);
-        setImage(data.image);
-        setUrl(data.url);
+        setSelling(String(selectedAmazing.price.selling));
+        setOriginal(String(selectedAmazing.price.original));
+        setDiscount(String(selectedAmazing.price.discount));
 
-        setSelling(String(data.price.selling));
-        setOriginal(String(data.price.original));
-        setDiscount(String(data.price.discount));
+        setTimer(String(selectedAmazing.timer));
 
-        setTimer(String(data.timer));
+        setRate(String(selectedAmazing.rating.rate));
+        setCount(String(selectedAmazing.rating.count));
 
-        setRate(String(data.rating.rate));
-        setCount(String(data.rating.count));
+        setBrandTitle(selectedAmazing.brand.title);
+        setBrandLogo(selectedAmazing.brand.logo);
 
-        setBrandTitle(data.brand.title);
-        setBrandLogo(data.brand.logo);
-
-        setColors(data.colors || []);
+        setColors(selectedAmazing.colors || []);
       } catch (error) {
-        console.error(error);
-        alert("اطلاعات شگفت‌انگیز دریافت نشد");
+        console.error("خطا در دریافت اطلاعات Amazing:", error);
+
+        alert(
+          error instanceof Error
+            ? error.message
+            : "اطلاعات شگفت‌انگیز دریافت نشد",
+        );
+
         navigate("/dashboard/amazing");
       } finally {
         setPageLoading(false);
@@ -155,14 +168,10 @@ const AmazingForm = () => {
           logo: brandLogo.trim(),
         },
         url: url.trim(),
-        ...(colors.length > 0
-          ? {
-              colors: colors.map((color) => ({
-                title: color.title.trim(),
-                hex: color.hex,
-              })),
-            }
-          : {}),
+        colors: colors.map((color) => ({
+          title: color.title.trim(),
+          hex: color.hex,
+        })),
       };
 
       if (id) {
@@ -171,13 +180,18 @@ const AmazingForm = () => {
         await createAmazing(data);
       }
 
+      await dispatch(getAmazing());
+
       navigate("/dashboard/amazing");
     } catch (error) {
-      console.error(error);
+      console.error("خطا در ذخیره Amazing:", error);
+
       alert(
-        isEditMode
-          ? "ویرایش شگفت‌انگیز انجام نشد"
-          : "ایجاد شگفت‌انگیز انجام نشد",
+        error instanceof Error
+          ? error.message
+          : isEditMode
+            ? "ویرایش شگفت‌انگیز انجام نشد"
+            : "ایجاد شگفت‌انگیز انجام نشد",
       );
     } finally {
       setLoading(false);
@@ -187,7 +201,7 @@ const AmazingForm = () => {
   if (pageLoading) {
     return (
       <div className="rounded-xl bg-white p-8 text-center text-gray-500">
-        در حال دریافت اطلاعات شگفت‌انگیز...
+        <span className="loading loading-dots loading-xl"></span>
       </div>
     );
   }
@@ -473,11 +487,15 @@ const AmazingForm = () => {
             disabled={loading}
             className="flex-1 rounded-lg bg-green-600 px-4 py-3 text-sm font-medium text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {loading
-              ? "در حال ذخیره..."
-              : isEditMode
-                ? "ذخیره تغییرات"
-                : "ایجاد شگفت‌انگیز"}
+            {loading ? (
+              <span className="flex items-center justify-center">
+                <span className="loading loading-spinner loading-sm"></span>
+              </span>
+            ) : isEditMode ? (
+              "ذخیره تغییرات"
+            ) : (
+              "ایجاد شگفت‌انگیز"
+            )}
           </button>
         </div>
       </form>

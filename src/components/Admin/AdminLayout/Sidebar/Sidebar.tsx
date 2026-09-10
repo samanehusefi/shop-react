@@ -1,16 +1,20 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import {
   MdDashboard,
-  MdViewList,
-  MdImage,
-  MdSlideshow,
-  MdMiscellaneousServices,
-  MdLocalOffer,
+  MdCampaign,
+  MdDiscount,
   MdMenu,
   MdClose,
+  MdVerified,
+  MdViewCarousel,
   MdChevronRight,
   MdChevronLeft,
+  MdAdminPanelSettings,
+  MdInventory2,
 } from "react-icons/md";
+import { BiSolidCategory } from "react-icons/bi";
+import { GrServices } from "react-icons/gr";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -25,36 +29,59 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
       icon: <MdDashboard />,
     },
     {
-      title: "دسته‌بندی‌ محصولات",
-      path: "/dashboard/categories",
-      icon: <MdViewList />,
-    },
-    {
       title: "برند",
       path: "/dashboard/brands",
-      icon: <MdViewList />,
+      icon: <MdVerified />,
     },
     {
       title: "تبلیغات",
       path: "/dashboard/banners",
-      icon: <MdImage />,
+      icon: <MdCampaign />,
     },
     {
       title: "اسلایدر",
       path: "/dashboard/slider",
-      icon: <MdSlideshow />,
+      icon: <MdViewCarousel />,
+    },
+    {
+      title: "دسته‌بندی‌ محصولات",
+      path: "/dashboard/categories",
+      icon: <BiSolidCategory />,
+    },
+    {
+      title: " محصولات",
+      path: "/dashboard/products",
+      icon: <MdInventory2 />,
     },
     {
       title: "خدمات فروشگاه",
       path: "/dashboard/circle-badge",
-      icon: <MdMiscellaneousServices />,
+      icon: <GrServices />,
     },
     {
       title: "شگفت‌انگیزها",
       path: "/dashboard/amazing",
-      icon: <MdLocalOffer />,
+      icon: <MdDiscount />,
     },
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setIsOpen(false);
+      } else {
+        setIsOpen(true);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setIsOpen]);
 
   return (
     <>
@@ -71,7 +98,8 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           }`}
         >
           {isOpen && (
-            <h1 className="whitespace-nowrap text-lg font-bold text-red-700">
+            <h1 className="flex items-center gap-2 text-lg font-bold text-red-700">
+              <MdAdminPanelSettings size={24} />
               پنل مدیریت
             </h1>
           )}

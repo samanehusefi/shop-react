@@ -1,10 +1,5 @@
 import type { IBanner } from "../../../Types/Home/IBanner";
-
-import {
-  GET_BANNERS_REQUEST,
-  GET_BANNERS_SUCCESS,
-  GET_BANNERS_FAILURE,
-} from "./actiontype";
+import { GET_BANNERS } from "./actiontype";
 
 interface BannerState {
   banners: IBanner[];
@@ -22,30 +17,16 @@ const bannerReducer = (
   state = initialState,
   action: {
     type: string;
-    payload?: IBanner[] | string;
+    payload?: IBanner[];
   },
 ): BannerState => {
   switch (action.type) {
-    case GET_BANNERS_REQUEST:
-      return {
-        ...state,
-        loading: true,
-        error: null,
-      };
-
-    case GET_BANNERS_SUCCESS:
+    case GET_BANNERS:
       return {
         ...state,
         banners: action.payload as IBanner[],
         loading: false,
         error: null,
-      };
-
-    case GET_BANNERS_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        error: action.payload as string,
       };
 
     default:

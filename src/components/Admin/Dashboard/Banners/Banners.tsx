@@ -93,7 +93,7 @@ const Banners = () => {
     <div className="w-full min-w-0">
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-xl font-bold text-red-900 sm:text-2xl">
+          <h1 className="text-sm md:text-xl font-bold text-red-900 sm:text-2xl">
             تبلیغات
           </h1>
 
@@ -115,7 +115,7 @@ const Banners = () => {
       <div className="overflow-hidden rounded-xl bg-white shadow-sm">
         {loading && (
           <div className="p-6 text-center text-sm text-gray-500">
-            در حال دریافت اطلاعات...
+            <span className="loading loading-spinner loading-sm"></span>
           </div>
         )}
 
@@ -131,7 +131,7 @@ const Banners = () => {
               <table className="w-full min-w-[1000px] text-right">
                 <thead className="border-b border-gray-200 bg-gray-50">
                   <tr>
-                    <th className="px-5 py-4 text-sm">ID</th>
+                    <th className="px-5 py-4 text-sm">شناسه</th>
 
                     <th className="px-5 py-4 text-sm">تصویر</th>
 

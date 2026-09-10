@@ -20,18 +20,23 @@ const CategoryForm = () => {
 
   const isEditMode = Boolean(id);
 
-  const { categories, loading: categoriesLoading } = useSelector(
-    (state: RootState) => state.categories,
-  );
+  const {
+    categories,
+    loading: categoriesLoading,
+    error,
+  } = useSelector((state: RootState) => state.categories);
 
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
   const [isActive, setIsActive] = useState(false);
+
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    dispatch(getCategoriesAction());
+    dispatch(getCategoriesAction()).catch((error) => {
+      console.error("خطا در دریافت دسته‌بندی‌ها:", error);
+    });
   }, [dispatch]);
 
   useEffect(() => {
@@ -59,6 +64,7 @@ const CategoryForm = () => {
     event.preventDefault();
 
     if (!image.trim() || !title.trim() || !url.trim()) {
+      alert("لطفاً تمام فیلدهای الزامی را تکمیل کنید");
       return;
     }
 
@@ -78,14 +84,18 @@ const CategoryForm = () => {
         await createCategory(data);
       }
 
+      await dispatch(getCategoriesAction());
+
       navigate("/dashboard/categories");
     } catch (error) {
-      console.error(error);
+      console.error("خطا در ذخیره دسته‌بندی:", error);
 
       alert(
-        isEditMode
-          ? "ویرایش دسته‌بندی محصولات انجام نشد"
-          : "ایجاد دسته‌بندی محصولات انجام نشد",
+        error instanceof Error
+          ? error.message
+          : isEditMode
+            ? "ویرایش دسته‌بندی محصولات انجام نشد"
+            : "ایجاد دسته‌بندی محصولات انجام نشد",
       );
     } finally {
       setLoading(false);
@@ -94,8 +104,28 @@ const CategoryForm = () => {
 
   if (isEditMode && categoriesLoading) {
     return (
-      <div className="rounded-xl bg-white p-8 text-center text-gray-500">
-        در حال دریافت اطلاعات دسته‌بندی محصولات...
+      <div className="flex min-h-60 items-center justify-center rounded-xl bg-white">
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+    );
+  }
+
+  if (isEditMode && error) {
+    return (
+      <div className="flex min-h-60 flex-col items-center justify-center gap-3 rounded-xl bg-white">
+        <p className="text-sm text-red-600">
+          دریافت اطلاعات دسته‌بندی انجام نشد
+        </p>
+
+        <p className="text-xs text-gray-500">{error}</p>
+
+        <button
+          type="button"
+          onClick={() => dispatch(getCategoriesAction())}
+          className="rounded-lg bg-blue-600 px-4 py-2 text-sm text-white"
+        >
+          تلاش مجدد
+        </button>
       </div>
     );
   }
@@ -183,7 +213,7 @@ const CategoryForm = () => {
           <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-gray-50 p-4">
             <div>
               <p className="text-sm font-medium text-gray-700">
-                وضعیت دسته‌بندی محصولات 
+                وضعیت دسته‌بندی محصولات
               </p>
 
               <p className="mt-1 text-xs text-gray-500">
@@ -222,11 +252,15 @@ const CategoryForm = () => {
               }
               className="flex-1 rounded-lg bg-green-600 px-4 py-3 text-sm font-medium text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {loading
-                ? "در حال ذخیره..."
-                : isEditMode
-                  ? "ذخیره تغییرات"
-                  : "ایجاد دسته‌بندی"}
+              {loading ? (
+                <span className="flex items-center justify-center">
+                  <span className="loading loading-spinner loading-sm"></span>
+                </span>
+              ) : isEditMode ? (
+                "ذخیره تغییرات"
+              ) : (
+                "ایجاد دسته‌بندی"
+              )}
             </button>
           </div>
         </form>

@@ -96,7 +96,7 @@ const SliderForm = () => {
   if (isEditMode && sliderLoading) {
     return (
       <div className="rounded-xl bg-white p-8 text-center text-gray-500">
-        در حال دریافت اطلاعات اسلایدر...
+        <span className="loading loading-spinner loading-sm"></span>
       </div>
     );
   }
@@ -220,11 +220,15 @@ const SliderForm = () => {
               }
               className="flex-1 rounded-lg bg-green-600 px-4 py-3 text-sm font-medium text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {loading
-                ? "در حال ذخیره..."
-                : isEditMode
-                  ? "ذخیره تغییرات"
-                  : "ایجاد اسلایدر"}
+              {loading ? (
+                <span className="flex items-center justify-center">
+                  <span className="loading loading-spinner loading-sm"></span>
+                </span>
+              ) : isEditMode ? (
+                "ذخیره تغییرات"
+              ) : (
+                "ایجاد اسلایدر"
+              )}
             </button>
           </div>
         </form>

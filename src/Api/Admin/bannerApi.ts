@@ -1,91 +1,84 @@
+import { supabase } from "../supabase";
 import type { IBanner } from "../../Types/Home/IBanner";
-import { getDbData } from "../dbApi";
-
-const API_URL = "http://localhost:3001/banners";
-
-const isProduction = import.meta.env.PROD;
 
 export const getAdminBanners = async (): Promise<IBanner[]> => {
-  if (isProduction) {
-    const data = await getDbData();
-    return data.banners;
-  }
+  const { data, error } = await supabase
+    .from("banners")
+    .select("*")
+    .order("id", { ascending: true });
 
-  const response = await fetch(API_URL);
-
-  if (!response.ok) {
+  if (error) {
+    console.error("Get Banners Error:", error);
     throw new Error("خطا در دریافت بنرها");
   }
 
-  return response.json();
+  return data as IBanner[];
 };
 
 export const createBanner = async (
   banner: Omit<IBanner, "id">,
 ): Promise<IBanner> => {
-  if (isProduction) {
-    throw new Error("ایجاد بنر در نسخه آنلاین امکان‌پذیر نیست");
+  const { data: banners, error: bannersError } = await supabase
+    .from("banners")
+    .select("id");
+
+  if (bannersError) {
+    console.error("Get Banner IDs Error:", bannersError);
+    throw new Error("خطا در دریافت شناسه بنرها");
   }
 
-  const banners = await getAdminBanners();
-
-  const ids = banners
+  const ids = (banners ?? [])
     .map((item) => Number(item.id))
     .filter((id) => Number.isInteger(id));
 
   const newId = ids.length > 0 ? Math.max(...ids) + 1 : 1;
 
-  const response = await fetch(API_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
+  const { data, error } = await supabase
+    .from("banners")
+    .insert({
       id: newId,
       ...banner,
-    }),
-  });
+    })
+    .select()
+    .single();
 
-  if (!response.ok) {
+  if (error) {
+    console.error("Create Banner Error:", error);
     throw new Error("خطا در ایجاد بنر");
   }
 
-  return response.json();
+  return data as IBanner;
 };
 
 export const updateBanner = async (
   id: IBanner["id"],
   banner: Partial<Omit<IBanner, "id">>,
 ): Promise<IBanner> => {
-  if (isProduction) {
-    throw new Error("ویرایش بنر در نسخه آنلاین امکان‌پذیر نیست");
-  }
+  const { data, error } = await supabase
+    .from("banners")
+    .update(banner)
+    .eq("id", Number(id))
+    .select()
+    .single();
 
-  const response = await fetch(`${API_URL}/${id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(banner),
-  });
-
-  if (!response.ok) {
+  if (error) {
+    console.error("Update Banner Error:", error);
     throw new Error("خطا در ویرایش بنر");
   }
 
-  return response.json();
+  return data as IBanner;
 };
 
-export const deleteBanner = async (id: IBanner["id"]): Promise<void> => {
-  if (isProduction) {
-    throw new Error("حذف بنر در نسخه آنلاین امکان‌پذیر نیست");
-  }
+export const deleteBanner = async (
+  id: IBanner["id"],
+): Promise<void> => {
+  const { error } = await supabase
+    .from("banners")
+    .delete()
+    .eq("id", Number(id));
 
-  const response = await fetch(`${API_URL}/${id}`, {
-    method: "DELETE",
-  });
-
-  if (!response.ok) {
+  if (error) {
+    console.error("Delete Banner Error:", error);
     throw new Error("خطا در حذف بنر");
   }
 };

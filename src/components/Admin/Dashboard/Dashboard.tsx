@@ -10,6 +10,7 @@ import { getSlider } from "../../../Redux/Home/Slider/action";
 import { getCircleBadge } from "../../../Redux/Home/CircleBadge/action";
 import { getAmazing } from "../../../Redux/Home/Amazing/action";
 import { getBrands } from "../../../Redux/Home/Brands/action";
+
 import DashboardSkeleton from "./DashboardSkeleton";
 
 const Dashboard = () => {
@@ -34,7 +35,13 @@ const Dashboard = () => {
     (state: RootState) => state.circleBadge,
   );
 
-  const { amazing } = useSelector((state: RootState) => state.amazing);
+  const { amazing, loading: amazingLoading } = useSelector(
+    (state: RootState) => state.amazing,
+  );
+
+  const { brands, loading: brandsLoading } = useSelector(
+    (state: RootState) => state.brands,
+  );
 
   useEffect(() => {
     dispatch(getCategoriesAction());
@@ -42,7 +49,7 @@ const Dashboard = () => {
     dispatch(getSlider());
     dispatch(getCircleBadge());
     dispatch(getAmazing());
-    dispatch(getBrands);
+    dispatch(getBrands());
   }, [dispatch]);
 
   const activeCategories = categories.filter(
@@ -65,7 +72,9 @@ const Dashboard = () => {
     categoriesLoading ||
     bannersLoading ||
     sliderLoading ||
-    circleBadgeLoading
+    circleBadgeLoading ||
+    amazingLoading ||
+    brandsLoading
   ) {
     return <DashboardSkeleton />;
   }
@@ -187,6 +196,26 @@ const Dashboard = () => {
 
           <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
             تعداد کل شگفت‌انگیزها
+          </p>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => navigate("/dashboard/brands")}
+          className={cardClass}
+        >
+          <div className="mb-3 sm:mb-4">
+            <h2 className="text-sm font-semibold text-gray-800 sm:text-base">
+              برندها
+            </h2>
+          </div>
+
+          <div className="text-2xl font-bold text-red-700 sm:text-3xl">
+            {brands.length}
+          </div>
+
+          <p className="mt-1.5 text-xs text-gray-500 sm:mt-2 sm:text-sm">
+            تعداد کل برندها
           </p>
         </button>
       </div>

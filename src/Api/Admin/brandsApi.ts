@@ -1,91 +1,79 @@
+import { supabase } from "../supabase";
 import type { IBrand } from "../../Types/Home/IBrand";
-import { getDbData } from "../dbApi";
-
-const API_URL = "http://localhost:3001/brands";
-
-const isProduction = import.meta.env.PROD;
 
 export const getAdminBrands = async (): Promise<IBrand[]> => {
-  if (isProduction) {
-    const data = await getDbData();
-    return data.brands;
-  }
+  const { data, error } = await supabase
+    .from("brands")
+    .select("*")
+    .order("id", { ascending: true });
 
-  const response = await fetch(API_URL);
-
-  if (!response.ok) {
+  if (error) {
+    console.error("Get Brands Error:", error);
     throw new Error("خطا در دریافت برندها");
   }
 
-  return response.json();
+  return data as IBrand[];
 };
 
 export const createBrand = async (
   brand: Omit<IBrand, "id">,
 ): Promise<IBrand> => {
-  if (isProduction) {
-    throw new Error("ایجاد برند در نسخه آنلاین امکان‌پذیر نیست");
+  const { data: brands, error: brandsError } = await supabase
+    .from("brands")
+    .select("id");
+
+  if (brandsError) {
+    console.error("Get Brand IDs Error:", brandsError);
+    throw new Error("خطا در دریافت شناسه برندها");
   }
 
-  const brands = await getAdminBrands();
-
-  const ids = brands
+  const ids = (brands ?? [])
     .map((item) => Number(item.id))
     .filter((id) => Number.isInteger(id));
 
   const newId = ids.length > 0 ? Math.max(...ids) + 1 : 1;
 
-  const response = await fetch(API_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
+  const { data, error } = await supabase
+    .from("brands")
+    .insert({
       id: newId,
       ...brand,
-    }),
-  });
+    })
+    .select()
+    .single();
 
-  if (!response.ok) {
+  if (error) {
+    console.error("Create Brand Error:", error);
     throw new Error("خطا در ایجاد برند");
   }
 
-  return response.json();
+  return data as IBrand;
 };
 
 export const updateBrand = async (
   id: IBrand["id"],
   brand: Partial<Omit<IBrand, "id">>,
 ): Promise<IBrand> => {
-  if (isProduction) {
-    throw new Error("ویرایش برند در نسخه آنلاین امکان‌پذیر نیست");
-  }
+  const { data, error } = await supabase
+    .from("brands")
+    .update(brand)
+    .eq("id", Number(id))
+    .select()
+    .single();
 
-  const response = await fetch(`${API_URL}/${id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(brand),
-  });
-
-  if (!response.ok) {
+  if (error) {
+    console.error("Update Brand Error:", error);
     throw new Error("خطا در ویرایش برند");
   }
 
-  return response.json();
+  return data as IBrand;
 };
 
 export const deleteBrand = async (id: IBrand["id"]): Promise<void> => {
-  if (isProduction) {
-    throw new Error("حذف برند در نسخه آنلاین امکان‌پذیر نیست");
-  }
+  const { error } = await supabase.from("brands").delete().eq("id", Number(id));
 
-  const response = await fetch(`${API_URL}/${id}`, {
-    method: "DELETE",
-  });
-
-  if (!response.ok) {
+  if (error) {
+    console.error("Delete Brand Error:", error);
     throw new Error("خطا در حذف برند");
   }
 };

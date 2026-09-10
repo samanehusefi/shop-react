@@ -65,18 +65,31 @@ const Amazing = () => {
 
     try {
       await deleteAmazing(id);
-      dispatch(getAmazing());
+
+      const updatedAmazing = await dispatch(getAmazing());
+
+      const newTotalPages = Math.ceil(updatedAmazing.length / itemsPerPage);
+
+      if (newTotalPages > 0 && currentPage > newTotalPages) {
+        setCurrentPage(newTotalPages);
+      }
+
+      if (newTotalPages === 0) {
+        setCurrentPage(1);
+      }
     } catch (error) {
-      console.error(error);
-      alert("حذف شگفت‌انگیز انجام نشد");
+      console.error("خطا در حذف Amazing:", error);
+
+      alert(
+        error instanceof Error ? error.message : "حذف شگفت‌انگیز انجام نشد",
+      );
     }
   };
-
   return (
     <div className="w-full min-w-0">
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-xl font-bold text-red-900 sm:text-2xl">
+          <h1 className=" text-sm md:text-xl font-bold text-red-900 sm:text-2xl">
             شگفت‌انگیزها
           </h1>
 
@@ -98,7 +111,7 @@ const Amazing = () => {
       <div className="overflow-hidden rounded-xl bg-white shadow-sm">
         {loading && (
           <div className="p-6 text-center text-sm text-gray-500">
-            در حال دریافت اطلاعات...
+            <span className="loading loading-spinner loading-sm"></span>
           </div>
         )}
 
@@ -114,13 +127,11 @@ const Amazing = () => {
               <table className="w-full min-w-[900px] text-right">
                 <thead className="border-b border-gray-200 bg-gray-50">
                   <tr>
-                    <th className="px-5 py-4 text-sm">ID</th>
+                    <th className="px-5 py-4 text-sm">شناسه</th>
 
                     <th className="px-5 py-4 text-sm">تصویر</th>
 
                     <th className="px-5 py-4 text-sm">عنوان</th>
-
-                    <th className="px-5 py-4 text-sm">برند</th>
 
                     <th className="px-5 py-4 text-sm">عملیات</th>
                   </tr>
@@ -147,12 +158,6 @@ const Amazing = () => {
                       <td className="max-w-xs px-5 py-4">
                         <span className="block truncate font-medium text-gray-700">
                           {item.title}
-                        </span>
-                      </td>
-
-                      <td className="px-5 py-4">
-                        <span className="rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">
-                          {item.brand.title}
                         </span>
                       </td>
 

@@ -1,91 +1,82 @@
+import { supabase } from "../supabase";
 import type { IAmazing } from "../../Types/Home/IAmazing";
-import { getDbData } from "../dbApi";
-
-const API_URL = "http://localhost:3001/amazing";
-
-const isProduction = import.meta.env.PROD;
 
 export const getAdminAmazing = async (): Promise<IAmazing[]> => {
-  if (isProduction) {
-    const data = await getDbData();
-    return data.amazing;
-  }
+  const { data, error } = await supabase
+    .from("amazing")
+    .select("*")
+    .order("id", { ascending: true });
 
-  const response = await fetch(API_URL);
-
-  if (!response.ok) {
+  if (error) {
+    console.error("Get Amazing Error:", error);
     throw new Error("خطا در دریافت Amazing");
   }
 
-  return response.json();
+  return data as IAmazing[];
 };
 
 export const createAmazing = async (
   amazing: Omit<IAmazing, "id">,
 ): Promise<IAmazing> => {
-  if (isProduction) {
-    throw new Error("ایجاد Amazing در نسخه آنلاین امکان‌پذیر نیست");
+  const { data: items, error: itemsError } = await supabase
+    .from("amazing")
+    .select("id");
+
+  if (itemsError) {
+    console.error("Get Amazing IDs Error:", itemsError);
+    throw new Error("خطا در دریافت شناسه Amazing");
   }
 
-  const items = await getAdminAmazing();
-
-  const ids = items
+  const ids = (items ?? [])
     .map((item) => Number(item.id))
     .filter((id) => Number.isInteger(id));
 
   const newId = ids.length > 0 ? Math.max(...ids) + 1 : 1;
 
-  const response = await fetch(API_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
+  const { data, error } = await supabase
+    .from("amazing")
+    .insert({
       id: newId,
       ...amazing,
-    }),
-  });
+    })
+    .select()
+    .single();
 
-  if (!response.ok) {
+  if (error) {
+    console.error("Create Amazing Error:", error);
     throw new Error("خطا در ایجاد Amazing");
   }
 
-  return response.json();
+  return data as IAmazing;
 };
 
 export const updateAmazing = async (
   id: IAmazing["id"],
   amazing: Partial<Omit<IAmazing, "id">>,
 ): Promise<IAmazing> => {
-  if (isProduction) {
-    throw new Error("ویرایش Amazing در نسخه آنلاین امکان‌پذیر نیست");
-  }
+  const { data, error } = await supabase
+    .from("amazing")
+    .update(amazing)
+    .eq("id", Number(id))
+    .select()
+    .single();
 
-  const response = await fetch(`${API_URL}/${id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(amazing),
-  });
-
-  if (!response.ok) {
+  if (error) {
+    console.error("Update Amazing Error:", error);
     throw new Error("خطا در ویرایش Amazing");
   }
 
-  return response.json();
+  return data as IAmazing;
 };
 
 export const deleteAmazing = async (id: IAmazing["id"]): Promise<void> => {
-  if (isProduction) {
-    throw new Error("حذف Amazing در نسخه آنلاین امکان‌پذیر نیست");
-  }
+  const { error } = await supabase
+    .from("amazing")
+    .delete()
+    .eq("id", Number(id));
 
-  const response = await fetch(`${API_URL}/${id}`, {
-    method: "DELETE",
-  });
-
-  if (!response.ok) {
+  if (error) {
+    console.error("Delete Amazing Error:", error);
     throw new Error("خطا در حذف Amazing");
   }
 };

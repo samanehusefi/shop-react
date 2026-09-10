@@ -104,7 +104,7 @@ const Slider = () => {
       <div className="overflow-hidden rounded-xl bg-white shadow-sm">
         {loading && (
           <div className="p-6 text-center text-sm text-gray-500">
-            در حال دریافت اطلاعات...
+            <span className="loading loading-spinner loading-sm"></span>
           </div>
         )}
 
@@ -120,7 +120,7 @@ const Slider = () => {
               <table className="w-full min-w-[1000px] text-right">
                 <thead className="border-b border-gray-200 bg-gray-50">
                   <tr>
-                    <th className="px-6 py-4">ID</th>
+                    <th className="px-6 py-4">شناسه</th>
                     <th className="px-6 py-4">تصویر دسکتاپ</th>
                     <th className="px-6 py-4">تصویر موبایل</th>
                     <th className="px-6 py-4">عنوان</th>

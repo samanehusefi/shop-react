@@ -1,3 +1,4 @@
+import { useEffect, useState, type RefObject } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import type { AppDispatch, RootState } from "../../../../../Redux/store";
@@ -7,7 +8,11 @@ import type { IMegaMenuColumn } from "../../../../../Types/Header/IMegaMenu";
 import MegaMenuColumn from "./MegaMenuColumn";
 import { LuChevronLeft, menuIcons } from "./MenuIcons";
 
-const MegaMenu = () => {
+interface MegaMenuProps {
+  anchorRef: RefObject<HTMLDivElement | null>;
+}
+
+const MegaMenu = ({ anchorRef }: MegaMenuProps) => {
   const dispatch = useDispatch<AppDispatch>();
 
   const megaMenu = useSelector((state: RootState) => state.menu.megaMenu);
@@ -16,7 +21,35 @@ const MegaMenu = () => {
     (state: RootState) => state.menu.activeMegaMenu,
   );
 
+  const [position, setPosition] = useState({
+    top: 0,
+    right: 0,
+  });
+
   const activeMenu = megaMenu.find((menu) => menu.id === activeMegaMenu);
+
+  useEffect(() => {
+    const updatePosition = () => {
+      if (!anchorRef.current) {
+        return;
+      }
+
+      const rect = anchorRef.current.getBoundingClientRect();
+
+      setPosition({
+        top: rect.bottom,
+        right: window.innerWidth - rect.right,
+      });
+    };
+
+    updatePosition();
+
+    window.addEventListener("resize", updatePosition);
+
+    return () => {
+      window.removeEventListener("resize", updatePosition);
+    };
+  }, [anchorRef]);
 
   if (!megaMenu.length) {
     return null;
@@ -25,7 +58,11 @@ const MegaMenu = () => {
   return (
     <div
       dir="rtl"
-      className="absolute right-0 top-full z-50 h-[70vh] w-[80vw] overflow-hidden rounded-bl-2xl rounded-br-2xl bg-white shadow-[0_10px_35px_rgba(0,0,0,0.18)]"
+      className="fixed z-[100] h-[70vh] w-[80vw] max-w-[1152px] overflow-hidden rounded-bl-2xl  bg-white shadow-[0_10px_35px_rgba(0,0,0,0.18)]"
+      style={{
+        top: position.top,
+        right: position.right,
+      }}
     >
       <div className="flex h-full w-full overflow-hidden">
         <aside

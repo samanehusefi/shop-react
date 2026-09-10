@@ -27,9 +27,9 @@ const Login = () => {
           loading="lazy"
           src={`${import.meta.env.BASE_URL}assets/logo/full-horizontal.svg`}
           alt="دیجیکالا"
-          className="h-11 justify-items-center w-full my-2 object-contain md:h-4"
+          className="h-11 w-16 justify-items-center md:w-full my-2 object-contain md:h-4"
         />
-        <p className="mb-2 text-center text-gray-700 text-xl">
+        <p className="mb-2 text-center text-gray-700 text-sm">
           ورود به پنل مدیریت
         </p>
 

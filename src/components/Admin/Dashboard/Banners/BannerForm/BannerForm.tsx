@@ -91,7 +91,7 @@ const BannerForm = () => {
   if (isEditMode && bannersLoading) {
     return (
       <div className="rounded-xl bg-white p-8 text-center text-gray-500">
-        در حال دریافت اطلاعات تبلیغات...
+        <span className="loading loading-dots loading-xl"></span>
       </div>
     );
   }
@@ -108,7 +108,7 @@ const BannerForm = () => {
         </button>
 
         <div>
-          <h1 className="text-2xl font-bold text-red-900">
+          <h1 className="text-sm md:text-xl font-bold text-red-900">
             {isEditMode ? "ویرایش تبلیغات" : "افزودن تبلیغات"}
           </h1>
 
@@ -214,11 +214,15 @@ const BannerForm = () => {
               }
               className="flex-1 rounded-lg bg-green-600 px-4 py-3 text-sm font-medium text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {loading
-                ? "در حال ذخیره..."
-                : isEditMode
-                  ? "ذخیره تغییرات"
-                  : "ایجاد تبلیغات"}
+              {loading ? (
+                <span className="flex items-center justify-center">
+                  <span className="loading loading-spinner loading-sm"></span>
+                </span>
+              ) : isEditMode ? (
+                "ذخیره تغییرات"
+              ) : (
+                "ایجاد تبلیغات"
+              )}
             </button>
           </div>
         </form>

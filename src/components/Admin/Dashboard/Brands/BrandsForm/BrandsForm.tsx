@@ -4,9 +4,11 @@ import { useNavigate, useParams } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
 import type { AppDispatch, RootState } from "../../../../../Redux/store";
-import { getBrands } from "../../../../../Redux/Home/Brands/action";
-
-import { createBrand, updateBrand } from "../../../../../Api/Admin/brandsApi";
+import {
+  getBrands,
+  addBrand,
+  editBrand,
+} from "../../../../../Redux/Home/Brands/action";
 
 import type { IBrand } from "../../../../../Types/Home/IBrand";
 
@@ -28,8 +30,10 @@ const BrandForm = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    dispatch(getBrands());
-  }, [dispatch]);
+    if (brands.length === 0) {
+      dispatch(getBrands());
+    }
+  }, [dispatch, brands.length]);
 
   useEffect(() => {
     if (!id || brands.length === 0) {
@@ -37,7 +41,7 @@ const BrandForm = () => {
     }
 
     const selectedBrand = brands.find(
-      (brand: IBrand) => Number(brand.id) === Number(id),
+      (brand) => Number(brand.id) === Number(id),
     );
 
     if (!selectedBrand) {
@@ -46,41 +50,51 @@ const BrandForm = () => {
       return;
     }
 
-    setCode(selectedBrand.code);
-    setTitleFa(selectedBrand.title_fa);
-    setSrc(selectedBrand.src);
+    setCode(selectedBrand.code ?? "");
+    setTitleFa(selectedBrand.title_fa ?? "");
+    setSrc(selectedBrand.src ?? "");
     setVisibility(Boolean(selectedBrand.visibility));
   }, [id, brands, navigate]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!code.trim() || !titleFa.trim() || !src.trim()) {
+    const trimmedCode = code.trim();
+    const trimmedTitle = titleFa.trim();
+    const trimmedSrc = src.trim();
+
+    if (!trimmedCode || !trimmedTitle || !trimmedSrc) {
       return;
     }
 
     setLoading(true);
 
     try {
-      const data: Omit<IBrand, "id"> = {
-        code: code.trim(),
-        title_fa: titleFa.trim(),
+      const brandData: Omit<IBrand, "id"> = {
+        code: trimmedCode,
+        title_fa: trimmedTitle,
         title_en: "",
         url: "",
-        src: src.trim(),
+        src: trimmedSrc,
         visibility,
         is_premium: false,
       };
 
-      if (id) {
-        await updateBrand(Number(id), data);
+      if (isEditMode) {
+        const brandId = Number(id);
+
+        if (!Number.isInteger(brandId)) {
+          throw new Error("شناسه برند نامعتبر است");
+        }
+
+        await dispatch(editBrand(brandId, brandData));
       } else {
-        await createBrand(data);
+        await dispatch(addBrand(brandData));
       }
 
       navigate("/dashboard/brands");
     } catch (error) {
-      console.error(error);
+      console.error("Brand form error:", error);
 
       alert(isEditMode ? "ویرایش برند انجام نشد" : "ایجاد برند انجام نشد");
     } finally {
@@ -91,7 +105,7 @@ const BrandForm = () => {
   if (isEditMode && brandsLoading) {
     return (
       <div className="rounded-xl bg-white p-8 text-center text-gray-500">
-        در حال دریافت اطلاعات برند...
+        <span className="loading loading-spinner loading-sm"></span>
       </div>
     );
   }
@@ -108,7 +122,7 @@ const BrandForm = () => {
         </button>
 
         <div>
-          <h1 className="text-2xl font-bold text-red-900">
+          <h1 className="text-2xl font-bold text-blue-900">
             {isEditMode ? "ویرایش برند" : "افزودن برند"}
           </h1>
 
@@ -122,7 +136,7 @@ const BrandForm = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="mb-2 block text-sm font-medium text-gray-700">
-              عنوان
+              کد برند
             </label>
 
             <input
@@ -212,11 +226,15 @@ const BrandForm = () => {
               }
               className="flex-1 rounded-lg bg-green-600 px-4 py-3 text-sm font-medium text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {loading
-                ? "در حال ذخیره..."
-                : isEditMode
-                  ? "ذخیره تغییرات"
-                  : "ایجاد برند"}
+              {loading ? (
+                <span className="flex items-center justify-center">
+                  <span className="loading loading-spinner loading-sm"></span>
+                </span>
+              ) : isEditMode ? (
+                "ذخیره تغییرات"
+              ) : (
+                "ایجاد برند"
+              )}
             </button>
           </div>
         </form>

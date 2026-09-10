@@ -34,7 +34,9 @@ const Search = () => {
 
         // Products
         const incredibleResults: ISearchResult[] = data.incredible
-          .filter((item: any) => item.title.toLowerCase().includes(searchValue))
+          .filter((item: any) =>
+            (item.title ?? "").toLowerCase().includes(searchValue),
+          )
           .map((item: any) => ({
             title: item.title,
             type: "product",
@@ -42,7 +44,9 @@ const Search = () => {
 
         // Categories
         const categoriesResults: ISearchResult[] = data.categories
-          .filter((item: any) => item.title.toLowerCase().includes(searchValue))
+          .filter((item: any) =>
+            (item.title ?? "").toLowerCase().includes(searchValue),
+          )
           .map((item: any) => ({
             title: item.title,
             type: "categories",
@@ -50,10 +54,12 @@ const Search = () => {
 
         // Brands
         const brandResults: ISearchResult[] = data.brands
-          .filter((item: any) => item.title.toLowerCase().includes(searchValue))
+          .filter((item: any) =>
+            (item.title_fa ?? "").toLowerCase().includes(searchValue),
+          )
           .map((item: any) => ({
-            title: item.title,
-            type: "brand",
+            title: item.title_fa,
+            type: "brands",
           }));
 
         setResults([
@@ -109,7 +115,7 @@ const Search = () => {
     .slice(0, 3);
 
   const brands = results
-    .filter((result) => result.type === "brand")
+    .filter((result) => result.type === "brands")
     .slice(0, 3);
 
   const products = results
@@ -377,7 +383,8 @@ const Search = () => {
                 sm:p-6
               "
             >
-              <img   loading="lazy"
+              <img
+                loading="lazy"
                 src={`${import.meta.env.BASE_URL}assets/icon/SearchNotFound.svg`}
                 className="h-40 w-40 opacity-70 sm:h-52 sm:w-52 md:h-60 md:w-60"
                 alt="نتیجه‌ای یافت نشد"

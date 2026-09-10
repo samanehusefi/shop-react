@@ -1,10 +1,5 @@
 import type { ICategory } from "../../../Types/Home/ICategory";
-
-import {
-  GET_CATEGORIES_REQUEST,
-  GET_CATEGORIES_SUCCESS,
-  GET_CATEGORIES_FAILURE,
-} from "./actionType";
+import { GET_CATEGORIES, GET_CATEGORIES_ERROR } from "./actionType";
 
 interface CategoriesState {
   categories: ICategory[];
@@ -26,24 +21,18 @@ const categoriesReducer = (
   },
 ): CategoriesState => {
   switch (action.type) {
-    case GET_CATEGORIES_REQUEST:
+    case GET_CATEGORIES:
       return {
         ...state,
-        loading: true,
-        error: null,
-      };
-
-    case GET_CATEGORIES_SUCCESS:
-      return {
-        ...state,
+        categories: (action.payload as ICategory[]) ?? [],
         loading: false,
-        categories: action.payload as ICategory[],
         error: null,
       };
 
-    case GET_CATEGORIES_FAILURE:
+    case GET_CATEGORIES_ERROR:
       return {
         ...state,
+        categories: [],
         loading: false,
         error: action.payload as string,
       };

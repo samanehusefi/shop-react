@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 
 import HeaderMain from "./HeaderMain/HeaderMain";
@@ -16,6 +16,8 @@ const Header = () => {
 
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const categoryMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     dispatch(fetchHeader());
@@ -54,12 +56,15 @@ const Header = () => {
 
       {!isScrolled && (
         <div
-          className="relative z-40 hidden w-full transition-transform duration-1000 ease-in-out md:block"
+          className="relative z-40 hidden w-full md:block"
           onMouseLeave={() => setIsMegaMenuOpen(false)}
         >
-          <Menu setIsMegaMenuOpen={setIsMegaMenuOpen} />
+          <Menu
+            setIsMegaMenuOpen={setIsMegaMenuOpen}
+            categoryMenuRef={categoryMenuRef}
+          />
 
-          {isMegaMenuOpen && <MegaMenu />}
+          {isMegaMenuOpen && <MegaMenu anchorRef={categoryMenuRef} />}
         </div>
       )}
     </header>

@@ -1,4 +1,6 @@
+import type { RefObject } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import type { AppDispatch, RootState } from "../../../../../Redux/store";
 import { setActiveMegaMenu } from "../../../../../Redux/Header/MegaMenu/action";
 import { menuIcons, LuMenu } from "./MenuIcons";
@@ -6,9 +8,10 @@ import Address from "../Address/Address";
 
 interface MenuProps {
   setIsMegaMenuOpen: (value: boolean) => void;
+  categoryMenuRef: RefObject<HTMLDivElement | null>;
 }
 
-const Menu = ({ setIsMegaMenuOpen }: MenuProps) => {
+const Menu = ({ setIsMegaMenuOpen, categoryMenuRef }: MenuProps) => {
   const dispatch = useDispatch<AppDispatch>();
 
   const megaMenu = useSelector((state: RootState) => state.menu.megaMenu);
@@ -16,9 +19,10 @@ const Menu = ({ setIsMegaMenuOpen }: MenuProps) => {
   const navbar = useSelector((state: RootState) => state.navbar.NavBar);
 
   return (
-    <nav dir="rtl" className="w-full overflow-hidden bg-white">
-      <div className="mx-auto max-w-[1440px] flex w-full items-center px-4 py-1">
+    <nav dir="rtl" className="w-full overflow-visible bg-white">
+      <div className="mx-auto flex w-full max-w-full items-center px-4 py-1">
         <div
+          ref={categoryMenuRef}
           className="relative shrink-0"
           onMouseEnter={() => {
             setIsMegaMenuOpen(true);
