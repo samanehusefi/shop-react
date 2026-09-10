@@ -7974,86 +7974,6 @@
       "type": "link"
     }
   ],
-  "services": [
-    {
-      "active": false,
-      "Simg": "./img/Header/mobile/s-1.png",
-      "Stitle": "سرویس‌ها",
-      "id": "CCee01s9YRk"
-    },
-    {
-      "active": true,
-      "Simg": "./img/Header/mobile/s-2.png",
-      "Stitle": "دیجی‌کالا",
-      "id": "nZntbG-mnCs"
-    },
-    {
-      "active": false,
-      "Simg": "./img/Header/mobile/s-3.png",
-      "Stitle": "۴۵ دقیقه‌ای",
-      "id": "CvANg6Gi9pc"
-    },
-    {
-      "active": false,
-      "Simg": "./img/Header/mobile/s-4.png",
-      "Stitle": "طلای دیجیتال",
-      "id": "rpVIifEh5Mc"
-    },
-    {
-      "active": false,
-      "Simg": "./img/Header/mobile/s-5.png",
-      "Stitle": "سوپرمارکت",
-      "id": "JLq71iGbLcE"
-    },
-    {
-      "active": false,
-      "Simg": "./img/Header/mobile/s-6.png",
-      "Stitle": "اعتبار خرید",
-      "id": "bJll9Clobsg"
-    }
-  ],
-  "HotSearh": [
-    {
-      "title": "گوشی موبایل",
-      "id": "pWu-DIGaJwk"
-    },
-    {
-      "title": "لپ تاپ",
-      "id": "1vgkAmVIBE4"
-    },
-    {
-      "title": "هدفون",
-      "id": "WhD0wxzhPzU"
-    },
-    {
-      "title": "ساعت هوشمند",
-      "id": "hjlp3noNgqM"
-    },
-    {
-      "title": "کفش مردانه",
-      "id": "24jaKY8t3EE"
-    },
-    {
-      "title": "کفش زنانه",
-      "id": "QyX7B119ECA"
-    },
-    {
-      "title": "لباس مردانه",
-      "id": "sdZmurcyw-w"
-    },
-    {
-      "title": "لباس زنانه",
-      "id": "ulyaX-n3uYY"
-    },
-    {
-      "title": "عطر و ادکلن",
-      "id": "QzqTd5L1N5k"
-    },
-    {
-      "title": "محصولات آرایشی و بهداشتی",
-      "id": "3UD9mYhsrN4"
-    }
-  ],
   "slider": [
     {
       "id": 212051,
@@ -8871,7 +8791,7 @@
   ],
   "categories": [
     {
-      "id": "1",
+      "id": 1,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/09a98a13c782e12a245930b4515d243b17734a33_1740821989.jpg",
       "url": "https://www.digikala.com/landing/mobile/",
       "title": "موبایل",
@@ -8879,7 +8799,7 @@
       "showHomepage": true
     },
     {
-      "id": "2",
+      "id": 2,
       "image": "https://dkstatics-public.digikala.com/digikala-mega-menu/7cf1fed6dac6bdfd1b888db6bf8f443ea680244b_1748692252.jpg",
       "url": "https://www.digikala.com/landing/laptop/",
       "title": "لپ تاپ",
@@ -8887,7 +8807,7 @@
       "showHomepage": true
     },
     {
-      "id": "3",
+      "id": 3,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/151ec29bae111afd3b6a0e71cec5c4c26f1c3014_1740821986.jpg",
       "url": "https://www.digikala.com/main/electronic-devices/",
       "title": "کالای دیجیتال",
@@ -8895,7 +8815,7 @@
       "showHomepage": true
     },
     {
-      "id": "4",
+      "id": 4,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/8a042388b93c5116604f35092a1fb35f8f0756be_1740821985.jpg",
       "url": "https://www.digikala.com/main/home-and-kitchen/",
       "title": "خانه و آشپزخانه",
@@ -8903,7 +8823,7 @@
       "showHomepage": true
     },
     {
-      "id": "5",
+      "id": 5,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/d825f64f509cd5067a9022528c465e8ca705f60d_1740821988.jpg",
       "url": "https://www.digikala.com/landing/category-home-appliance/",
       "title": "لوازم خانگی برقی",
@@ -8911,7 +8831,7 @@
       "showHomepage": true
     },
     {
-      "id": "6",
+      "id": 6,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/b196bbdea97f57bfac02dc1666d7401b16ee4bcb_1740821984.jpg",
       "url": "https://www.digikala.com/main/personal-appliance/",
       "title": "آرایشی بهداشتی",
@@ -8919,7 +8839,7 @@
       "showHomepage": true
     },
     {
-      "id": "7",
+      "id": 7,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/b3d4eaefebe67ab8d849296ea2e7e113cde8094c_1740821988.jpg",
       "url": "https://www.digikala.com/landing/apparel/",
       "title": "مد و پوشاک",
@@ -8927,7 +8847,7 @@
       "showHomepage": true
     },
     {
-      "id": "8",
+      "id": 8,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/78135af4274ad7b7fcdaec7e5912689e5f5db96a_1740821985.jpg",
       "url": "https://www.digikala.com/landing/gold/",
       "title": "طلا و نقره",
@@ -8935,7 +8855,7 @@
       "showHomepage": true
     },
     {
-      "id": "9",
+      "id": 9,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/03552aa1293fec9f43477814ca62afdacdac18e3_1740821990.jpg",
       "url": "https://www.digikala.com/main/vehicles-spare-parts/",
       "title": "خودرو و موتورسیکلت",
@@ -8943,7 +8863,7 @@
       "showHomepage": true
     },
     {
-      "id": "10",
+      "id": 10,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/fb6303218362cd2c48b40fef5da89ad33a5c04d7_1740821984.jpg",
       "url": "https://www.digikala.com/main/vehicles/",
       "title": "ابزار آلات و تجهیزات",
@@ -8951,7 +8871,7 @@
       "showHomepage": true
     },
     {
-      "id": "11",
+      "id": 11,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/deb3f514c62761797eb6a49e1559268b8bce3219_1740821984.jpg",
       "url": "https://www.digikala.com/search/category-health-care/",
       "title": "تجهیزات پزشکی و سلامت",
@@ -8959,7 +8879,7 @@
       "showHomepage": true
     },
     {
-      "id": "12",
+      "id": 12,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/0cdf9c404e509371c3177a334be948a7e500419c_1740821987.jpg",
       "url": "https://www.digikala.com/main/book-and-media/",
       "title": "کتاب، لوازم تحریر و هنر",
@@ -8967,7 +8887,7 @@
       "showHomepage": true
     },
     {
-      "id": "13",
+      "id": 13,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/4d4582205d0d5045c2bd94c5e910bbb49ae4fd4e_1740821990.jpg",
       "url": "https://www.digikala.com/main/sport-entertainment/",
       "title": "ورزش و سفر",
@@ -8975,7 +8895,7 @@
       "showHomepage": true
     },
     {
-      "id": "14",
+      "id": 14,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/f35b3eba7de8bf2432fff4f53abfa8cbaa6e71d6_1740821985.jpg",
       "url": "https://www.digikala.com/main/dk-ds-gift-card/",
       "title": "کارت هدیه و گیفت کارت",
@@ -8983,7 +8903,7 @@
       "showHomepage": true
     },
     {
-      "id": "15",
+      "id": 15,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/7adb0cc6edc18a6d04b9ba3bdd424b1bcce47848_1740821986.jpg",
       "url": "https://www.digikala.com/main/food-beverage/",
       "title": "کالای خوراکی و اساسی",
@@ -8991,7 +8911,7 @@
       "showHomepage": true
     },
     {
-      "id": "16",
+      "id": 16,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/6f5284dccdb280616bbfe58533ecc483de4639af_1740821987.jpg",
       "url": "https://www.digikala.com/main/mother-and-child/",
       "title": "اسباب بازی، کودک و نوزاد",
@@ -8999,7 +8919,7 @@
       "showHomepage": true
     },
     {
-      "id": "17",
+      "id": 17,
       "image": "https://dkstatics-public.digikala.com/digikala-admin-landing/9a4dfac524f8a865f9f69e38d5434fa69fe63e3b_1740821990.jpg",
       "url": "https://www.digikala.com/main/rural-products/",
       "title": "محصولات بومی و محلی",
@@ -9007,214 +8927,12 @@
       "showHomepage": true
     },
     {
-      "id": "18",
+      "id": 18,
       "image": "https://dkstatics-public.digikala.com/digikala-mega-menu/6f236efd9caae4d1c3177f37c483aa44c3092b6a_1753614680.jpg",
       "url": "https://www.digikala.com/main/pet/",
       "title": "پت شاپ",
       "isActive": true,
       "showHomepage": true
-    }
-  ],
-  "list": [
-    {
-      "icon": "./img/category/img-1.png",
-      "text": "ارسال‌فوری خواربار",
-      "url": "#",
-      "id": "YwsNvFQVyDc"
-    },
-    {
-      "icon": "./img/category/img-2.png",
-      "text": "طلای دیجیتال",
-      "url": "#",
-      "id": "_4933Q4fKZc"
-    },
-    {
-      "icon": "./img/category/img-3.png",
-      "text": "پلاس",
-      "url": "#",
-      "id": "E-HnJtUAm2A"
-    },
-    {
-      "icon": "./img/category/img-4.png",
-      "text": "وام‌بانکی دیجی‌پی",
-      "url": "#",
-      "id": "dtsPSmwoJ6s"
-    },
-    {
-      "icon": "./img/category/img-5.png",
-      "text": "استایل بهاری",
-      "url": "#",
-      "id": "zara5Cy6-VA"
-    },
-    {
-      "icon": "./img/category/img-6.png",
-      "text": "انتخاب پاوربانک",
-      "url": "#",
-      "id": "KNQyKzWMsYg"
-    },
-    {
-      "icon": "./img/category/img-8.png",
-      "text": "تقویم 1405",
-      "url": "#",
-      "id": "P8MeOZP-KP4"
-    },
-    {
-      "icon": "./img/category/img-9.png",
-      "text": "نصب اپ",
-      "url": "#",
-      "id": "YIAi_L_nERw"
-    },
-    {
-      "icon": "./img/category/img-10.png",
-      "text": "فروشنده شوید",
-      "url": "#",
-      "id": "BkMAFCBHExA"
-    }
-  ],
-  "listModal": [
-    {
-      "icon": "./img/category/modal/img-1.png",
-      "text": "ارسال فوری خواربار",
-      "link": "#",
-      "id": "w7Jk7XMam6Y"
-    },
-    {
-      "icon": "./img/category/modal/img-2.png",
-      "text": "وام‌بانکی دیجی‌پی",
-      "link": "#",
-      "id": "aBaPL1wSu8s"
-    },
-    {
-      "icon": "./img/category/modal/img-3.png",
-      "text": "استایل بهاری",
-      "link": "#",
-      "id": "cJhzgMplpU8"
-    },
-    {
-      "icon": "./img/category/modal/img-4.png",
-      "text": "انتخاب پاوربانک",
-      "link": "#",
-      "id": "hoHA82_pgfY"
-    },
-    {
-      "icon": "./img/category/modal/img-5.png",
-      "text": "تقویم 1405",
-      "link": "#",
-      "id": "Hjj17hyRRa0"
-    },
-    {
-      "icon": "./img/category/modal/img-6.png",
-      "text": "نصب اپ",
-      "link": "#",
-      "id": "iJ12-bmsFCg"
-    },
-    {
-      "icon": "./img/category/modal/img-7.png",
-      "text": "فروشنده شوید",
-      "link": "#",
-      "id": "rz22vMmX4gU"
-    },
-    {
-      "icon": "./img/category/modal/img-8.png",
-      "text": "پیشنهاد هفته",
-      "link": "#",
-      "id": "210RnUswkTY"
-    },
-    {
-      "icon": "./img/category/modal/img-9.png",
-      "text": "برق و شارژی",
-      "link": "#",
-      "id": "_f6Y1HzVsko"
-    },
-    {
-      "icon": "./img/category/modal/img-10.png",
-      "text": "خریدحضوری ازدیجی‌کالا",
-      "link": "#",
-      "id": "EmEmQwTmgbw"
-    },
-    {
-      "icon": "./img/category/modal/img-11.png",
-      "text": "سوپرمارکت",
-      "link": "#",
-      "id": "Tb1DBMpCuVo"
-    },
-    {
-      "icon": "./img/category/modal/img-12.png",
-      "text": "دیجی‌کلاب",
-      "link": "#",
-      "id": "yV5HtRiE8YE"
-    }
-  ],
-  "modalService": [
-    {
-      "pic": "./img/category/modal/pic-1.png",
-      "title": "طلای دیجیتال",
-      "text": "",
-      "link": "#",
-      "id": "OTjp9deasE4"
-    },
-    {
-      "pic": "./img/category/modal/pic-2.png",
-      "title": "پلاس",
-      "text": "خریدی سریع‌تر و راحت‌تر و ارزان‌تر از دیجی‌کالا",
-      "link": "#",
-      "id": "HgUj8J4h3SQ"
-    },
-    {
-      "pic": "./img/category/modal/pic-3.png",
-      "title": "خرید قسطی",
-      "text": "خرید قسطی گوشی موبایل، لپ‌تاپ، طلا و لوازم خانگی",
-      "link": "#",
-      "id": "dSVs1YNVfCc"
-    },
-    {
-      "pic": "./img/category/modal/pic-4.png",
-      "title": "دیجی‌کالا مهر",
-      "text": "همه چیز برای این روزا",
-      "link": "#",
-      "id": "vVc8ZDYlMJY"
-    },
-    {
-      "pic": "./img/category/modal/pic-5.png",
-      "title": "همکاری در فروش دیجی کالا",
-      "text": "کسب درآمد از همکاری در فروش محصولات دیجی‌کالا از طریق تولید محتوا",
-      "link": "#",
-      "id": "wsiycysGFQs"
-    },
-    {
-      "pic": "./img/category/modal/pic-6.png",
-      "title": "دیجی‌کالا بیزینس",
-      "text": "پلتفرم اختصاصی فروش عمده موبایل و کالای دیجیتال",
-      "link": "#",
-      "id": "Q5lisRMiYrM"
-    },
-    {
-      "pic": "./img/category/modal/pic-7.png",
-      "title": "پیندو",
-      "text": "ثبت آگهی برای کالا و خدمات",
-      "link": "#",
-      "id": "HQ8uNna9gt0"
-    },
-    {
-      "pic": "./img/category/modal/pic-8.png",
-      "title": "بومی‌محلی",
-      "text": "محصولات بومی و محلی با هدف توانمندسازی کسب‌وکارهای خرد شهری و روستایی در خانواده دیجی‌کالا ایجاد شده و میزبان محصولات اصیل و متفاوتی از چهارگوشه ایران است.",
-      "link": "#",
-      "id": "JNy93_cPu8w"
-    },
-    {
-      "pic": "./img/category/modal/pic-9.png",
-      "title": "دیجی‌کالا سرویس",
-      "text": "گارانتی و خدمات پس از فروش دیجی‌کالا",
-      "link": "#",
-      "id": "1safRlRVrjc"
-    },
-    {
-      "pic": "./img/category/modal/pic-10.png",
-      "title": "فیدیبو",
-      "text": "خرید کتاب و دانلود کتاب الکترونیک",
-      "link": "#",
-      "id": "NF18NBZaSZ8"
     }
   ],
   "incredible": [
@@ -9327,144 +9045,211 @@
       "id": "jtX7fUuYpQo"
     }
   ],
-  "partner": [
-    {
-      "id": "1",
-      "mobile": true,
-      "title": "پارتنرشیپ ری بن",
-      "img": "./img/partner/img-1.jpg"
-    },
-    {
-      "id": "2",
-      "mobile": false,
-      "title": "پارتنرشیپ نوآکسا",
-      "img": "./img/partner/img-2.jpg"
-    }
-  ],
-  "partner2": [
-    {
-      "id": "1",
-      "title": "پارتنرشیپ مایا ماهک",
-      "img": "./img/partner/img-3.jpg"
-    },
-    {
-      "id": "2",
-      "title": "چراغ قوه، چراغ اضطراری و هدلامپ",
-      "img": "./img/partner/img-4.jpg"
-    }
-  ],
+
   "brands": [
     {
-      "title": "پریل",
-      "img": "./img/brands/img-1.png",
-      "id": "ftKY41iONYs"
+      "id": 1,
+      "code": "rani",
+      "title_fa": "رانی",
+      "title_en": "Rani",
+      "url": "https://www.digikala.com/brand/rani/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/6613.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "پرسیل",
-      "img": "./img/brands/img-2.png",
-      "id": "hPwv1S1K_R8"
+      "id": 2,
+      "code": "torabika",
+      "title_fa": "ترابیکا",
+      "title_en": "Torabika",
+      "url": "https://www.digikala.com/brand/torabika/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/35.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "چرم مشهد",
-      "img": "./img/brands/img-3.png",
-      "id": "crhVD2Lpw0k"
+      "id": 3,
+      "code": "charm-mashhad",
+      "title_fa": "چرم مشهد",
+      "title_en": "Mashhad Leather",
+      "url": "https://www.digikala.com/brand/charm-mashhad/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/9f5727fd7c13dc4b10c879a1865d77bc1fb333ce_1705308969.jpg?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "آداتا",
-      "img": "./img/brands/img-4.png",
-      "id": "64uh7Kg0nYc"
+      "id": 4,
+      "code": "adata",
+      "title_fa": "ای دیتا",
+      "title_en": "ADATA",
+      "url": "https://www.digikala.com/brand/adata/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/1800.png?x-oss-process=image//format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "چینی زرین ایران",
-      "img": "./img/brands/img-6.png",
-      "id": "IQpGDFtHZa8"
+      "id": 5,
+      "code": "chini-zarrin-iran",
+      "title_fa": "چینی زرین ایران",
+      "title_en": "Zarrin Iran",
+      "url": "https://www.digikala.com/brand/zarin-iran/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/5a10ae95eb42fc96906c8062563b28062668d418_1722238640.png?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "پنتر",
-      "img": "./img/brands/img-7.png",
-      "id": "bd9TbMw1J1s"
+      "id": 6,
+      "code": "madopad",
+      "title_fa": "مدوپد",
+      "title_en": "Madopad",
+      "url": "https://www.digikala.com/brand/madopad/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/3e0100126c0bccc9cbb02aa6f869eac6c1240027_1607154301.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "ایکس ویژن",
-      "img": "./img/brands/img-8.png",
-      "id": "hemiwoWEFog"
+      "id": 7,
+      "code": "xvision",
+      "title_fa": "ایکس ویژن",
+      "title_en": "Xvision",
+      "url": "https://www.digikala.com/brand/xvision/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/d23e8875d5f7a9735e433f1fd86a1513902efc8b_1604470597.jpg?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "پمینا",
-      "img": "./img/brands/img-9.png",
-      "id": "9hWRO_o1YlM"
+      "id": 8,
+      "code": "maya-mahak",
+      "title_fa": "مایا ماهک",
+      "title_en": "Maya Mahak",
+      "url": "https://www.digikala.com/brand/maya-mahak/",
+      "src": "https://dkstatics-public.digikala.com/digikala-adservice-banners/a4ff497f24b1315b93f6ca9f040069c367d83aac_1781790676.jpg?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "نتربیت",
-      "img": "./img/brands/img-10.png",
-      "id": "SI3PoB3EI-E"
+      "id": 9,
+      "code": "netrabit",
+      "title_fa": "نتربیت",
+      "title_en": "Netrabit",
+      "url": "https://www.digikala.com/brand/netrabit/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/070d1eb61036eaa9d9981aeadd4a0f05cf93efe6_1627122768.png?x-oss-process=image//format,webp",
+      "visibility": true,
+      "is_premium": false
+    },
+
+    {
+      "id": 10,
+      "code": "huawei",
+      "title_fa": "هوآوی",
+      "title_en": "Huawei",
+      "url": "https://www.digikala.com/brand/huawei/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/af664f0bcf9bc412b741c618e6e52fc2d090198f_1619269008.png?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": true
     },
     {
-      "title": "هوآوی",
-      "img": "./img/brands/img-11.png",
-      "id": "J6E0zig5Yoc"
+      "id": 11,
+      "code": "eurovital",
+      "title_fa": "یوروویتال",
+      "title_en": "EuroVital",
+      "url": "https://www.digikala.com/brand/eurovital/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/e44886020b773202d6d431e2fef2f3bd8bd3bc7f_1737817444.jpg?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "یوروویتال",
-      "img": "./img/brands/img-12.png",
-      "id": "KZnG9glzbZU"
+      "id": 12,
+      "code": "lafarrerr",
+      "title_fa": "لافارر",
+      "title_en": "Lafarrerr",
+      "url": "https://www.digikala.com/brand/lafarrerr/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/1313.png?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "لافارر",
-      "img": "./img/brands/img-13.png",
-      "id": "ixotb_CrQ9s"
+      "id": 13,
+      "code": "xiaomi",
+      "title_fa": "شیائومی",
+      "title_en": "Xiaomi",
+      "url": "https://www.digikala.com/brand/xiaomi/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/2994.png?x-oss-process=image//format,webp",
+      "visibility": true,
+      "is_premium": true
     },
     {
-      "title": "شیائومی",
-      "img": "./img/brands/img-14.png",
-      "id": "JPJk5n-krWE"
+      "id": 14,
+      "code": "my",
+      "title_fa": "مای",
+      "title_en": "MY",
+      "url": "https://www.digikala.com/brand/my/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/3972.png?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "مای",
-      "img": "./img/brands/img-15.png",
-      "id": "oBOJPBUl5ZQ"
+      "id": 15,
+      "code": "samsung",
+      "title_fa": "سامسونگ",
+      "title_en": "Samsung",
+      "url": "https://www.digikala.com/brand/samsung/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/3960.jpg?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": true
     },
     {
-      "title": "سامسونگ",
-      "img": "./img/brands/img-16.png",
-      "id": "Bp0FwvkFVbs"
+      "id": 16,
+      "code": "active",
+      "title_fa": "اکتیو",
+      "title_en": "Active",
+      "url": "https://www.digikala.com/brand/active/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/87dcb454f4d8df28bd2f8fd902f0f27b5fb1fac4_1666761801.jpg?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "اکتیو",
-      "img": "./img/brands/img-17.png",
-      "id": "LcAIQsPaag4"
+      "id": 17,
+      "code": "saei",
+      "title_fa": "ساعی",
+      "title_en": "Saei",
+      "url": "https://www.digikala.com/brand/saei/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/58ba4ffb03e2843e97778403fbe5b9d99c2f4cdb_1747138682.jpg?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "ساعی",
-      "img": "./img/brands/img-18.png",
-      "id": "kIt5Bx2D65E"
+      "id": 18,
+      "code": "kalleh",
+      "title_fa": "کاله",
+      "title_en": "Kalleh",
+      "url": "https://www.digikala.com/brand/kalleh/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/311.png?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "کاله",
-      "img": "./img/brands/img-19.png",
-      "id": "eGk6oNSn8zU"
+      "id": 19,
+      "code": "vitalayer",
+      "title_fa": "ویتالیر",
+      "title_en": "Vitalayer",
+      "url": "https://www.digikala.com/brand/vitalayer/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/efb14accdad9be1b2176aa0317c8bbac43733831_1609325767.png?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     },
     {
-      "title": "ویتالیر",
-      "img": "./img/brands/img-20.png",
-      "id": "SiOzHFxzpnI"
-    },
-    {
-      "title": "فولیکا",
-      "img": "./img/brands/img-21.png",
-      "id": "uGQ1BtHGdgo"
-    },
-    {
-      "title": "",
-      "img": "./img/brands/img-22.png",
-      "id": "nMpgA5DvHVA"
-    },
-    {
-      "title": "",
-      "img": "./img/brands/img-23.png",
-      "id": "n1Sq2uAwwnk"
+      "id": 20,
+      "code": "fulica",
+      "title_fa": "فولیکا",
+      "title_en": "Fulica",
+      "url": "https://www.digikala.com/brand/fulica/",
+      "src": "https://dkstatics-public.digikala.com/digikala-brands/100012444.jpg?x-oss-process=image/format,webp",
+      "visibility": true,
+      "is_premium": false
     }
   ],
+
   "options": [
     {
       "title": "جوراب مردانه",
@@ -9570,6 +9355,7 @@
     ],
     "applicationsMobile": [
       {
+        "id": 1,
         "src": "assets/application/coffe-bazzar-dark-.svg",
         "alt": "coffe-bazzar",
         "title": "coffe-bazzar",
@@ -9577,6 +9363,7 @@
         "url": "#"
       },
       {
+        "id": 2,
         "src": "assets/application/myket-dark.svg",
         "alt": "myket-dark",
         "title": "myket-dark",
@@ -9584,6 +9371,7 @@
         "url": "#"
       },
       {
+        "id": 3,
         "src": "assets/application/apk-badge-dark.svg",
         "alt": "apk-badge-dark",
         "title": "apk-badge-dark",

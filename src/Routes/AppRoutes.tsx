@@ -17,6 +17,8 @@ import CircleBadgeForm from "../components/Admin/Dashboard/CircleBadge/CircleBad
 
 import Amazing from "../components/Admin/Dashboard/Amazing/Amazing";
 import AmazingForm from "../components/Admin/Dashboard/Amazing/AmazingForm/AmazingForm";
+import Brands from "../components/Admin/Dashboard/Brands/Brands";
+import BrandForm from "../components/Admin/Dashboard/Brands/BrandsForm/BrandsForm";
 
 const AppRoutes = () => {
   return (
@@ -46,7 +48,11 @@ const AppRoutes = () => {
           <Route path="/dashboard/banners" element={<Banners />} />
           <Route path="/dashboard/banners/create" element={<BannerForm />} />
           <Route path="/dashboard/banners/edit/:id" element={<BannerForm />} />
+          <Route path="/dashboard/brands" element={<Brands />} />
 
+          <Route path="/dashboard/brands/create" element={<BrandForm />} />
+
+          <Route path="/dashboard/brands/edit/:id" element={<BrandForm />} />
           <Route path="/dashboard/circle-badge" element={<CircleBadge />} />
           <Route
             path="/dashboard/circle-badge/create"

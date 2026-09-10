@@ -30,6 +30,11 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
       icon: <MdViewList />,
     },
     {
+      title: "برند",
+      path: "/dashboard/brands",
+      icon: <MdViewList />,
+    },
+    {
       title: "تبلیغات",
       path: "/dashboard/banners",
       icon: <MdImage />,

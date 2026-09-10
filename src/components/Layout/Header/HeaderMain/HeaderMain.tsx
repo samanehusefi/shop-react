@@ -29,8 +29,10 @@ const HeaderMain = () => {
               <Login />
             </div>
 
-            <div className="border-r border-gray-200 pr-2 md:mr-2 md:pr-4">
-              <Cart />
+            <div className="flex items-center">
+              <div className="flex h-6 items-center border-r border-gray-200 ">
+                <Cart />
+              </div>
             </div>
           </div>
         </div>

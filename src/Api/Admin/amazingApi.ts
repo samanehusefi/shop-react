@@ -1,8 +1,16 @@
 import type { IAmazing } from "../../Types/Home/IAmazing";
+import { getDbData } from "../dbApi";
 
-const API_URL = `${import.meta.env.VITE_API_URL}/amazing`;
+const API_URL = "http://localhost:3001/amazing";
+
+const isProduction = import.meta.env.PROD;
 
 export const getAdminAmazing = async (): Promise<IAmazing[]> => {
+  if (isProduction) {
+    const data = await getDbData();
+    return data.amazing;
+  }
+
   const response = await fetch(API_URL);
 
   if (!response.ok) {
@@ -15,6 +23,10 @@ export const getAdminAmazing = async (): Promise<IAmazing[]> => {
 export const createAmazing = async (
   amazing: Omit<IAmazing, "id">,
 ): Promise<IAmazing> => {
+  if (isProduction) {
+    throw new Error("ایجاد Amazing در نسخه آنلاین امکان‌پذیر نیست");
+  }
+
   const items = await getAdminAmazing();
 
   const ids = items
@@ -42,9 +54,13 @@ export const createAmazing = async (
 };
 
 export const updateAmazing = async (
-  id: number,
+  id: IAmazing["id"],
   amazing: Partial<Omit<IAmazing, "id">>,
 ): Promise<IAmazing> => {
+  if (isProduction) {
+    throw new Error("ویرایش Amazing در نسخه آنلاین امکان‌پذیر نیست");
+  }
+
   const response = await fetch(`${API_URL}/${id}`, {
     method: "PATCH",
     headers: {
@@ -60,7 +76,11 @@ export const updateAmazing = async (
   return response.json();
 };
 
-export const deleteAmazing = async (id: number): Promise<void> => {
+export const deleteAmazing = async (id: IAmazing["id"]): Promise<void> => {
+  if (isProduction) {
+    throw new Error("حذف Amazing در نسخه آنلاین امکان‌پذیر نیست");
+  }
+
   const response = await fetch(`${API_URL}/${id}`, {
     method: "DELETE",
   });

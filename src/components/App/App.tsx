@@ -3,6 +3,7 @@ import BottomBanner from "../Home/Banners/BottomBanner/BottomBanner";
 import HeroBanner from "../Home/Banners/HeroBanner/HeroBanner";
 import MiddleBanner from "../Home/Banners/MiddleBanner/MiddleBanner";
 import TopBanner from "../Home/Banners/TopBanner/TopBanner";
+import Brands from "../Home/Brands/Brands";
 import Categories from "../Home/Categories/Categories";
 import CircleBadge from "../Home/CircleBadge/CircleBadge";
 import Slider from "../Home/Slider/Slider";
@@ -21,6 +22,7 @@ const App = () => {
         <Categories />
         <TopBanner />
         <MiddleBanner />
+        <Brands />
         <BottomBanner />
         <Footer />
       </>

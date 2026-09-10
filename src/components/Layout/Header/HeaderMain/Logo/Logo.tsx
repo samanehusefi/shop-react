@@ -19,7 +19,7 @@ const Logo = () => {
         loading="lazy"
         src={logoSrc}
         alt={logo.alt}
-        className="h-3 w-auto object-contain md:h-8"
+        className="h-5 w-auto object-contain md:h-8"
       />
     </a>
   );

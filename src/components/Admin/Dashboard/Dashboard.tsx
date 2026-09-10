@@ -9,6 +9,7 @@ import { getBanners } from "../../../Redux/Home/Banner/action";
 import { getSlider } from "../../../Redux/Home/Slider/action";
 import { getCircleBadge } from "../../../Redux/Home/CircleBadge/action";
 import { getAmazing } from "../../../Redux/Home/Amazing/action";
+import { getBrands } from "../../../Redux/Home/Brands/action";
 import DashboardSkeleton from "./DashboardSkeleton";
 
 const Dashboard = () => {
@@ -41,6 +42,7 @@ const Dashboard = () => {
     dispatch(getSlider());
     dispatch(getCircleBadge());
     dispatch(getAmazing());
+    dispatch(getBrands);
   }, [dispatch]);
 
   const activeCategories = categories.filter(
