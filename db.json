@@ -9045,14 +9045,13 @@
       "id": "jtX7fUuYpQo"
     }
   ],
-
   "brands": [
     {
       "id": 1,
       "code": "rani",
       "title_fa": "رانی",
-      "title_en": "Rani",
-      "url": "https://www.digikala.com/brand/rani/",
+      "title_en": "",
+      "url": "",
       "src": "https://dkstatics-public.digikala.com/digikala-brands/6613.png?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80/format,webp",
       "visibility": true,
       "is_premium": false
@@ -9137,7 +9136,6 @@
       "visibility": true,
       "is_premium": false
     },
-
     {
       "id": 10,
       "code": "huawei",
@@ -9249,7 +9247,6 @@
       "is_premium": false
     }
   ],
-
   "options": [
     {
       "title": "جوراب مردانه",
