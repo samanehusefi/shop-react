@@ -11,6 +11,7 @@ import bannerReducer from "./Home/Banner/bannerReducer";
 import categoriesReducer from "./Home/Categories/categoriesReducer";
 import footerReducer from "./Footer/footerReducer";
 import brandsReducer from "./Home/Brands/brandsReducer";
+import productsReducer from "./Home/Products/productsReducer";
 const rootReducer = combineReducers({
   header: headerReducer,
   menu: menuReducer,
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   categories: categoriesReducer,
   footer: footerReducer,
   brands: brandsReducer,
+  products: productsReducer,
 });
 
 export default rootReducer;

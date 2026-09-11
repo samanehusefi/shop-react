@@ -42,9 +42,9 @@ const Header = () => {
   }, []);
 
   return (
-    <header>
+    <header className="shadow-lg">
       <div
-        className={`bg-white ${
+        className={`bg-white  ${
           isScrolled
             ? "fixed left-0 right-0 top-0 z-40 shadow-lg"
             : "relative z-50"

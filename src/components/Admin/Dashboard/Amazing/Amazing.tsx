@@ -26,11 +26,16 @@ const Amazing = () => {
 
   const itemsPerPage = 10;
 
-  const totalPages = Math.ceil(amazing.length / itemsPerPage);
+  const sortedAmazing = [...amazing].sort((a, b) => b.id - a.id);
+
+  const totalPages = Math.ceil(sortedAmazing.length / itemsPerPage);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
 
-  const currentItems = amazing.slice(startIndex, startIndex + itemsPerPage);
+  const currentItems = sortedAmazing.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
 
   useEffect(() => {
     dispatch(getAmazing());
@@ -66,17 +71,18 @@ const Amazing = () => {
     try {
       await deleteAmazing(id);
 
-      const updatedAmazing = await dispatch(getAmazing());
+      await dispatch(getAmazing());
 
-      const newTotalPages = Math.ceil(updatedAmazing.length / itemsPerPage);
+      setCurrentPage((page) => {
+        const remainingItems = amazing.length - 1;
+        const newTotalPages = Math.ceil(remainingItems / itemsPerPage);
 
-      if (newTotalPages > 0 && currentPage > newTotalPages) {
-        setCurrentPage(newTotalPages);
-      }
+        if (newTotalPages === 0) {
+          return 1;
+        }
 
-      if (newTotalPages === 0) {
-        setCurrentPage(1);
-      }
+        return page > newTotalPages ? newTotalPages : page;
+      });
     } catch (error) {
       console.error("خطا در حذف Amazing:", error);
 

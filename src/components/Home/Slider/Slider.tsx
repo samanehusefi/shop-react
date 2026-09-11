@@ -1,7 +1,6 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch, RootState } from "../../../Redux/store";
-import { getSlider } from "../../../Redux/Home/Slider/action";
+import { useSelector } from "react-redux";
+
+import type { RootState } from "../../../Redux/store";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -14,13 +13,7 @@ import "./Slider.css";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 const Slider = () => {
-  const dispatch = useDispatch<AppDispatch>();
-
   const slider = useSelector((state: RootState) => state.slider.slider);
-
-  useEffect(() => {
-    dispatch(getSlider());
-  }, [dispatch]);
 
   if (!slider.length) {
     return null;

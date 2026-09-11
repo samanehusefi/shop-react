@@ -1,41 +1,44 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+
 const Login = () => {
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (username === "admin" && password === "admin") {
       localStorage.setItem("isAdmin", "true");
-      navigate("/dashboard");
+      navigate("/dashboard", { replace: true });
       return;
     }
 
     setError("نام کاربری یا رمز عبور اشتباه است");
   };
-
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100 px-4">
-      <div className="w-full justify-center max-w-md rounded-2xl bg-white p-8 shadow-lg">
-        <img
-          loading="lazy"
-          src={`${import.meta.env.BASE_URL}assets/logo/full-horizontal.svg`}
-          alt="دیجیکالا"
-          className="h-11 w-16 justify-items-center md:w-full my-2 object-contain md:h-4"
-        />
-        <p className="mb-2 text-center text-gray-700 text-sm">
-          ورود به پنل مدیریت
-        </p>
+      <div className="w-full max-w-md justify-center rounded-2xl bg-white p-8 shadow-lg">
+        <div className="flex flex-wrap justify-center">
+          <img
+            loading="lazy"
+            src={`${import.meta.env.BASE_URL}assets/logo/full-horizontal.svg`}
+            alt="دیجیکالا"
+            className="mb-3 h-5 w-auto object-contain md:h-6"
+          />
+
+          <p className="mb-2 w-full text-center text-sm text-gray-700">
+            ورود به پنل مدیریت
+          </p>
+        </div>
 
         <form onSubmit={handleLogin} className="space-y-5">
           <div>
             <label className="mb-2 block text-sm font-medium">نام کاربری</label>
+
             <input
               type="text"
               value={username}
@@ -47,6 +50,7 @@ const Login = () => {
 
           <div>
             <label className="mb-2 block text-sm font-medium">رمز عبور</label>
+
             <input
               type="password"
               value={password}

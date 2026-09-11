@@ -13,15 +13,12 @@ const AdminLayout = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("isAdmin");
-    navigate("/login");
+    navigate("/login", { replace: true });
   };
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Sidebar
-        isOpen={isSidebarOpen}
-        setIsOpen={setIsSidebarOpen}
-      />
+      <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
 
       <main
         className={`min-h-screen pt-16 transition-all duration-300 lg:pt-0 ${
@@ -34,9 +31,7 @@ const AdminLayout = () => {
 
             <span className="hidden sm:inline">خوش آمدید،</span>
 
-            <span className="mr-1 text-red-800 sm:mr-1.5">
-              ادمین
-            </span>
+            <span className="mr-1 text-red-800 sm:mr-1.5">ادمین</span>
           </h3>
 
           <button

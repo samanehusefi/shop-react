@@ -24,6 +24,17 @@ const Categories = () => {
     (state: RootState) => state.categories,
   );
 
+  const sortedCategories = [...categories].sort((a, b) => b.id - a.id);
+
+  const totalPages = Math.ceil(sortedCategories.length / itemsPerPage);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+
+  const currentCategories = sortedCategories.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
+
   useEffect(() => {
     dispatch(getCategoriesAction()).catch((error) => {
       console.error("خطا در دریافت دسته‌بندی‌ها:", error);
@@ -31,8 +42,6 @@ const Categories = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    const totalPages = Math.ceil(categories.length / itemsPerPage);
-
     if (totalPages > 0 && currentPage > totalPages) {
       setCurrentPage(totalPages);
     }
@@ -40,7 +49,7 @@ const Categories = () => {
     if (totalPages === 0 && currentPage !== 1) {
       setCurrentPage(1);
     }
-  }, [categories.length, currentPage]);
+  }, [currentPage, totalPages]);
 
   const handleAdd = () => {
     navigate("/dashboard/categories/create");
@@ -88,12 +97,18 @@ const Categories = () => {
 
       const updatedCategories = await dispatch(getCategoriesAction());
 
-      const totalPages = Math.ceil(updatedCategories.length / itemsPerPage);
+      const updatedSortedCategories = [...updatedCategories].sort(
+        (a, b) => b.id - a.id,
+      );
 
-      if (totalPages === 0) {
+      const updatedTotalPages = Math.ceil(
+        updatedSortedCategories.length / itemsPerPage,
+      );
+
+      if (updatedTotalPages === 0) {
         setCurrentPage(1);
-      } else if (currentPage > totalPages) {
-        setCurrentPage(totalPages);
+      } else if (currentPage > updatedTotalPages) {
+        setCurrentPage(updatedTotalPages);
       }
     } catch (error) {
       console.error("خطا در حذف دسته‌بندی:", error);
@@ -107,15 +122,6 @@ const Categories = () => {
       setActionLoading(null);
     }
   };
-
-  const totalPages = Math.ceil(categories.length / itemsPerPage);
-
-  const startIndex = (currentPage - 1) * itemsPerPage;
-
-  const currentCategories = categories.slice(
-    startIndex,
-    startIndex + itemsPerPage,
-  );
 
   return (
     <div className="w-full min-w-0">
@@ -164,13 +170,13 @@ const Categories = () => {
           </div>
         )}
 
-        {!loading && !error && categories.length === 0 && (
+        {!loading && !error && sortedCategories.length === 0 && (
           <div className="flex min-h-60 items-center justify-center p-6 text-sm text-gray-500">
             دسته‌بندی‌ای برای نمایش وجود ندارد
           </div>
         )}
 
-        {!loading && !error && categories.length > 0 && (
+        {!loading && !error && sortedCategories.length > 0 && (
           <>
             <div className="hidden overflow-x-auto md:block">
               <table className="w-full min-w-[900px] text-right">

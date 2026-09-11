@@ -8935,114 +8935,586 @@
       "showHomepage": true
     }
   ],
-  "incredible": [
+  "products": [
     {
-      "border": true,
-      "img": "./img/inc/img-1.jpg",
-      "title": "ساندبار هیسکا مدل B203",
-      "discount": "۲۴٪",
-      "newPrice": "۸,۹۹۰,۰۰۰",
-      "oldPrice": "۱۱,۹۰۰,۰۰۰",
-      "id": "OiMsJs3NcTU"
+      "id": 21191058,
+      "title": "گوشی موبایل شیائومی مدل Redmi Note 15 Pro 4G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
+      "englishTitle": "Xiaomi Redmi Note 15 Pro 4G Dual SIM Storage 256GB and RAM 8GB Mobile Phone",
+      "brand": "شیائومی",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/87a37b28afcb8596bcff3de2939a59ec1eaeb3ce_1772819778.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 906000000,
+      "oldPrice": 906000000,
+      "discount": 0,
+      "stock": 3,
+      "rating": 4.6,
+      "ratingCount": 67,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "اسمارت تکنولوژی قشم",
+      "warranty": "گارانتی 18 ماهه شرکتی",
+      "color": {
+        "title": "مشکی",
+        "hex": "#000000"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-21191058/گوشی-موبایل-شیائومی-مدل-redmi-note-15-pro-4g-دو-سیم-کارت-ظرفیت-256-گیگابایت-و-رم-8-گیگابایت"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-2.jpg",
-      "title": "ماساژور برقی ریمکس مدل RM-8787",
-      "discount": "۴۵٪",
-      "newPrice": "۶,۶۰۰,۰۰۰",
-      "oldPrice": "۱۲,۰۰۰,۰۰۰",
-      "id": "fjaPprDkPjA"
+      "id": 22396485,
+      "title": "گوشی موبایل نمو مدل N16 دو سیم کارت ظرفیت 128 گیگابایت و رم ۴ گیگابایت",
+      "englishTitle": "Nemo N16 Dual SIM Storage 128GB and RAM 4GB Mobile Phone",
+      "brand": "متفرقه",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/bfdf381dd070e914445ebf77a41cd086d9c43b8c_1785506307.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 259490000,
+      "oldPrice": 269000000,
+      "discount": 4,
+      "stock": 0,
+      "rating": 0,
+      "ratingCount": 0,
+      "status": "active",
+      "isPromotion": true,
+      "isAmazing": false,
+      "seller": "اسمارت تکنولوژی قشم",
+      "warranty": "گارانتی 18 ماهه شرکتی",
+      "color": {
+        "title": "مشکی",
+        "hex": "#000000"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-22396485/گوشی-موبایل-نمو-مدل-n16-دو-سیم-کارت-ظرفیت-128-گیگابایت-و-رم-۴-گیگابایت"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-3.jpg",
-      "title": "کنسول بازی سونی مدل PlayStation 5 Slim Digital",
-      "discount": "۱۱٪",
-      "newPrice": "۹۷,۹۹۹,۰۰۰",
-      "oldPrice": "۱۱۰,۰۰۰,۰۰۰",
-      "id": "wmG74qmxPOY"
+      "id": 21461863,
+      "title": "گوشی موبایل تی سی اچ مدل One Pro دو سیم کارت ظرفیت 128 گیگابایت و رم 8 گیگابایت",
+      "englishTitle": "TCH One Pro Dual SIM Storage 128GB and RAM 8GB Mobile Phone",
+      "brand": "تی سی اچ",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/7fa086a0092ebf573b8a7556a1e8eb87d1da2765_1780314914.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 332439000,
+      "oldPrice": 342721000,
+      "discount": 3,
+      "stock": 0,
+      "rating": 4.6,
+      "ratingCount": 2,
+      "status": "active",
+      "isPromotion": true,
+      "isAmazing": false,
+      "seller": "دیجی‌کالا",
+      "warranty": "گارانتی 18 ماهه کسری پارس",
+      "color": {
+        "title": "طلایی",
+        "hex": "#d4af38"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-21461863/گوشی-موبایل-تی-سی-اچ-مدل-one-pro-دو-سیم-کارت-ظرفیت-128-گیگابایت-و-رم-8-گیگابایت"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-4.jpg",
-      "title": "ماشین لباسشویی ۹ کیلوگرم اتوماتیک دیپوینت",
-      "discount": "۳۰٪",
-      "newPrice": "۶۵,۵۰۰,۰۰۰",
-      "oldPrice": "۹۳,۴۷۷,۱۰۰",
-      "id": "n952_U6gD28"
+      "id": 21832005,
+      "title": "گوشی موبایل تی سی اچ مدل One Lite دو سیم کارت ظرفیت 128 گیگابایت و رم 4 گیگابایت",
+      "englishTitle": "TCH One Lite Dual SIM Storage 128GB and RAM 4GB",
+      "brand": "تی سی اچ",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/8d6d7e428c8672e59f800eec5aa2524bcdfb2673_1779022878.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 284187000,
+      "oldPrice": 292977000,
+      "discount": 3,
+      "stock": 0,
+      "rating": 4.3,
+      "ratingCount": 0,
+      "status": "active",
+      "isPromotion": true,
+      "isAmazing": false,
+      "seller": "دیجی‌کالا",
+      "warranty": "گارانتی 18 ماهه کسری پارس",
+      "color": {
+        "title": "بژ",
+        "hex": "#e6dab3"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-21832005/گوشی-موبایل-تی-سی-اچ-مدل-one-lite-دو-سیم-کارت-ظرفیت-128-گیگابایت-و-رم-4-گیگابایت"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-5.jpg",
-      "title": "گردنبند طلا ۱۸ عیار زنانه با زنجیر حلقه‌ای",
-      "discount": "۱۴٪",
-      "newPrice": "۱۴,۹۵۵,۵۵۰",
-      "oldPrice": "۱۷,۳۴۱,۰۴۰",
-      "id": "_ShJGHd8c7g"
+      "id": 20207656,
+      "title": "گوشی موبایل شیائومی مدل Poco M7 4G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
+      "englishTitle": "Xiaomi Poco M7 Dual SIM Storage 256GB And 8GB Mobile Phone",
+      "brand": "شیائومی",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/a6ee1696a5063962c40877571e098dd48885f71b_1768489634.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 644537000,
+      "oldPrice": 664471000,
+      "discount": 3,
+      "stock": 1,
+      "rating": 4.5,
+      "ratingCount": 8,
+      "status": "active",
+      "isPromotion": true,
+      "isAmazing": false,
+      "seller": "دیجی‌کالا",
+      "warranty": "گارانتی 18 ماهه ارتباط همراه اسپرلوس نوین",
+      "color": {
+        "title": "آبی",
+        "hex": "#0000FF"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-20207656/گوشی-موبایل-شیائومی-مدل-poco-m7-4g-دو-سیم-کارت-ظرفیت-256-گیگابایت-و-رم-8-گیگابایت"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-6.jpg",
-      "title": "هواپز فیلیپس مدل NA230/00",
-      "discount": "۱۳٪",
-      "newPrice": "۱۴,۷۹۰,۰۰۰",
-      "oldPrice": "۱۷,۰۰۰,۰۰۰",
-      "id": "muNx3V4ecE0"
+      "id": 17986495,
+      "title": "گوشی موبایل اپل مدل iPhone 16 CH دو سیم کارت ظرفیت 128 گیگابایت و رم 8 گیگابایت",
+      "englishTitle": "Apple iPhone 16 CH Dual SIM Storage 128GB And RAM 8GB Mobile Phone",
+      "brand": "اپل",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 3150200000,
+      "oldPrice": 3150200000,
+      "discount": 0,
+      "stock": 1,
+      "rating": 4.6,
+      "ratingCount": 0,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "ری فون",
+      "warranty": "گارانتی 18 ماهه دیجی سرویس + بیمه 12 ماهه ایران",
+      "color": {
+        "title": "مشکی",
+        "hex": "#000000"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-17986495/گوشی-موبایل-اپل-مدل-iphone-16-ch-دو-سیم-کارت-ظرفیت-128-گیگابایت-و-رم-8-گیگابایت"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-7.jpg",
-      "title": "جارو رباتیک شیائومی مدل S40",
-      "discount": "۷٪",
-      "newPrice": "۳۱,۴۹۹,۰۰۰",
-      "oldPrice": "۳۴,۰۰۰,۰۰۰",
-      "id": "m7vS4NwDLMw"
+      "id": 18856850,
+      "title": "گوشی موبایل داریا مدل bond II Lite دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت - به همراه شارژر 66 وات داریا",
+      "englishTitle": "Daria bond II Lite Dual SIM 256GB And 8GB RAM Mobile Phone - With 66w Daria Charger",
+      "brand": "داریا",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/331338a1039da92003f0cb0342f579937e73bd6c_1745762611.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 550000000,
+      "oldPrice": 550000000,
+      "discount": 0,
+      "stock": 2,
+      "rating": 4.2,
+      "ratingCount": 0,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "سورین همراه ایرانیان",
+      "warranty": "گارانتی 18 ماهه داریا همراه پایتخت",
+      "color": {
+        "title": "سفید",
+        "hex": "#FFFFFF"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-18856850/گوشی-موبایل-داریا-مدل-bond-ii-lite-دو-سیم-کارت-ظرفیت-256-گیگابایت-و-رم-8-گیگابایت-به-همراه-شارژر-66-وات-داریا"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-8.jpg",
-      "title": "ماشین اصلاح موی صورت و بدن بانوان مدل T1",
-      "discount": "۴۰٪",
-      "newPrice": "۸۳۷,۰۰۰",
-      "oldPrice": "۱,۳۹۵,۰۰۰",
-      "id": "qehA5uZrHmU"
+      "id": 20607579,
+      "title": "گوشی موبایل شیائومی مدل Redmi 15 4G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
+      "englishTitle": "Xiaomi Redmi 15 4G Dual SIM Storage 256GB and 8GB RAM Mobile Phone",
+      "brand": "شیائومی",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/d711653c7f894bf82c8e9660c8924c8686a4b76d_1759749915.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 733000000,
+      "oldPrice": 733000000,
+      "discount": 0,
+      "stock": 2,
+      "rating": 4.5,
+      "ratingCount": 72,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "اسمارت تکنولوژی قشم",
+      "warranty": "گارانتی 18 ماهه شرکتی",
+      "color": {
+        "title": "بنفش",
+        "hex": "#800080"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-20607579/گوشی-موبایل-شیائومی-مدل-redmi-15-4g-دو-سیم-کارت-ظرفیت-256-گیگابایت-و-رم-8-گیگابایت"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-9.jpg",
-      "title": "خمیر دندان سفیدکننده میسویک مدل X-13",
-      "discount": "۳۴٪",
-      "newPrice": "۲۷۷,۷۰۰",
-      "oldPrice": "۴۲۱,۹۰۰",
-      "id": "6GAKrh6s688"
+      "id": 17111777,
+      "title": "گوشی موبایل ریلمی مدل C61 دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
+      "englishTitle": "Realme C61 Dual SIM Storage 256GB And RAM 8GB Mobile Phone",
+      "brand": "ریلمی",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/46bbb57e2b67ba26136767d6aa957f2953a7e5d2_1737982278.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 490000000,
+      "oldPrice": 490000000,
+      "discount": 0,
+      "stock": 1,
+      "rating": 4.4,
+      "ratingCount": 0,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "سپهر همراه",
+      "warranty": "گارانتی 18 ماهه کاوش تیم",
+      "color": {
+        "title": "سبز",
+        "hex": "#008000"
+      },
+      "shipping": {
+        "available": true,
+        "fast": false,
+        "description": "موجود در انبار فروشنده"
+      },
+      "url": "/product/dkp-17111777/گوشی-موبایل-ریلمی-مدل-c61-دو-سیم-کارت-ظرفیت-256-گیگابایت-و-رم-8-گیگابایت"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-10.jpg",
-      "title": "جارو رباتیک شیائومی مدل H40",
-      "discount": "۴٪",
-      "newPrice": "۴۳,۹۹۰,۰۰۰",
-      "oldPrice": "۴۶,۰۰۰,۰۰۰",
-      "id": "slGmvNqx-tI"
+      "id": 21879459,
+      "title": "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
+      "englishTitle": "Honor 600 Lite Dual SIM Storage 256GB And RAM 8GB Mobile Phone",
+      "brand": "آنر",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/ed85c9ad687139b3befac2f4a90489838df2ef2a_1779663111.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 1005000000,
+      "oldPrice": 1005000000,
+      "discount": 0,
+      "stock": 1,
+      "rating": 4.9,
+      "ratingCount": 1,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "تجارت هوشمند فاخر",
+      "warranty": "گارانتی 18 ماهه مدیا پردازش + بیمه 12 ماهه سرقت،شکستگی و آب خوردگی",
+      "color": {
+        "title": "خاکستری",
+        "hex": "#9E9E9E"
+      },
+      "shipping": {
+        "available": true,
+        "fast": false,
+        "description": "موجود در انبار فروشنده"
+      },
+      "url": "/product/dkp-21879459/گوشی-موبایل-آنر-مدل-600-lite-دو-سیمکارت-ظرفیت-256-گیگابایت-و-رم-8-گیگابایت"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-11.jpg",
-      "title": "تونر پاک‌کننده صورت لورآل مدل مولتی اکتیو",
-      "discount": "۴۰٪",
-      "newPrice": "۱۷۵,۶۸۰",
-      "oldPrice": "۲۹۲,۸۰۰",
-      "id": "xfDT1vNApOU"
+      "id": 22469143,
+      "title": "گوشی موبایل ارد مدل F200 دو سیم کارت",
+      "englishTitle": "Orod F200 Dual SIM Mobile Phone",
+      "brand": "ارد",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/182fa7f3b8393a410dfba37175e5b827876de494_1786281695.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 38990000,
+      "oldPrice": 38990000,
+      "discount": 0,
+      "stock": 2,
+      "rating": 4.9,
+      "ratingCount": 0,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "سپهر همراه",
+      "warranty": "گارانتی 18 ماهه کاوش تیم",
+      "color": {
+        "title": "بنفش",
+        "hex": "#800080"
+      },
+      "shipping": {
+        "available": true,
+        "fast": false,
+        "description": "موجود در انبار فروشنده و دیجی‌کالا"
+      },
+      "url": "/product/dkp-22469143/گوشی-موبایل-ارد-مدل-f200-دو-سیم-کارت"
     },
     {
-      "border": false,
-      "img": "./img/inc/img-12.jpg",
-      "title": "تبلت اپل مدل iPad 11 2025 Wi-Fi 128GB",
-      "discount": "۳٪",
-      "newPrice": "۵۸,۹۹۹,۰۰۰",
-      "oldPrice": "۶۱,۰۰۰,۰۰۰",
-      "id": "jtX7fUuYpQo"
+      "id": 21294091,
+      "title": "گوشی موبایل آنر مدل X9d دو سیم کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت",
+      "englishTitle": "Honor X9d Dual SIM Storage 256GB And RAM 12GB",
+      "brand": "آنر",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/ea66787e6d2040a0cab1fa9c9d8c54d7a9e0d5a3_1768997655.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 1085000000,
+      "oldPrice": 1085000000,
+      "discount": 0,
+      "stock": 2,
+      "rating": 4.8,
+      "ratingCount": 0,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "پایاگستر شهر",
+      "warranty": "گارانتی 18 ماهه شرکتی",
+      "color": {
+        "title": "طلایی",
+        "hex": "#d4af38"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-21294091/گوشی-موبایل-آنر-مدل-x9d-دو-سیم-کارت-ظرفیت-256-گیگابایت-و-رم-12-گیگابایت"
+    },
+    {
+      "id": 21718007,
+      "title": "گوشی موبایل ژوبیتر مدل jPhone M25 دو سیم‌کارت ظرفیت 128 گیگابایت و رم 4 گیگابایت",
+      "englishTitle": "Jubiter jPhone M25 Dual SIM Storage 128GB And RAM 4GB Mobile Phone",
+      "brand": "ژوبیتر",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/610d5c004210844503b0f1cd3da593c13a41b6ab_1777297137.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 278900000,
+      "oldPrice": 290000000,
+      "discount": 4,
+      "stock": 0,
+      "rating": 4.2,
+      "ratingCount": 168,
+      "status": "active",
+      "isPromotion": true,
+      "isAmazing": false,
+      "seller": "ژوبیتر",
+      "warranty": "گارانتی 18 ماهه اطلس بنیاد جنوب",
+      "color": {
+        "title": "مشکی",
+        "hex": "#000000"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-21718007/گوشی-موبایل-ژوبیتر-مدل-jphone-m25-دو-سیمکارت-ظرفیت-128-گیگابایت-و-رم-4-گیگابایت"
+    },
+    {
+      "id": 20490714,
+      "title": "گوشی موبایل سامسونگ مدل Galaxy A17 4G دو سیم کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت - ویتنام",
+      "englishTitle": "Samsung Galaxy A17 4G Dual SIM 128GB Storage And 6GB Ram Mobile Phone - Vietnam",
+      "brand": "سامسونگ",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/68a4f680e47e209c5b090c5479004a3902342d07_1771839003.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 696421000,
+      "oldPrice": 717960000,
+      "discount": 3,
+      "stock": 0,
+      "rating": 4.5,
+      "ratingCount": 1,
+      "status": "active",
+      "isPromotion": true,
+      "isAmazing": false,
+      "seller": "دیجی‌کالا",
+      "warranty": "گارانتی 18 ماهه صدرتل",
+      "color": {
+        "title": "خاکستری",
+        "hex": "#9E9E9E"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-20490714/گوشی-موبایل-سامسونگ-مدل-galaxy-a17-4g-دو-سیم-کارت-ظرفیت-128-گیگابایت-و-رم-6-گیگابایت-ویتنام"
+    },
+    {
+      "id": 22412295,
+      "title": "گوشی موبایل آنر مدل X8d دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
+      "englishTitle": "Honor X8d Dual SIM Storage 256GB and RAM 8GB Mobile Phone",
+      "brand": "آنر",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/fca0033dd26c830f0f06aa90a62786d56554b593_1785676197.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 800990000,
+      "oldPrice": 800990000,
+      "discount": 0,
+      "stock": 1,
+      "rating": 0,
+      "ratingCount": 0,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "گلوبال سنتر",
+      "warranty": "گارانتی 18 ماهه مدیا پردازش + بیمه 12 ماهه سرقت،شکستگی و آب خوردگی",
+      "color": {
+        "title": "خاکستری",
+        "hex": "#9E9E9E"
+      },
+      "shipping": {
+        "available": true,
+        "fast": false,
+        "description": "موجود در انبار فروشنده"
+      },
+      "url": "/product/dkp-22412295/گوشی-موبایل-آنر-مدل-x8d-دو-سیم-کارت-ظرفیت-256-گیگابایت-و-رم-8-گیگابایت"
+    },
+    {
+      "id": 18144366,
+      "title": "گوشی موبایل داریا مدل bond 2 ظرفیت 512 گیگابایت",
+      "englishTitle": "",
+      "brand": "داریا",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/2dcd9fb26e12e34865fcf4930e20a3fe7051746d_1739260008.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 720000000,
+      "oldPrice": 720000000,
+      "discount": 0,
+      "stock": 0,
+      "rating": 4.3,
+      "ratingCount": 35,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "پایاگستر شهر",
+      "warranty": "گارانتی 18 ماهه داریا همراه پایتخت",
+      "color": {
+        "title": "مشکی",
+        "hex": "#000000"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-18144366/گوشی-موبایل-داریا-مدل-bond-2-ظرفیت-512-گیگابایت"
+    },
+    {
+      "id": 21430736,
+      "title": "گوشی موبایل تی سی اچ مدل Neo دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت",
+      "englishTitle": "TCH Neo Dual SIM Storage 64GB and RAM 4GB Mobile Phone",
+      "brand": "تی سی اچ",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/50a4035c0e4b01cddf82c27d7b46658b6b39b974_1780312956.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 243000000,
+      "oldPrice": 243000000,
+      "discount": 0,
+      "stock": 0,
+      "rating": 4.5,
+      "ratingCount": 5,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "اسمارت تکنولوژی قشم",
+      "warranty": "گارانتی 18 ماهه کسری پارس( 3 ماه تعویض طلایی)",
+      "color": {
+        "title": "طلایی",
+        "hex": "#d4af38"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-21430736/گوشی-موبایل-تی-سی-اچ-مدل-neo-دو-سیم-کارت-ظرفیت-64-گیگابایت-و-رم-4-گیگابایت"
+    },
+    {
+      "id": 19901379,
+      "title": "گوشی موبایل آنر مدل X6c دو سیم‌کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت",
+      "englishTitle": "Honor X6c Dual SIM Storage 128GB And RAM 6GB Mobile Phone",
+      "brand": "آنر",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/202bee3ebd5d8597c8240a4ba1001b4fa6557abe_1754482404.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 543000000,
+      "oldPrice": 543000000,
+      "discount": 0,
+      "stock": 1,
+      "rating": 4.5,
+      "ratingCount": 0,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "پارس نوین مدیا",
+      "warranty": "گارانتی 18 ماهه شرکتی",
+      "color": {
+        "title": "آبی فیروزه ای",
+        "hex": "#40E0D0"
+      },
+      "shipping": {
+        "available": true,
+        "fast": false,
+        "description": "موجود در انبار فروشنده و دیجی‌کالا"
+      },
+      "url": "/product/dkp-19901379/گوشی-موبایل-آنر-مدل-x6c-دو-سیمکارت-ظرفیت-128-گیگابایت-و-رم-6-گیگابایت"
+    },
+    {
+      "id": 21845929,
+      "title": "گوشی موبایل هانوفر مدل Axiom1 دو سیم‌کارت ظرفیت 128 گیگابایت و رم 8 گیگابایت",
+      "englishTitle": "Hanofer Axiom 1 Dual SIM Storage 128GB And RAM 8GB Mobile Phone",
+      "brand": "هانوفر",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/e37c6f0abae172267ac6724a3b11747e682d0f12_1779196253.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 325400000,
+      "oldPrice": 325400000,
+      "discount": 0,
+      "stock": 0,
+      "rating": 4.1,
+      "ratingCount": 99,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "پایاگستر شهر",
+      "warranty": "گارانتی 18 ماهه شرکتی",
+      "color": {
+        "title": "سرمه ای",
+        "hex": "#002171"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار دیجی‌کالا"
+      },
+      "url": "/product/dkp-21845929/گوشی-موبایل-هانوفر-مدل-axiom1-دو-سیمکارت-ظرفیت-128-گیگابایت-و-رم-8-گیگابایت"
+    },
+    {
+      "id": 22229122,
+      "title": "گوشی موبایل هانوفر مدل Axiom 2 دو سیم کارت ظرفیت 128 گیگابایت و رم 8 گیگابایت",
+      "englishTitle": "Hanoofer Axiom 2 Dual SIM Storage 128GB and RAM 8GB Mobile Phone",
+      "brand": "هانوفر",
+      "category": "گوشی موبایل",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/1e5f753d90b2672a5c0768b74f3f5df41dc5ec4a_1783854884.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+      "price": 292500000,
+      "oldPrice": 292500000,
+      "discount": 0,
+      "stock": 0,
+      "rating": 4.2,
+      "ratingCount": 14,
+      "status": "active",
+      "isPromotion": false,
+      "isAmazing": false,
+      "seller": "نامداران پارس",
+      "warranty": "گارانتی 18 ماهه شرکتی",
+      "color": {
+        "title": "سرمه ای",
+        "hex": "#002171"
+      },
+      "shipping": {
+        "available": true,
+        "fast": true,
+        "description": "موجود در انبار فروشنده و دیجی‌کالا"
+      },
+      "url": "/product/dkp-22229122/گوشی-موبایل-هانوفر-مدل-axiom-2-دو-سیم-کارت-ظرفیت-128-گیگابایت-و-رم-8-گیگابایت"
     }
   ],
   "brands": [

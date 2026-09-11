@@ -6,8 +6,8 @@ const DashboardSkeleton = () => {
         <div className="mt-3 h-4 w-48 rounded bg-gray-200" />
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {[1, 2, 3].map((item) => (
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
           <div key={item} className="rounded-xl bg-white p-6 shadow-sm">
             <div className="flex items-center justify-between">
               <div className="h-5 w-28 rounded bg-gray-200" />

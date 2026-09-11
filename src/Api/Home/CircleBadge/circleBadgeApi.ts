@@ -1,19 +1,19 @@
-import type { ICircleBadge } from "../../../Types/Home/ICircleBadge";
+import type { IProduct } from "../../../Types/Home/IProduct";
 import { getDbData } from "../../dbApi";
 
-const API_URL = "http://localhost:3001/circle_badge";
+const API_URL = "http://localhost:3001/products";
 
-export const getCircleBadge = async (): Promise<ICircleBadge[]> => {
+export const getProducts = async (): Promise<IProduct[]> => {
   if (import.meta.env.PROD) {
     const data = await getDbData();
 
-    return data.circle_badge;
+    return data.products;
   }
 
   const response = await fetch(API_URL);
 
   if (!response.ok) {
-    throw new Error("خطا در دریافت اطلاعات Circle Badge");
+    throw new Error("خطا در دریافت اطلاعات محصولات");
   }
 
   return response.json();

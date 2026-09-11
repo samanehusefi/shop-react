@@ -26,11 +26,16 @@ const Banners = () => {
 
   const itemsPerPage = 10;
 
-  const totalPages = Math.ceil(banners.length / itemsPerPage);
+  const sortedBanners = [...banners].sort((a, b) => b.id - a.id);
+
+  const totalPages = Math.ceil(sortedBanners.length / itemsPerPage);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
 
-  const currentBanners = banners.slice(startIndex, startIndex + itemsPerPage);
+  const currentBanners = sortedBanners.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
 
   useEffect(() => {
     dispatch(getBanners());
@@ -63,15 +68,7 @@ const Banners = () => {
 
     try {
       await deleteBanner(id);
-
-      if (
-        currentPage > 1 &&
-        banners.length - 1 <= (currentPage - 1) * itemsPerPage
-      ) {
-        setCurrentPage((page) => page - 1);
-      }
-
-      dispatch(getBanners());
+      await dispatch(getBanners());
     } catch (error) {
       console.error(error);
       alert("حذف تبلیغات انجام نشد");
@@ -93,7 +90,7 @@ const Banners = () => {
     <div className="w-full min-w-0">
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-sm md:text-xl font-bold text-red-900 sm:text-2xl">
+          <h1 className="text-sm font-bold text-red-900 md:text-xl sm:text-2xl">
             تبلیغات
           </h1>
 
@@ -125,22 +122,17 @@ const Banners = () => {
           </div>
         )}
 
-        {!loading && !error && banners.length > 0 && (
+        {!loading && !error && sortedBanners.length > 0 && (
           <>
             <div className="hidden overflow-x-auto md:block">
               <table className="w-full min-w-[1000px] text-right">
                 <thead className="border-b border-gray-200 bg-gray-50">
                   <tr>
                     <th className="px-5 py-4 text-sm">شناسه</th>
-
                     <th className="px-5 py-4 text-sm">تصویر</th>
-
                     <th className="px-5 py-4 text-sm">عنوان</th>
-
                     <th className="px-5 py-4 text-sm">موقعیت</th>
-
                     <th className="px-5 py-4 text-sm">لینک</th>
-
                     <th className="px-5 py-4 text-sm">عملیات</th>
                   </tr>
                 </thead>
@@ -328,7 +320,7 @@ const Banners = () => {
           </>
         )}
 
-        {!loading && !error && banners.length === 0 && (
+        {!loading && !error && sortedBanners.length === 0 && (
           <div className="p-8 text-center text-sm text-gray-500">
             تبلیغاتی وجود ندارد
           </div>

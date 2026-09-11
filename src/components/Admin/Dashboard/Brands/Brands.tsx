@@ -23,13 +23,22 @@ const Brands = () => {
   const loading = brandsState?.loading ?? false;
   const error = brandsState?.error ?? null;
 
+  const sortedBrands = [...brands].sort((a, b) => b.id - a.id);
+
+  const totalPages = Math.ceil(sortedBrands.length / itemsPerPage);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+
+  const currentBrands = sortedBrands.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
+
   useEffect(() => {
     dispatch(getBrands());
   }, [dispatch]);
 
   useEffect(() => {
-    const totalPages = Math.ceil(brands.length / itemsPerPage);
-
     if (totalPages > 0 && currentPage > totalPages) {
       setCurrentPage(totalPages);
     }
@@ -37,7 +46,7 @@ const Brands = () => {
     if (totalPages === 0 && currentPage !== 1) {
       setCurrentPage(1);
     }
-  }, [brands.length, currentPage]);
+  }, [currentPage, totalPages]);
 
   const handleAdd = () => {
     navigate("/dashboard/brands/create");
@@ -53,7 +62,7 @@ const Brands = () => {
         visibility: !brand.visibility,
       });
 
-      dispatch(getBrands());
+      await dispatch(getBrands());
     } catch (error) {
       console.error(error);
       alert("تغییر وضعیت برند انجام نشد");
@@ -69,32 +78,18 @@ const Brands = () => {
 
     try {
       await deleteBrand(id);
-
-      if (
-        currentPage > 1 &&
-        brands.length - 1 <= (currentPage - 1) * itemsPerPage
-      ) {
-        setCurrentPage((page) => page - 1);
-      }
-
-      dispatch(getBrands());
+      await dispatch(getBrands());
     } catch (error) {
       console.error(error);
       alert("حذف برند انجام نشد");
     }
   };
 
-  const totalPages = Math.ceil(brands.length / itemsPerPage);
-
-  const startIndex = (currentPage - 1) * itemsPerPage;
-
-  const currentBrands = brands.slice(startIndex, startIndex + itemsPerPage);
-
   return (
     <div className="w-full min-w-0">
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className=" text-sm md:text-xl font-bold text-red-900 sm:text-2xl">
+          <h1 className="text-sm font-bold text-red-900 md:text-xl sm:text-2xl">
             مدیریت برندها
           </h1>
 
@@ -266,8 +261,7 @@ const Brands = () => {
                     <button
                       type="button"
                       onClick={() => handleEdit(brand)}
-                      className="flex cursor-pointer items-center justify-center gap-2 rounded-lg
-                       bg-yellow-500 px-3 py-2.5 text-xs font-medium text-red-900 transition hover:bg-yellow-600 sm:text-sm"
+                      className="flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-yellow-500 px-3 py-2.5 text-xs font-medium text-red-900 transition hover:bg-yellow-600 sm:text-sm"
                     >
                       <FaEdit />
                       ویرایش

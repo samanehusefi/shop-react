@@ -8,17 +8,19 @@ import type { AppDispatch, RootState } from "../../../Redux/store";
 
 import { getAmazing } from "../../../Redux/Home/Amazing/action";
 
+import AmazingSkeleton from "./AmazingSkeleton";
+
 const Amazing = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const amazing = useSelector((state: RootState) => state.amazing.amazing);
 
+  const loading = useSelector((state: RootState) => state.amazing.loading);
+
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const [timeLeft, setTimeLeft] = useState(0);
-
   const [showLeftButton, setShowLeftButton] = useState(true);
-
   const [showRightButton, setShowRightButton] = useState(false);
 
   useEffect(() => {
@@ -48,9 +50,7 @@ const Amazing = () => {
   }, [timeLeft]);
 
   const hours = Math.floor(timeLeft / 3600);
-
   const minutes = Math.floor((timeLeft % 3600) / 60);
-
   const seconds = timeLeft % 60;
 
   const handleLeftButton = () => {
@@ -81,6 +81,14 @@ const Amazing = () => {
     setShowRightButton(true);
   };
 
+  if (loading) {
+    return <AmazingSkeleton />;
+  }
+
+  if (!amazing.length) {
+    return null;
+  }
+
   return (
     <section className="mx-auto w-full max-w-[1440px] px-0 py-2 sm:px-4 sm:py-4">
       <div className="overflow-hidden bg-[#ef394e] sm:rounded-[20px] sm:p-2 md:p-3">
@@ -92,6 +100,7 @@ const Amazing = () => {
                   <span>شگفت‌انگیز</span>
                   <span className="text-xl">%</span>
                 </div>
+
                 <div className="flex h-6 min-w-6 items-center justify-center rounded bg-white px-1 text-[11px] font-bold text-gray-800">
                   {String(seconds).padStart(2, "0")}
                 </div>
@@ -109,6 +118,7 @@ const Amazing = () => {
                 </div>
               </div>
             </div>
+
             <button
               type="button"
               className="flex items-center gap-1 text-[11px] font-bold"
@@ -177,10 +187,7 @@ const Amazing = () => {
 
             <div
               ref={sliderRef}
-              className="flex gap-1 overflow-x-auto bg-[#ef394e] 
-              [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
-              my-0.5 mr-2 md:my-0 md:mr-0
-              "
+              className="my-0.5 mr-2 flex gap-1 overflow-x-auto bg-[#ef394e] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:my-0 md:mr-0"
               dir="rtl"
             >
               {amazing.map((item) => (

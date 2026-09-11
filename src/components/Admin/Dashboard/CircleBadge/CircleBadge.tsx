@@ -35,11 +35,16 @@ const CircleBadge = () => {
     dispatch(getCircleBadge());
   }, [dispatch]);
 
-  const totalPages = Math.ceil(circleBadge.length / itemsPerPage);
+  const sortedCircleBadge = [...circleBadge].sort((a, b) => b.id - a.id);
+
+  const totalPages = Math.ceil(sortedCircleBadge.length / itemsPerPage);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
 
-  const currentItems = circleBadge.slice(startIndex, startIndex + itemsPerPage);
+  const currentItems = sortedCircleBadge.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
 
   useEffect(() => {
     if (totalPages > 0 && currentPage > totalPages) {
@@ -71,14 +76,17 @@ const CircleBadge = () => {
     try {
       await deleteCircleBadge(id);
 
-      if (
-        currentPage > 1 &&
-        circleBadge.length - 1 <= (currentPage - 1) * itemsPerPage
-      ) {
-        setCurrentPage((page) => page - 1);
-      }
+      await dispatch(getCircleBadge());
 
-      dispatch(getCircleBadge());
+      const updatedTotalPages = Math.ceil(
+        (circleBadge.length - 1) / itemsPerPage,
+      );
+
+      if (updatedTotalPages === 0) {
+        setCurrentPage(1);
+      } else if (currentPage > updatedTotalPages) {
+        setCurrentPage(updatedTotalPages);
+      }
     } catch (error) {
       console.error(error);
       alert("حذف مورد انجام نشد");
@@ -93,7 +101,7 @@ const CircleBadge = () => {
         is_digikala_service: !item.is_digikala_service,
       });
 
-      dispatch(getCircleBadge());
+      await dispatch(getCircleBadge());
     } catch (error) {
       console.error(error);
       alert("تغییر وضعیت انجام نشد");
@@ -131,6 +139,7 @@ const CircleBadge = () => {
             <span className="loading loading-spinner loading-sm"></span>
           </div>
         )}
+
         {error && (
           <div className="p-6 text-center text-sm text-red-500">
             خطا در دریافت اطلاعات

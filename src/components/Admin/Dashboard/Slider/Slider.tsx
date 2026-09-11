@@ -26,15 +26,20 @@ const Slider = () => {
 
   const itemsPerPage = 10;
 
-  const totalPages = Math.ceil(slider.length / itemsPerPage);
-
-  const startIndex = (currentPage - 1) * itemsPerPage;
-
-  const currentSlider = slider.slice(startIndex, startIndex + itemsPerPage);
-
   useEffect(() => {
     dispatch(getSlider());
   }, [dispatch]);
+
+  const sortedSlider = [...slider].sort((a, b) => b.id - a.id);
+
+  const totalPages = Math.ceil(sortedSlider.length / itemsPerPage);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+
+  const currentSlider = sortedSlider.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
 
   useEffect(() => {
     if (totalPages > 0 && currentPage > totalPages) {
@@ -64,14 +69,16 @@ const Slider = () => {
     try {
       await deleteSlider(id);
 
-      if (
-        currentPage > 1 &&
-        slider.length - 1 <= (currentPage - 1) * itemsPerPage
-      ) {
-        setCurrentPage((page) => page - 1);
-      }
+      await dispatch(getSlider());
 
-      dispatch(getSlider());
+      const remainingItems = slider.length - 1;
+      const updatedTotalPages = Math.ceil(remainingItems / itemsPerPage);
+
+      if (updatedTotalPages === 0) {
+        setCurrentPage(1);
+      } else if (currentPage > updatedTotalPages) {
+        setCurrentPage(updatedTotalPages);
+      }
     } catch (error) {
       console.error(error);
       alert("حذف اسلایدر انجام نشد");

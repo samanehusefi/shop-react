@@ -13,7 +13,7 @@ export const getShopData = async () => {
     const data = await response.json();
 
     return {
-      incredible: data.incredible,
+      products: data.products,
       categories: data.categories,
       brands: data.brands,
       options: data.options,
@@ -21,19 +21,19 @@ export const getShopData = async () => {
   }
 
   const [
-    incredibleResponse,
+    productsResponse,
     categoriesResponse,
     brandsResponse,
     optionsResponse,
   ] = await Promise.all([
-    fetch(`${API_URL}/incredible`),
+    fetch(`${API_URL}/products`),
     fetch(`${API_URL}/categories`),
     fetch(`${API_URL}/brands`),
     fetch(`${API_URL}/options`),
   ]);
 
   if (
-    !incredibleResponse.ok ||
+    !productsResponse.ok ||
     !categoriesResponse.ok ||
     !brandsResponse.ok ||
     !optionsResponse.ok
@@ -41,15 +41,15 @@ export const getShopData = async () => {
     throw new Error("خطا در دریافت اطلاعات");
   }
 
-  const [incredible, categories, brands, options] = await Promise.all([
-    incredibleResponse.json(),
+  const [products, categories, brands, options] = await Promise.all([
+    productsResponse.json(),
     categoriesResponse.json(),
     brandsResponse.json(),
     optionsResponse.json(),
   ]);
 
   return {
-    incredible,
+    products,
     categories,
     brands,
     options,

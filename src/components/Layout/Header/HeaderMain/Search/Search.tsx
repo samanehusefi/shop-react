@@ -33,7 +33,7 @@ const Search = () => {
         const searchValue = searchText.trim().toLowerCase();
 
         // Products
-        const incredibleResults: ISearchResult[] = data.incredible
+        const productsResults: ISearchResult[] = data.products
           .filter((item: any) =>
             (item.title ?? "").toLowerCase().includes(searchValue),
           )
@@ -62,11 +62,7 @@ const Search = () => {
             type: "brands",
           }));
 
-        setResults([
-          ...categoriesResults,
-          ...brandResults,
-          ...incredibleResults,
-        ]);
+        setResults([...categoriesResults, ...brandResults, ...productsResults]);
       } catch (error) {
         console.error("Search error:", error);
         setResults([]);
