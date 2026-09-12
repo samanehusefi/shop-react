@@ -2,6 +2,7 @@ import { HiHome, HiOutlineShoppingCart, HiOutlineUser } from "react-icons/hi";
 import { IoGridOutline } from "react-icons/io5";
 import { RiGooglePlayLine } from "react-icons/ri";
 // import { FaRegPercent } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const FooterBottomNav = () => {
   return (
@@ -15,13 +16,13 @@ const FooterBottomNav = () => {
           <span className="text-[10px]">خانه</span>
         </a>
 
-        <a
-          href="https://www.digikala.com/categories/"
+        <Link
+          to="/categories"
           className="flex w-1/5 flex-col items-center justify-center gap-1 text-neutral-500"
         >
           <IoGridOutline className="text-xl" />
           <span className="text-[10px]">دسته‌بندی</span>
-        </a>
+        </Link>
 
         <a
           href="https://www.digikala.com/checkout/cart/"

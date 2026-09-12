@@ -31,6 +31,7 @@ import ProductForm from "../components/Admin/Dashboard/Products/ProductForm/Prod
 
 import ProtectedRoute from "./ProtectedRoute";
 import NotFound from "../components/Error/NotFound";
+import FooterMobileMenuCategories from "../components/Layout/Footer/FooterMobileMenuCategories/FooterMobileMenuCategories";
 
 const AppRoutes = () => {
   return (
@@ -42,7 +43,7 @@ const AppRoutes = () => {
 
         <Route path="*" element={<NotFound />} />
       </Route>
-
+      <Route path="/categories" element={<FooterMobileMenuCategories />} />
       <Route path="/login" element={<Login />} />
 
       <Route
