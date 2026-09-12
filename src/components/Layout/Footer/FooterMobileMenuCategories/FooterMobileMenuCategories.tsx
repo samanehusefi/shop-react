@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { LuArrowRight, LuSearch } from "react-icons/lu";
+import { LuArrowRight } from "react-icons/lu";
 
 import type { AppDispatch, RootState } from "../../../../Redux/store";
 import {
