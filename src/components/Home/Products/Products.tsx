@@ -143,7 +143,8 @@ const Products = () => {
                   <Link
                     key={product.id}
                     to={`/product/d/${product.id}/${slug}`}
-                    className="group flex h-[310px] w-[155px] min-w-[155px] shrink-0 flex-col overflow-hidden rounded-lg border border-gray-200 bg-white transition hover:shadow-sm sm:h-[330px] sm:w-[180px] sm:min-w-[180px] md:h-[340px] md:w-[205px] md:min-w-[205px]"
+                    className="group flex h-[280px]  w-[155px] min-w-[155px] shrink-0 flex-col overflow-hidden rounded-lg border border-gray-200 bg-white transition hover:shadow-sm 
+                    sm:h-[330px] sm:w-[180px] sm:min-w-[180px] md:h-[340px] md:w-[205px] md:min-w-[205px]"
                   >
                     <div className="relative flex h-[155px] w-full items-center justify-center p-2.5 sm:h-[180px] sm:p-3 md:h-[205px]">
                       <img

@@ -1,20 +1,19 @@
 import { HiHome, HiOutlineShoppingCart, HiOutlineUser } from "react-icons/hi";
 import { IoGridOutline } from "react-icons/io5";
 import { RiGooglePlayLine } from "react-icons/ri";
-// import { FaRegPercent } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const FooterBottomNav = () => {
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-[10000] border-t border-gray-200 bg-white lg:hidden">
       <div className="flex h-16 items-center justify-around">
-        <a
-          href="/"
+        <Link
+          to="/"
           className="flex w-1/5 flex-col items-center justify-center gap-1 text-neutral-500"
         >
           <HiHome className="text-xl" />
           <span className="text-[10px]">خانه</span>
-        </a>
+        </Link>
 
         <Link
           to="/categories"
